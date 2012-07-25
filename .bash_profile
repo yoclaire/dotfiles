@@ -25,6 +25,9 @@ done
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
+# Enable SCM Breeze
+[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
+
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
 
@@ -37,3 +40,10 @@ complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book Syst
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
+
+# Source the git bash completion file
+# if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+#     source /usr/local/etc/bash_completion.d/git-completion.bash
+#     GIT_PS1_SHOWDIRTYSTATE=true
+#     PS1='\[\e[0;31m\]\h:\[\e[m\]\[\e[0;34m\]\W$(__git_ps1 " (%s)")\[\e[m\]\n\[\e[0;30m\]\u\[\e[m\]\[\e[1;30m\]\$\[\e[m\] '
+# fi
