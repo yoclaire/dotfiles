@@ -1,3 +1,31 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+.tags
+.tags_sorted_by_file
+
+# Editor files
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+# Dreamweaver added files
+_notes
+dwsync.xml
+
+
 # Compiled Python files
 *.pyc
 
