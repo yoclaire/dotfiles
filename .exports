@@ -1,5 +1,7 @@
-# Make vim the default editor
-export EDITOR="vim"
+# Make Sublime Text 2 the default editor
+# the -w bit ensures we wait until returning to the prompt
+# to proceed with any commands (good for commits, etc.)
+export EDITOR="subl -w"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 # Highlight section titles in manual pages
@@ -11,3 +13,7 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+
+# Set the directory defaults for Sass
+export SASS_DIRECTORY="_scss"
+export CSS_DIRECTORY="css"
