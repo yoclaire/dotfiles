@@ -1,5 +1,7 @@
 # Mathias’s dotfiles
 
+These were shamelessly lifted from [Matthias Bynens](https://github.com/mathiasbynens) dotfiles, and edited to suit my setup. Original README follows
+
 ## Installation
 
 ### Using Git and the bootstrap script
