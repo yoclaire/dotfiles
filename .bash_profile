@@ -43,7 +43,7 @@ complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book Syst
 
 # Source the git bash completion file
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-    source /usr/local/etc/bash_completion.d/git-completion.bash
-    GIT_PS1_SHOWDIRTYSTATE=true
-    # export PS1="\[$red\]\h:\[\e[m\]\[$blue\]\w$(__git_ps1 ' (%s)')\[\e[m\]\n\[$black\]\u\[\e[m\]\[$dark_grey\]\$\[\e[m\] "
+	source /usr/local/etc/bash_completion.d/git-completion.bash
+	GIT_PS1_SHOWDIRTYSTATE=true
+	# export PS1="\[$red\]\h:\[\e[m\]\[$blue\]\w$(__git_ps1 ' (%s)')\[\e[m\]\n\[$black\]\u\[\e[m\]\[$dark_grey\]\$\[\e[m\] "
 fi

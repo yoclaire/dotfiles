@@ -11,19 +11,19 @@ hi clear
 
 set background=dark
 if version > 580
-    " no guarantees for version 5.8 and below, but this makes it stop
-    " complaining
-    hi clear
-    if exists("syntax_on")
-        syntax reset
-    endif
+	" no guarantees for version 5.8 and below, but this makes it stop
+	" complaining
+	hi clear
+	if exists("syntax_on")
+		syntax reset
+	endif
 endif
 let g:colors_name="molokai"
 
 if exists("g:molokai_original")
-    let s:molokai_original = g:molokai_original
+	let s:molokai_original = g:molokai_original
 else
-    let s:molokai_original = 0
+	let s:molokai_original = 0
 endif
 
 hi Boolean         guifg=#AE81FF
@@ -81,10 +81,10 @@ hi SpecialComment  guifg=#465457               gui=bold
 hi Special         guifg=#66D9EF guibg=bg      gui=italic
 hi SpecialKey      guifg=#888A85               gui=italic
 if has("spell")
-    hi SpellBad    guisp=#FF0000 gui=undercurl
-    hi SpellCap    guisp=#7070F0 gui=undercurl
-    hi SpellLocal  guisp=#70F0F0 gui=undercurl
-    hi SpellRare   guisp=#FFFFFF gui=undercurl
+	hi SpellBad    guisp=#FF0000 gui=undercurl
+	hi SpellCap    guisp=#7070F0 gui=undercurl
+	hi SpellLocal  guisp=#70F0F0 gui=undercurl
+	hi SpellRare   guisp=#FFFFFF gui=undercurl
 endif
 hi Statement       guifg=#F92672               gui=bold
 hi StatusLine      guifg=#455354 guibg=fg
