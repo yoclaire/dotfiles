@@ -1,7 +1,7 @@
-# Load ~/.bash_prompt, ~/.exports, ~/.aliases, ~/.functions and ~/.extra
+# Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases, and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
 for file in ~/.{bash_prompt,exports,aliases,functions,extra}; do
-    [ -r "$file" ] && source "$file"
+	[ -r "$file" ] && source "$file"
 done
 unset file
 
@@ -18,7 +18,7 @@ shopt -s cdspell
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
 # * Recursive globbing, e.g. `echo **/*.txt`
 for option in autocd globstar; do
-    shopt -s "$option" 2> /dev/null
+	shopt -s "$option" 2> /dev/null
 done
 
 # Prefer US English and use UTF-8
@@ -43,7 +43,7 @@ complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book Syst
 
 # Source the git bash completion file
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-    source /usr/local/etc/bash_completion.d/git-completion.bash
-    GIT_PS1_SHOWDIRTYSTATE=true
-    export PS1="\[$red\]\h:\[\e[m\]\[$blue\]\w$(__git_ps1 ' (%s)')\[\e[m\]\n\[$black\]\u\[\e[m\]\[$dark_grey\]\$\[\e[m\] "
+	source /usr/local/etc/bash_completion.d/git-completion.bash
+	GIT_PS1_SHOWDIRTYSTATE=true
+	# export PS1="\[$red\]\h:\[\e[m\]\[$blue\]\w$(__git_ps1 ' (%s)')\[\e[m\]\n\[$black\]\u\[\e[m\]\[$dark_grey\]\$\[\e[m\] "
 fi
