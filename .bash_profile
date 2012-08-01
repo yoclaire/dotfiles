@@ -47,3 +47,6 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 	GIT_PS1_SHOWDIRTYSTATE=true
 	# export PS1="\[$red\]\h:\[\e[m\]\[$blue\]\w$(__git_ps1 ' (%s)')\[\e[m\]\n\[$black\]\u\[\e[m\]\[$dark_grey\]\$\[\e[m\] "
 fi
+
+# Source the Homebrew bash completion file
+[ -f /usr/local/Library/Contributions/brew_bash_completion.sh ] && source /usr/local/Library/Contributions/brew_bash_completion.sh
