@@ -25,6 +25,10 @@ alias oo="open ."
 alias hfmtunnel='ssh -R 52698:localhost:52698 hfm'
 alias jbtunnel='ssh -R 52698:localhost:52698 66.92.65.152'
 
+# Shortcuts for server filepaths
+serverpath="/var/www/vhosts/"
+alias cdffsand="cd ${serverpath}forcefactor.com/httpdocs"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
     colorflag="--color"

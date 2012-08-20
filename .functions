@@ -77,3 +77,8 @@ function codepoint() {
 	perl -e "use utf8; print sprintf('U+%04X', ord(\"$@\"))"
 	echo # newline
 }
+
+# CD to the webroot for a server vhost
+function cdvhost() {
+	cd /var/www/vhosts/$1/httpdocs
+}
