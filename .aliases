@@ -27,7 +27,20 @@ alias jbtunnel='ssh -R 52698:localhost:52698 66.92.65.152'
 
 # Shortcuts for server filepaths
 serverpath="/var/www/vhosts/"
-alias cdffsand="cd ${serverpath}forcefactor.com/httpdocs"
+alias cdfflive="cd ${serverpath}forcefactor.com/httpdocs"
+alias cdffsand="cd ${serverpath}sandbox.forcefactor.com/httpdocs"
+
+alias cdsblive="cd ${serverpath}stagesofbeauty.com/httpdocs"
+alias cdsbsand="cd ${serverpath}sandbox.stagesofbeauty.com/httpdocs"
+
+alias cdpllive="cd ${serverpath}peaklife.com/httpdocs"
+alias cdplsand="cd ${serverpath}sandbox.peaklife.com/httpdocs"
+
+alias cdhfmalive="cd ${serverpath}hfmanalytics.com/httpdocs"
+alias cdhfmasand="cd ${serverpath}sandbox.hfmanalytics.com/httpdocs"
+
+alias cdthebcrm="cd ${serverpath}the.bigfishcrm.com/httpdocs"
+alias cdtsnbcrm="cd ${serverpath}tsn.bigfishcrm.com/httpdocs"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
