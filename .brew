@@ -9,6 +9,10 @@ brew upgrade
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
 echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+brew install findutils
+# Install Bash 4
+brew install bash
 
 # Install wget with IRI support
 brew install wget --enable-iri
@@ -25,8 +29,8 @@ brew install homebrew/dupes/grep
 # brew install php54
 
 # These two formulae didn’t work well last time I tried them:
-#brew install homebrew/dupes/vim
-#brew install homebrew/dupes/screen
+# brew install homebrew/dupes/vim
+# brew install homebrew/dupes/screen
 
 # Install everything else
 # brew install ack
@@ -39,3 +43,6 @@ brew install node
 # brew install rhino
 # brew install tree
 # brew install webkit2png
+
+# Remove outdated versions from the cellar
+brew cleanup
