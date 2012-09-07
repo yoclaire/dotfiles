@@ -22,8 +22,8 @@ alias o="open"
 alias oo="open ."
 
 # Shortcuts to open tunnels for easy rmate usage
-alias hfmtunnel='ssh -R 52698:localhost:52698 hfm'
-alias jbtunnel='ssh -R 52698:localhost:52698 66.92.65.152'
+alias hfmtunnel="ssh -R 52698:localhost:52698 hfm"
+alias jbtunnel="ssh -R 52698:localhost:52698 66.92.65.152"
 
 # Shortcuts for server filepaths
 serverpath="/var/www/vhosts/"
@@ -39,8 +39,16 @@ alias cdplsand="cd ${serverpath}sandbox.peaklife.com/httpdocs"
 alias cdhfmalive="cd ${serverpath}hfmanalytics.com/httpdocs"
 alias cdhfmasand="cd ${serverpath}sandbox.hfmanalytics.com/httpdocs"
 
+alias cdcrmalive="cd ${serverpath}bigfishcrm.com/httpdocs"
+alias cdcrmasand="cd ${serverpath}sandbox.bigfishcrm.com/httpdocs"
+
 alias cdthebcrm="cd ${serverpath}the.bigfishcrm.com/httpdocs"
 alias cdtsnbcrm="cd ${serverpath}tsn.bigfishcrm.com/httpdocs"
+
+alias cdliblive="cd /var/www/libraries"
+alias cdlibstage="cd /var/www/libraries_staging"
+
+alias cdecom="cd /var/www/ecommerce"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
