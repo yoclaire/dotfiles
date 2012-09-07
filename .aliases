@@ -50,6 +50,9 @@ alias cdlibstage="cd /var/www/libraries_staging"
 
 alias cdecom="cd /var/www/ecommerce"
 
+alias cdhhsand="cd ${serverpath}sandbox.healthheadlines.com/httpdocs"
+alias cdhhlive="cd ${serverpath}healthheadlines.com/httpdocs"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
     colorflag="--color"
