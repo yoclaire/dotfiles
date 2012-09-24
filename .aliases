@@ -39,8 +39,8 @@ alias cdplsand="cd ${serverpath}sandbox.peaklife.com/httpdocs"
 alias cdhfmalive="cd ${serverpath}hfmanalytics.com/httpdocs"
 alias cdhfmasand="cd ${serverpath}sandbox.hfmanalytics.com/httpdocs"
 
-alias cdcrmalive="cd ${serverpath}bigfishcrm.com/httpdocs"
-alias cdcrmasand="cd ${serverpath}sandbox.bigfishcrm.com/httpdocs"
+alias cdcrmlive="cd ${serverpath}bigfishcrm.com/httpdocs"
+alias cdcrmsand="cd ${serverpath}sandbox.bigfishcrm.com/httpdocs"
 
 alias cdthebcrm="cd ${serverpath}the.bigfishcrm.com/httpdocs"
 alias cdtsnbcrm="cd ${serverpath}tsn.bigfishcrm.com/httpdocs"
