@@ -23,6 +23,7 @@ alias oo="open ."
 
 # Shortcuts to open tunnels for easy rmate usage
 alias hfmtunnel="ssh -R 52698:localhost:52698 hfm"
+alias stagetunnel="ssh -R 52698:localhost:52698 staging"
 alias jbtunnel="ssh -R 52698:localhost:52698 66.92.65.152"
 
 # Shortcuts for server filepaths
