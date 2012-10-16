@@ -44,5 +44,18 @@ brew install node
 # brew install tree
 # brew install webkit2png
 
+# Reinstall all gems
+gem install compass
+gem install capistrano
+gem install capistrano-gitflow
+gem install railsless-deploy
+gem install colored
+gem install colorize
+gem install bourbon
+gem install localtunnel
+gem install markdown2confluence
+gem install nokogiri
+gem install deadweight
+
 # Remove outdated versions from the cellar
 brew cleanup
