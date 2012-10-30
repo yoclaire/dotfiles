@@ -77,13 +77,13 @@ export WHITE
 export BOLD
 export RESET
 
-function parse_git_dirty() {
+function jb_parse_git_dirty() {
 	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
 
-function parse_git_branch() {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+function jb_parse_git_branch() {
+	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(jb_parse_git_dirty)/"
 }
 
-export PS1="\[${BOLD}${RED}\]\u \[$dark_grey\]at \[$yellow\]\h \[$dark_grey\]in \[$green\]\w\[$dark_grey\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$dark_grey\]\n\$ \[$RESET\]"
+export PS1="\[${BOLD}${RED}\]\u \[$dark_grey\]at \[$yellow\]\h \[$dark_grey\]in \[$green\]\w\[$dark_grey\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(jb_parse_git_branch)\[$dark_grey\]\n\$ \[$RESET\]"
 export PS2="\[$yellow\]→ \[$RESET\]"
