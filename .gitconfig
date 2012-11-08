@@ -89,12 +89,6 @@
 #     remote = origin
 #     merge = refs/heads/master
 
-# Use the "simple" model of pushing:
-#	Refuses to push if the upstream branch's name is different from the local one.
-#	Will become the default in Git 2.0
-[push]
-	default = simple
-
 # URL shorthands
 [url "git@github.com:"]
 	insteadOf = "gh:"
