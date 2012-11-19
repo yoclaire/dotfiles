@@ -36,10 +36,6 @@ set secure
 set number
 " Enable syntax highlighting
 syntax on
-" Set color scheme to Solarized
-set background=light
-colorscheme solarized
-let g:solarized_termcolors=256
 " Highlight current line
 set cursorline
 " Make tabs as wide as four spaces
