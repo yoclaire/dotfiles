@@ -9,24 +9,22 @@ elif infocmp xterm-256color >/dev/null 2>&1; then
 fi
 
 # if tput setaf 1 &> /dev/null; then
-#	tput sgr0
-#	if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
-#		BLACK=$(tput setaf 0)
-#		MAGENTA=$(tput setaf 9)
-#		ORANGE=$(tput setaf 172)
-#		GREEN=$(tput setaf 190)
-#		PURPLE=$(tput setaf 141)
-#		WHITE=$(tput setaf 256)
-#	else
-#		BLACK=$(tput setaf 0)
-#		MAGENTA=$(tput setaf 5)
-#		ORANGE=$(tput setaf 4)
-#		GREEN=$(tput setaf 2)
-#		PURPLE=$(tput setaf 1)
-#		WHITE=$(tput setaf 7)
-#	fi
-#	BOLD=$(tput bold)
-#	RESET=$(tput sgr0)
+# 	tput sgr0
+# 	if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
+# 		MAGENTA=$(tput setaf 9)
+# 		ORANGE=$(tput setaf 172)
+# 		GREEN=$(tput setaf 190)
+# 		PURPLE=$(tput setaf 141)
+# 		WHITE=$(tput setaf 0)
+# 	else
+# 		MAGENTA=$(tput setaf 5)
+# 		ORANGE=$(tput setaf 4)
+# 		GREEN=$(tput setaf 2)
+# 		PURPLE=$(tput setaf 1)
+# 		WHITE=$(tput setaf 7)
+# 	fi
+# 	BOLD=$(tput bold)
+# 	RESET=$(tput sgr0)
 # else
 	# Old school colors
 	# Black       0;30     Dark Gray     1;30
@@ -78,7 +76,7 @@ export BOLD
 export RESET
 
 function jb_parse_git_dirty() {
-	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+	[[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
 }
 
 function jb_parse_git_branch() {
