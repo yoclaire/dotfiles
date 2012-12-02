@@ -38,6 +38,7 @@
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	ls = ls-files
 	sta = stash
+	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-master}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
 
 [apply]
 	# Detect whitespace errors when applying a patch
