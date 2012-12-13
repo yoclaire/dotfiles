@@ -1,0 +1,48 @@
+# Display the name of the home directory.
+# windowTitle     = "$TM_DISPLAYNAME — ${CWD/^.*\///} ($TM_SCM_BRANCH)"
+
+# Variables
+TM_GIT          = "/usr/local/bin/git"
+TM_HG           = "/usr/local/bin/hg"
+
+# General settings
+fontName        = "Panic Sans"
+fontSize        = 14
+include         = "{$include,.htaccess-live,.htaccess-sandbox}"
+exclude         = "{$exclude,*.tmproj,*.crt,*.git,storage}"
+softTabs        = true
+tabSize         = 4
+softWrap        = true
+wrapColumn      = "Use Window Frame"
+
+# File type specific configuration
+[ text ]
+softTabs        = true
+tabSize         = 4
+
+[ text.plain ]
+softTabs        = false
+wrapColumn      = 80
+tabSize         = 4
+
+[ .git/COMMIT_EDITMSG ]
+wrapColumn      = 72
+
+[ *.{swf,flv} ]
+binary = true
+
+[ source ]
+softWrap        = true
+softTabs        = true
+tabSize         = 4
+
+[ source.ruby ]
+softWrap        = false
+wrapColumn      = 80
+
+[ source.plist ]
+softTabs        = false
+tabSize         = 4
+
+[ source.tm-properties ]
+spellChecking   = false
