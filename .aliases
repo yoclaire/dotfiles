@@ -70,7 +70,7 @@ alias l="ls -lpFh ${colorflag}"
 alias la="ls -lapFh ${colorflag}"
 
 # List only directories
-alias lsd='ls -l ${colorflag} | grep "^d"'
+alias lsd="ls -l ${colorflag} | grep \"^d\""
 
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
