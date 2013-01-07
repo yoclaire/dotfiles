@@ -76,6 +76,9 @@
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool "diffmerge"]
 	cmd = diffmerge "$LOCAL" "$REMOTE"
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
 [mergetool]
 	keepBackup = false
 [mergetool "diffmerge"]
