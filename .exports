@@ -20,3 +20,8 @@ export CSS_DIRECTORY="css"
 
 # Add DocBook package for XML generation (used for git-subtree)
 export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
+
+# EverTrue tools
+export JAVA_HOME=/usr/local/java
+export MAVEN_HOME=/usr/share/maven
+export M2_HOME=$MAVEN_HOME
