@@ -23,39 +23,6 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 
-# Shortcuts to open tunnels for easy rmate usage
-alias hfmtunnel="ssh -R 52698:localhost:52698 hfm"
-alias stagetunnel="ssh -R 52698:localhost:52698 staging"
-alias jbtunnel="ssh -R 52698:localhost:52698 66.92.65.152"
-
-# Shortcuts for server filepaths
-serverpath="/var/www/vhosts/"
-alias cdfflive="cd ${serverpath}forcefactor.com/httpdocs"
-alias cdffsand="cd ${serverpath}sandbox.forcefactor.com/httpdocs"
-
-alias cdsblive="cd ${serverpath}stagesofbeauty.com/httpdocs"
-alias cdsbsand="cd ${serverpath}sandbox.stagesofbeauty.com/httpdocs"
-
-alias cdpllive="cd ${serverpath}peaklife.com/httpdocs"
-alias cdplsand="cd ${serverpath}sandbox.peaklife.com/httpdocs"
-
-alias cdhfmalive="cd ${serverpath}hfmanalytics.com/httpdocs"
-alias cdhfmasand="cd ${serverpath}sandbox.hfmanalytics.com/httpdocs"
-
-alias cdcrmlive="cd ${serverpath}bigfishcrm.com/httpdocs"
-alias cdcrmsand="cd ${serverpath}sandbox.bigfishcrm.com/httpdocs"
-
-alias cdthebcrm="cd ${serverpath}the.bigfishcrm.com/httpdocs"
-alias cdtsnbcrm="cd ${serverpath}tsn.bigfishcrm.com/httpdocs"
-
-alias cdliblive="cd /var/www/libraries"
-alias cdlibstage="cd /var/www/libraries_staging"
-
-alias cdecom="cd /var/www/ecommerce"
-
-alias cdhhsand="cd ${serverpath}sandbox.healthheadlines.com/httpdocs"
-alias cdhhlive="cd ${serverpath}healthheadlines.com/httpdocs"
-
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
