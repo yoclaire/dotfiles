@@ -1,3 +1,6 @@
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:$PATH"
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -21,10 +24,6 @@ shopt -s cdspell
 for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null
 done
-
-# Prefer US English and use UTF-8
-export LC_ALL="en_US.UTF-8"
-export LANG="en_US"
 
 # Enable SCM Breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
