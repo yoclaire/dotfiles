@@ -25,8 +25,8 @@ for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null
 done
 
-# Enable SCM Breeze
-[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
+# Alias hub to git for GitHub CLI magic
+eval "$(hub alias -s)"
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
@@ -41,11 +41,20 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
+# Source SCM Breeze
+[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
+
 # Source the git bash completion file
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 	source /usr/local/etc/bash_completion.d/git-completion.bash
 	GIT_PS1_SHOWDIRTYSTATE=true
 fi
+
+# Source the hg bash completion file
+[ -f /usr/local/etc/bash_completion.d/hg-completion.bash ] && source /usr/local/etc/bash_completion.d/hg-completion.bash
+
+# Source the hub bash completion file
+[ -f /usr/local/etc/bash_completion.d/hub.bash_completion.sh ] && source /usr/local/etc/bash_completion.d/hub.bash_completion.sh
 
 # Source the Homebrew bash completion file
 [ -f /usr/local/Library/Contributions/brew_bash_completion.sh ] && source /usr/local/Library/Contributions/brew_bash_completion.sh
