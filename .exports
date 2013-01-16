@@ -1,7 +1,5 @@
 # Make Sublime Text 2 the default editor
-# the -w bit ensures we wait until returning to the prompt
-# to proceed with any commands (good for commits, etc.)
-export EDITOR="subl -w"
+export EDITOR="subl"
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
