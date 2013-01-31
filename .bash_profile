@@ -41,6 +41,9 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
+# Source SCM Breeze
+[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
+
 # Source the git bash completion file
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 	source /usr/local/etc/bash_completion.d/git-completion.bash
