@@ -1,5 +1,7 @@
 # Make Sublime Text 2 the default editor
 export EDITOR="subl"
+# Use the -w argument to ensure CLI waits for Sublime to finish
+export GIT_EDITOR="subl -w"
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
