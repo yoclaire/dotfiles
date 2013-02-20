@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ~/.osx — http://mths.be/osx
+# ~/.osx — https://github.com/jeffbyrnes/dotfiles/blob/master/.osx
 
 # Ask for the administrator password upfront
 sudo -v
@@ -161,7 +161,7 @@ systemsetup -settimezone "America/New_York" > /dev/null
 # Screen                                                                      #
 ###############################################################################
 
-# Require password immediately after sleep or screen saver begins
+# Require password 300s (5m) after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 300
 
@@ -281,7 +281,7 @@ chflags nohidden ~/Library
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilte-stack -bool true
 
-# Set the icon size of Dock items to 36 pixels
+# Set the icon size of Dock items to 64 pixels
 defaults write com.apple.dock tilesize -int 64
 
 # Enable spring loading for all Dock items
