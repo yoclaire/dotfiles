@@ -25,6 +25,8 @@
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
+	# Sort branches & tags by last commit
+	brbylast = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
 	# Various other shorthands
 	st = status
 	ci = commit
