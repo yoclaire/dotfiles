@@ -35,7 +35,11 @@ set secure
 " Enable line numbers
 set number
 " Enable syntax highlighting
-syntax on
+syntax enable
+set background=light
+let g:solarized_termcolors = 256
+let g:solarized_termtrans = 1
+colorscheme solarized
 " Highlight current line
 set cursorline
 " Make tabs as wide as four spaces
