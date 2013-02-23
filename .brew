@@ -34,15 +34,21 @@ brew install homebrew/dupes/grep
 
 # Install everything else
 # brew install ack
-#brew install exiv2
+# brew install exiv2
 brew install git
-#brew install imagemagick
+# brew install imagemagick
 # brew install lynx
 brew install node
 # brew install rename
 # brew install rhino
 # brew install tree
 # brew install webkit2png
+
+# Install hub github.com/defunkt/hub
+brew install hub
+
+# Uninstall all gems
+gem list | cut -d" " -f1 | xargs gem uninstall -aIx
 
 # Reinstall all gems
 gem install compass
@@ -54,8 +60,9 @@ gem install colorize
 gem install bourbon
 gem install localtunnel
 gem install markdown2confluence
-gem install nokogiri
 gem install deadweight
+gem install puppet-lint
+gem install oily_png
 
 # Remove outdated versions from the cellar
 brew cleanup
