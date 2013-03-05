@@ -124,9 +124,8 @@ defaults write com.apple.BluetoothAudioAgent "Stream - Flush Ring on Packet Drop
 defaults write com.apple.BluetoothAudioAgent "Stream - Max Outstanding Packets (editable)" 15
 defaults write com.apple.BluetoothAudioAgent "Stream Resume Delay" "0.75"
 
-# Enable full keyboard access for all controls
-# (e.g. enable Tab in modal dialogs)
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+# Enable some keyboard access
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
 
 # Enable access for assistive devices
 echo -n 'a' | sudo tee /private/var/db/.AccessibilityAPIEnabled > /dev/null 2>&1
@@ -143,8 +142,8 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
+# Set a (not-so) blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Automatically illuminate built-in MacBook keyboard in low light
 defaults write com.apple.BezelServices kDim -bool true
@@ -217,7 +216,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Display full POSIX path as Finder window title
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+# defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
