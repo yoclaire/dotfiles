@@ -58,3 +58,6 @@ fi
 
 # Source the Homebrew bash completion file
 [ -f /usr/local/Library/Contributions/brew_bash_completion.sh ] && source /usr/local/Library/Contributions/brew_bash_completion.sh
+
+# Source the Twig bash completion file
+[[ -s ~/.twig/twig-completion.bash ]] && source ~/.twig/twig-completion.bash
