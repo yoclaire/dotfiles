@@ -167,28 +167,21 @@ function unquarantine() {
 # Deploy a repo to all instances
 # Usage: `et-deploy-all core` or `et-deploy-all api`
 function et-deploy-all() {
-	echo 'dev-api-1'
-	deploy -p $1 -g origin/master -n dev-api-1
-	echo 'dev-web-1'
-	deploy -p $1 -g origin/master -n dev-web-1
-	echo 'stage-api-1'
-	deploy -p $1 -g origin/master -n stage-api-1
-	echo 'stage-mobile-1'
-	deploy -p $1 -g origin/master -n stage-mobile-1
-	echo 'stage-web-1'
-	deploy -p $1 -g origin/master -n stage-web-1
-	echo 'prod-api-1'
-	deploy -p $1 -g origin/master -n prod-api-1
-	echo 'prod-api-2'
-	deploy -p $1 -g origin/master -n prod-api-2
-	echo 'prod-dashboard-1'
-	deploy -p $1 -g origin/master -n prod-dashboard-1
-	echo 'prod-mobile-1'
-	deploy -p $1 -g origin/master -n prod-mobile-1
-	echo 'prod-web-3'
-	deploy -p $1 -g origin/master -n prod-web-3
-	echo 'trubot-1'
-	deploy -p $1 -g origin/master -n trubot-1
-	echo 'spider-queen'
-	deploy -p $1 -g origin/master -n spider-queen
+	api_hosts=( 'dev-api-1' 'stage-api-1' 'prod-api-1' 'prod-api-2' )
+	other_hosts=( 'dev-web-1' 'stage-web-3' 'prod-web-3' 'prod-dashboard-1' 'stage-mobile-1' 'prod-mobile-1' 'trubot-1' 'spider-queen' )
+
+	for host in "${api_hosts[@]}"
+	do
+		echo $host
+		deploy -p $1 -g origin/master -n $host
+	done
+
+	# Only deploy evertrue/api to API instances
+	if [ "$1" != "api" ]; then
+		for host in "${other_hosts[@]}"
+		do
+			echo $host
+			deploy -p $1 -g origin/master -n $host
+		done
+	fi
 }
