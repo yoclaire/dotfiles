@@ -33,7 +33,5 @@ export M2_HOME=$MAVEN_HOME
 
 # AWS stuff
 export JAVA_HOME="$(/usr/libexec/java_home)"
-export AWS_ACCESS_KEY="$(/bin/ls "$HOME"/.ec2/access_key | /usr/bin/head -1)"
-export AWS_SECRET_KEY="$(/bin/ls "$HOME"/.ec2/secret_key | /usr/bin/head -1)"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 export AWS_ELASTICACHE_HOME="/usr/local/Cellar/aws-elasticache/1.7.000/libexec"
