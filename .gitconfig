@@ -91,6 +91,7 @@
 	trustExitCode = true
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
 
 
 # Use `origin` as the default remote on the `master` branch in all cases
