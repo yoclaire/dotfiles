@@ -53,6 +53,7 @@ gem list | cut -d" " -f1 | xargs gem uninstall -aIx
 # Reinstall all gems
 gem install compass
 gem install capistrano
+gem install capistrano-ext
 gem install capistrano-gitflow
 gem install railsless-deploy
 gem install colored
@@ -63,6 +64,7 @@ gem install markdown2confluence
 gem install deadweight
 gem install puppet-lint
 gem install oily_png
+gem install twig
 
 # Remove outdated versions from the cellar
 brew cleanup
