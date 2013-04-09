@@ -125,7 +125,7 @@ defaults write com.apple.BluetoothAudioAgent "Stream - Max Outstanding Packets (
 defaults write com.apple.BluetoothAudioAgent "Stream Resume Delay" "0.75"
 
 # Enable some keyboard access
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
+# defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
 
 # Enable access for assistive devices
 echo -n 'a' | sudo tee /private/var/db/.AccessibilityAPIEnabled > /dev/null 2>&1
