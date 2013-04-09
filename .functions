@@ -168,7 +168,8 @@ function unquarantine() {
 # Usage: `et-deploy-all core` or `et-deploy-all api`
 function et-deploy-all() {
 	api_hosts=( 'dev-api-1' 'stage-api-1' 'prod-api-1' 'prod-api-2' )
-	other_hosts=( 'dev-web-1' 'stage-web-4' 'prod-web-3' 'prod-dashboard-1' 'stage-mobile-1' 'prod-mobile-1' 'trubot-1' 'spider-queen' )
+	core_hosts=( 'prod-dashboard-1' 'stage-mobile-1' 'prod-mobile-1' 'trubot-1' 'spider-queen' )
+	web_hosts=( 'dev-web-1' 'stage-web-4' 'prod-web-3' )
 
 	for host in "${api_hosts[@]}"
 	do
@@ -178,7 +179,7 @@ function et-deploy-all() {
 
 	# Only deploy evertrue/api to API instances
 	if [ "$1" != "api" ]; then
-		for host in "${other_hosts[@]}"
+		for host in "${core_hosts[@]}"
 		do
 			echo $host
 			deploy -p $1 -g origin/master -n $host
