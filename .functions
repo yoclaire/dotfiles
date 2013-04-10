@@ -168,7 +168,7 @@ function unquarantine() {
 # Usage: `et-deploy-all core` or `et-deploy-all api`
 function et-deploy-all() {
 	api_hosts=( 'dev-api-1' 'stage-api-1' 'prod-api-1' 'prod-api-2' )
-	core_hosts=( 'prod-dashboard-1' 'stage-mobile-1' 'prod-mobile-1' 'trubot-1' 'spider-queen' )
+	core_hosts=( 'prod-dashboard-1' 'stage-mobile-1' 'prod-mobile-1' 'spider-queen' )
 	web_hosts=( 'dev-web-1' 'stage-web-4' 'prod-web-3' )
 
 	for host in "${api_hosts[@]}"
