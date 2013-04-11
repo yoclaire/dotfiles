@@ -167,19 +167,37 @@ function unquarantine() {
 # Deploy a repo to all instances
 # Usage: `et-deploy-all core` or `et-deploy-all api`
 function et-deploy-all() {
-	api_hosts=( 'dev-api-1' 'stage-api-1' 'prod-api-1' 'prod-api-2' )
-	core_hosts=( 'prod-dashboard-1' 'stage-mobile-1' 'prod-mobile-1' 'spider-queen' )
+	api_hosts=( 'dev-api-1' 'dev-api-2' 'stage-api-1' 'prod-api-1' 'prod-api-2' )
+	core_hosts=( 'stage-dashboard-1' 'prod-dashboard-1' 'stage-mobile-1' 'prod-mobile-1' )
 	web_hosts=( 'dev-web-1' 'stage-web-4' 'prod-web-3' )
+	gateway_hosts=( 'prod' 'stage' )
+	misc_hosts=( 'trubot' 'spider-queen' 'andrew-api-1' 'dropbox' )
 
+	# Deploy everything to API hosts
 	for host in "${api_hosts[@]}"
 	do
 		echo $host
 		deploy -p $1 -g origin/master -n $host
 	done
 
-	# Only deploy evertrue/api to API instances
-	if [ "$1" != "api" ]; then
+	# Exclude api & web from non-API instances
+	if [ "$1" != "api" ] && [ "$1" != "web" ]; then
 		for host in "${core_hosts[@]}"
+		do
+			echo $host
+			deploy -p $1 -g origin/master -n $host
+		done
+	fi
+
+	# Don't deploy anything but puppet to gateways & helper instances
+	if [ "$1" == "puppet" ]; then
+		for host in "${gateway_hosts[@]}"
+		do
+			echo $host
+			deploy -p $1 -g origin/master -n $host
+		done
+
+		for host in "${misc_hosts[@]}"
 		do
 			echo $host
 			deploy -p $1 -g origin/master -n $host
