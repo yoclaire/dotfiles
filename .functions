@@ -171,7 +171,7 @@ function et-deploy-all() {
 	core_hosts=( 'stage-dashboard-1' 'prod-dashboard-1' 'stage-mobile-1' 'prod-mobile-1' )
 	web_hosts=( 'dev-web-1' 'stage-web-4' 'prod-web-3' )
 	gateway_hosts=( 'prod' 'stage' )
-	misc_hosts=( 'trubot' 'spider-queen' 'andrew-api-1' 'dropbox' )
+	misc_hosts=( 'trubot-1' 'spider-queen' 'andrew-api-1' 'dropbox' )
 
 	# Deploy everything to API hosts
 	for host in "${api_hosts[@]}"
