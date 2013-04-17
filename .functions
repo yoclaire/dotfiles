@@ -173,11 +173,15 @@ function et-deploy-all() {
 	gateway_hosts=( 'prod' 'stage' )
 	misc_hosts=( 'trubot-1' 'spider-queen' 'andrew-api-1' 'dropbox' )
 
+	deploy_fixes='sudo chmod 600 /home/core/.ssh/id_rsa && sudo service httpd restart'
+
 	# Deploy everything to API hosts
 	for host in "${api_hosts[@]}"
 	do
 		echo $host
 		deploy -p $1 -g origin/master -n $host
+		echo 'Fixing core SSH key permissions'
+		ssh -t $host \'$deploy_fixes\'
 	done
 
 	# Exclude api & web from non-API instances
@@ -186,6 +190,8 @@ function et-deploy-all() {
 		do
 			echo $host
 			deploy -p $1 -g origin/master -n $host
+			echo 'Fixing core SSH key permissions'
+			ssh -t $host \'$deploy_fixes\'
 		done
 	fi
 
