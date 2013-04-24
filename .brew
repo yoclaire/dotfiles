@@ -47,24 +47,37 @@ brew install node
 # Install hub github.com/defunkt/hub
 brew install hub
 
+# Install rbenv
+brew install rbenv
+brew install ruby-build
+rbenv install 1.9.3-p392
+rbenv global 1.9.3-p392
+
 # Uninstall all gems
 gem list | cut -d" " -f1 | xargs gem uninstall -aIx
 
+# Update Rubygems to latest
+gem update --system
+
 # Reinstall all gems
-gem install compass
-gem install capistrano
-gem install capistrano-ext
-gem install capistrano-gitflow
-gem install railsless-deploy
-gem install colored
-gem install colorize
-gem install bourbon
-gem install localtunnel
-gem install markdown2confluence
-gem install deadweight
-gem install puppet-lint
-gem install oily_png
-gem install twig
+gem install \
+	bourbon \
+	bundler \
+	compass \
+	capistrano \
+	capistrano-ext \
+	capistrano-gitflow \
+	railsless-deploy \
+	colored \
+	colorize \
+	deadweight \
+	less \
+	localtunnel \
+	markdown2confluence \
+	oily_png \
+	puppet-lint \
+	therubyracer \
+	twig
 
 # Remove outdated versions from the cellar
 brew cleanup
