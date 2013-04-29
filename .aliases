@@ -158,5 +158,3 @@ alias fix-tabs-2-spaces="tabfix --line-separator=Unix -s 2 -r --no-backup -m *.r
 # EverTrue handy bits
 alias trubot-restart="ssh -t trubot 'sudo su - trubot -c \"devops/restart.sh\"'"
 alias prod-api-httpd-restart="ssh -t prod-api-1 'sudo service httpd restart' && ssh -t prod-api-2 'sudo service httpd restart'"
-alias core-ssh-perms-fix="ssh -t dev-api-2 'sudo chmod 600 /home/core/.ssh/id_rsa' && ssh -t prod-api-1 'sudo chmod 600 /home/core/.ssh/id_rsa' && ssh -t prod-api-2 'sudo chmod 600 /home/core/.ssh/id_rsa'"
-alias core-deploy-fixes="prod-api-httpd-restart && core-ssh-perms-fix"

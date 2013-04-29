@@ -178,9 +178,6 @@ function et-deploy-all() {
 	do
 		echo $host
 		deploy -p $1 -g origin/master -n $host
-		echo 'Fixing core SSH key permissions'
-		ssh -t $host 'sudo chmod 600 /home/core/.ssh/id_rsa'
-		echo
 	done
 
 	# Exclude api & web from non-API instances
