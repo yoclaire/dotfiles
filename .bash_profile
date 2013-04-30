@@ -61,3 +61,6 @@ fi
 
 # Source the Twig bash completion file
 [[ -s ~/.twig/twig-completion.bash ]] && source ~/.twig/twig-completion.bash
+
+# Source the Opscode Chef Knife completion file
+[ -f /usr/local/etc/bash_completion.d/knife_bash_completion.sh ] && source /usr/local/etc/bash_completion.d/knife_bash_completion.sh
