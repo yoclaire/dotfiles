@@ -44,23 +44,15 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # Source SCM Breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
-# Source the git bash completion file
+# Source bash completion for all installed at /usr/local/etc/bash_completion.d
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
+# Set options for Git bash completion
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-	source /usr/local/etc/bash_completion.d/git-completion.bash
 	GIT_PS1_SHOWDIRTYSTATE=true
 fi
 
-# Source the hg bash completion file
-[ -f /usr/local/etc/bash_completion.d/hg-completion.bash ] && source /usr/local/etc/bash_completion.d/hg-completion.bash
-
-# Source the hub bash completion file
-[ -f /usr/local/etc/bash_completion.d/hub.bash_completion.sh ] && source /usr/local/etc/bash_completion.d/hub.bash_completion.sh
-
-# Source the Homebrew bash completion file
-[ -f /usr/local/Library/Contributions/brew_bash_completion.sh ] && source /usr/local/Library/Contributions/brew_bash_completion.sh
-
 # Source the Twig bash completion file
 [[ -s ~/.twig/twig-completion.bash ]] && source ~/.twig/twig-completion.bash
-
-# Source the Opscode Chef Knife completion file
-[ -f /usr/local/etc/bash_completion.d/knife_bash_completion.sh ] && source /usr/local/etc/bash_completion.d/knife_bash_completion.sh
