@@ -31,6 +31,14 @@ export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
 export MAVEN_HOME=/usr/share/maven
 export M2_HOME=$MAVEN_HOME
 
+# Opscode chef configurations.
+export KNIFE_CHEF_SERVER="https://api.opscode.com/organizations/evertrue"
+export KNIFE_CLIENT_KEY="$HOME/.chef/jeffbyrnes.pem"
+export KNIFE_NODE_NAME="jeffbyrnes"
+export KNIFE_VALIDATION_CLIENT_NAME="evertrue-validator"
+export KNIFE_VALIDATION_CLIENT_KEY="$HOME/.chef/eertrue-validator.pem"
+export ET_EMAIL="jeff@evertrue.com"
+
 # AWS stuff
 export JAVA_HOME="$(/usr/libexec/java_home)"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
