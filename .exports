@@ -36,7 +36,7 @@ export KNIFE_CHEF_SERVER="https://api.opscode.com/organizations/evertrue"
 export KNIFE_CLIENT_KEY="$HOME/.chef/jeffbyrnes.pem"
 export KNIFE_NODE_NAME="jeffbyrnes"
 export KNIFE_VALIDATION_CLIENT_NAME="evertrue-validator"
-export KNIFE_VALIDATION_CLIENT_KEY="$HOME/.chef/eertrue-validator.pem"
+export KNIFE_VALIDATION_CLIENT_KEY="$HOME/.chef/evertrue-validator.pem"
 export ET_EMAIL="jeff@evertrue.com"
 
 # AWS stuff
