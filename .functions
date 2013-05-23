@@ -164,28 +164,36 @@ function unquarantine() {
 	done
 }
 
+function et-deploy() {
+	# $1 = repo to deploy
+	# $2 = instance name
+	echo $1
+	deploy -p $1 -g origin/master -n $2
+}
+
 # Deploy a repo to all instances
 # Usage: `et-deploy-all core` or `et-deploy-all api`
 function et-deploy-all() {
-	api_hosts=( 'dev-api-2' 'prod-api-1' 'prod-api-2' ) # stage-api-1
-	core_hosts=( 'stage-dashboard-1' 'prod-dashboard-1' 'stage-mobile-1' 'prod-mobile-1' )
-	web_hosts=( 'dev-web-1' 'stage-web-4' 'prod-web-3' )
+	api_hosts=( 'prod-api-1' 'prod-api-2' ) # stage-api-1 dev-api-2
+	# Web is handled super manually, this isn't used right now
+	web_hosts=( 'prod-web-3' ) # stage-web-4 dev-web-1
+	dashboard_hosts=( 'prod-dashboard-1' ) # stage-dashboard-1
 	gateway_hosts=( 'prod' 'stage' )
-	misc_hosts=( 'trubot-1' 'spider-queen' 'andrew-api-1' 'upload-beta-2' )
+	misc_hosts=( 'trubot-1' 'spider-queen' 'upload-beta-2' 'stage-api-1' 'stage-web-4', 'stage-dashboard-1' 'dev-api-2' 'dev-web-1' )
 
-	# Deploy everything to API hosts
-	for host in "${api_hosts[@]}"
-	do
-		echo $host
-		deploy -p $1 -g origin/master -n $host
-	done
-
-	# Exclude api & web from non-API instances
-	if [ "$1" != "api" ] && [ "$1" != "web" ]; then
-		for host in "${core_hosts[@]}"
+	# Deploy API & core to API hosts
+	if [ "$1" == "api" ] || [ "$1" == "core" ]; then
+		for host in "${api_hosts[@]}"
 		do
-			echo $host
-			deploy -p $1 -g origin/master -n $host
+			et-deploy($1 $host)
+		done
+	fi
+
+	# Deploy dashboard
+	if [ "$1" == "dashboard" ]; then
+		for host in "${dashboard_hosts[@]}"
+		do
+			et-deploy($1 $host)
 		done
 	fi
 
@@ -193,14 +201,12 @@ function et-deploy-all() {
 	if [ "$1" == "puppet" ]; then
 		for host in "${gateway_hosts[@]}"
 		do
-			echo $host
-			deploy -p $1 -g origin/master -n $host
+			et-deploy($host)
 		done
 
 		for host in "${misc_hosts[@]}"
 		do
-			echo $host
-			deploy -p $1 -g origin/master -n $host
+			et-deploy($host)
 		done
 	fi
 }
