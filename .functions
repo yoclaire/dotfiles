@@ -269,7 +269,7 @@ function et-deploy-all() {
 	if [ "$1" == "api" ] || [ "$1" == "core" ]; then
 		for host in "${api_hosts[@]}"
 		do
-			et-deploy($1 $host)
+			et-deploy $1 $host
 		done
 	fi
 
@@ -277,7 +277,7 @@ function et-deploy-all() {
 	if [ "$1" == "dashboard" ]; then
 		for host in "${dashboard_hosts[@]}"
 		do
-			et-deploy($1 $host)
+			et-deploy $1 $host
 		done
 	fi
 
@@ -285,12 +285,12 @@ function et-deploy-all() {
 	if [ "$1" == "puppet" ]; then
 		for host in "${gateway_hosts[@]}"
 		do
-			et-deploy($host)
+			et-deploy $1 $host
 		done
 
 		for host in "${misc_hosts[@]}"
 		do
-			et-deploy($host)
+			et-deploy $1 $host
 		done
 	fi
 }
