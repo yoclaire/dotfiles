@@ -247,6 +247,7 @@ function unquarantine() {
 function gi() {
 	local IFS=,
 	eval npm install --save-dev grunt-{"$*"}
+}
 
 function et-deploy() {
 	# $1 = repo to deploy
