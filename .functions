@@ -252,7 +252,7 @@ function gi() {
 function et-deploy() {
 	# $1 = repo to deploy
 	# $2 = instance name
-	echo $1
+	echo $2
 	deploy -p $1 -g origin/master -n $2
 }
 
