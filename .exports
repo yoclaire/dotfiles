@@ -24,6 +24,9 @@ export GREP_OPTIONS="--color=auto"
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+# Use Homebrew's directories for rbenv instead of ~/.rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+
 # Set the directory defaults for Sass
 export SASS_DIRECTORY="_scss"
 export CSS_DIRECTORY="css"

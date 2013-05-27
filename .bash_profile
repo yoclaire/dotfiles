@@ -57,5 +57,8 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 	GIT_PS1_SHOWDIRTYSTATE=true
 fi
 
+# Enable rbenv shims and autocompletion
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 # Source the Twig bash completion file
 [[ -s ~/.twig/twig-completion.bash ]] && source ~/.twig/twig-completion.bash
