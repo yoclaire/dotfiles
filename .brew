@@ -100,6 +100,9 @@ gem install \
 	bourbon \
 	bundler \
 	compass \
+	chef \
+	knife-ec2 \
+	knife-github-cookbooks \
 	capistrano \
 	capistrano-ext \
 	capistrano-gitflow \
@@ -112,6 +115,7 @@ gem install \
 	markdown2confluence \
 	oily_png \
 	puppet-lint \
+	ruby-lint \
 	therubyracer \
 	twig
 
