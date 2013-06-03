@@ -289,6 +289,11 @@ function et-deploy-all() {
 			et-deploy $1 $host
 		done
 
+		for host in "${web_hosts[@]}"
+		do
+			et-deploy $1 $host
+		done
+
 		for host in "${misc_hosts[@]}"
 		do
 			et-deploy $1 $host
