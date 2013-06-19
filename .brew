@@ -6,16 +6,23 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
+# Tap additional Homebrew repositories
+brew tap homebrew/dupes
+brew tap homebrew/versions
+brew tap phinze/homebrew-cask
+# brew tap josegonzalez/homebrew-php
+
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
 echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
+
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
-# Install Bash 4
-brew install bash
 
-# Install wget with IRI support
-brew install wget --enable-iri
+# Install Bash 4, completion, and Generic Colouriser
+brew install bash
+brew install bash-completion
+brew install grc
 
 # Install RingoJS and Narwhal
 # Note that the order in which these are installed is important; see http://git.io/brew-narwhal-ringo.
@@ -23,14 +30,17 @@ brew install wget --enable-iri
 # brew install narwhal
 
 # Install more recent versions of some OS X tools
-brew tap homebrew/dupes
 brew install homebrew/dupes/grep
-# brew tap josegonzalez/homebrew-php
-# brew install php54
-
-# These two formulae didn’t work well last time I tried them:
-# brew install homebrew/dupes/vim
+# This formula didn’t work well last time I tried them:
 # brew install homebrew/dupes/screen
+brew install vim
+# Install wget with IRI support
+brew install wget --enable-iri
+brew install python
+
+# Updated versions of server software
+# brew install php54
+# brew install mysql
 
 # Install other useful binaries
 brew install ack
@@ -45,12 +55,9 @@ brew install node
 # brew install tree
 # brew install webkit2png
 # brew install zopfli
-
-brew tap homebrew/versions
 # brew install lua52
 
 # Install native apps
-brew tap phinze/homebrew-cask
 brew install brew-cask
 
 function installcask() {
