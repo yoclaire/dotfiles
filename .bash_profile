@@ -47,9 +47,19 @@ which grunt > /dev/null && eval "$(grunt --completion=bash)"
 # Source SCM Breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
-# Source bash completion for all installed at /usr/local/etc/bash_completion.d
+# Bash completion for brew-installed packages
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
+fi
+
+# Brew completion
+if [ -f $(brew --prefix)/Library/Contributions/brew_bash_completion.sh ]; then
+    . $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
+fi
+
+# Generic Colouriser
+if [ -f $(brew --prefix)/etc/grc.bashrc ]; then
+    . $(brew --prefix)/etc/grc.bashrc
 fi
 
 # Set options for Git bash completion
