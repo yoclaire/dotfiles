@@ -54,6 +54,10 @@ fi
 
 # Set options for Git bash completion
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+	# Enable git command  autocompletion for 'g' as well
+	complete -o default -o nospace -F _git g
+
+	# Set EnvVar so prompt displays Git status
 	GIT_PS1_SHOWDIRTYSTATE=true
 fi
 
