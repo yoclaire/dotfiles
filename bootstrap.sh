@@ -1,11 +1,30 @@
 #!/usr/bin/env bash
 cd "$(dirname "${BASH_SOURCE}")"
-git pull origin master
+
+echo "Self update"
+git pull
+
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-		--exclude "README.md" --exclude "LICENSE-GPL.txt" \
-		--exclude "LICENSE-MIT.txt" -av --no-perms . ~
+	dirss=`find . -type d \( ! -name ".git*" ! -path "*/.git/*" \) | cut -c 3-`
+
+	files=`find . -type f \( ! -path "*/.git/*" \
+							 ! -name "README.md" \
+							 ! -name ".DS_Store" \
+							 ! -name "bootstrap.sh" \) | cut -c 3-`
+
+	echo "Create directory hierarchy"
+	for d in $dirss
+	do
+		mkdir -p "$HOME/$d"
+	done
+
+	echo "Setting up symlinks"
+	for f in $files
+	do
+		ln -snf "$PWD/$f" "$HOME/$f"
+	done
 }
+
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt
 else
