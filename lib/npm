@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ./utils
+
 run_npm() {
     # Check for npm
     if type_exists 'npm'; then
