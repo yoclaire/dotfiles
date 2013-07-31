@@ -72,6 +72,7 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 fi
 
 # Enable rbenv shims and autocompletion
+# github.com/sstephenson/rbenv/
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Enable Bower autocompletion
