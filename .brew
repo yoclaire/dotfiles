@@ -61,11 +61,7 @@ brew install node
 brew install brew-cask
 
 function installcask() {
-	if brew cask info "${@}" | grep "Not installed" > /dev/null; then
-		brew cask install "${@}"
-	else
-		echo "${@} is already installed."
-	fi
+	brew cask install "${@}" 2> /dev/null
 }
 
 installcask dropbox
