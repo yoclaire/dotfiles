@@ -44,7 +44,7 @@ export KNIFE_CLIENT_KEY="$HOME/.chef/jeffbyrnes.pem"
 export KNIFE_NODE_NAME="jeffbyrnes"
 export KNIFE_VALIDATION_CLIENT_NAME="evertrue-validator"
 export KNIFE_VALIDATION_CLIENT_KEY="$HOME/.chef/evertrue-validator.pem"
-export AWS_SSH_KEY="jeff-id_rsa"
+export AWS_SSH_KEY="aws_dev"
 export ET_EMAIL="jeff@evertrue.com"
 export CHEF_REPO="$HOME/dev/server-chef"
 
