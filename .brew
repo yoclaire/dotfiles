@@ -80,6 +80,16 @@ installcask transmission
 installcask virtualbox
 installcask vlc
 installcask alfred
+installcask hip-chat
+installcask codekit
+installcask daisy-disk
+installcask skype
+installcask comic-book-lover
+installcask comic-book-lover-sync
+installcask ibank
+installcask launch-control
+installcask sitesucker
+installcask toggl-desktop
 # Add Caskroom to alfred search paths
 brew cask alfred link
 
