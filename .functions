@@ -277,22 +277,13 @@ function et-deploy() {
 # Usage: `et-deploy-all core` or `et-deploy-all api`
 function et-deploy-all() {
 	api_hosts=( 'prod-api-1' 'prod-api-2' ) # 'stage-api-1' 'dev-api-2'
-	web_hosts=( 'prod-web-3' ) # 'stage-web-4' dev-web-1
-	dashboard_hosts=( 'prod-dashboard-1' ) # 'stage-dashboard-1'
+	web_hosts=( 'prod-web-3' ) # 'stage-web-4'
 	gateway_hosts=( 'prod' 'stage' )
-	misc_hosts=( 'trubot-1' 'spider-queen-bigger' 'upload-3' 'stage-api-1' 'stage-web-4' 'stage-dashboard-1' 'dev-api-2' ) # 'dev-web-1'
+	misc_hosts=( 'trubot-1' 'spider-queen-bigger' 'upload-3' 'stage-api-1' 'stage-web-4' 'dev-api-2' )
 
 	# Deploy API, core, & puppet to API hosts
 	if [ "$1" == "api" ] || [ "$1" == "core" ] || [ "$1" == "puppet" ]; then
 		for host in "${api_hosts[@]}"
-		do
-			et-deploy $1 $host
-		done
-	fi
-
-	# Deploy dashboard & puppet to dashboard hosts
-	if [ "$1" == "dashboard" ] || [ "$1" == "puppet" ]; then
-		for host in "${dashboard_hosts[@]}"
 		do
 			et-deploy $1 $host
 		done
