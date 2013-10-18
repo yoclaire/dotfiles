@@ -90,6 +90,10 @@ installcask ibank
 installcask launch-control
 installcask sitesucker
 installcask toggl-desktop
+installcask diffmerge
+isntallcask little-snitch
+installcask virtualbox
+
 # Add Caskroom to alfred search paths
 brew cask alfred link
 
