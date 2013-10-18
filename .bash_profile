@@ -68,6 +68,11 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 	GIT_PS1_SHOWDIRTYSTATE=true
 fi
 
+# Enable aws-cli completion
+if [ -f /usr/local/bin/aws_completer ]; then
+	complete -C aws_completer aws
+fi
+
 # Enable rbenv shims and autocompletion
 # github.com/sstephenson/rbenv/
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
