@@ -160,6 +160,9 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 # Generic alias to pass any notify-send bits to growlnotify
 alias notify-send="growlnotify -a Terminal -m "
 
+# Shortcut for grabbing my default pubkey
+alias pubkey="pbcopy < ~/.ssh/id_rsa.pub"
+
 # Tabfixing, currently are set to dry-run
 alias fix-tabs-4-spaces="tabfix --line-separator=Unix -r --no-backup -m *.php -m *.html -m *.htm -m *.txt -m *.js -m *.md -m *.sql -m *.sh"
 alias fix-tabs-2-spaces="tabfix --line-separator=Unix -s 2 -r --no-backup -m *.rb -m *.erb -m *.json -m *.yml"
