@@ -1,0 +1,40 @@
+# Install native apps
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+function installcask() {
+	brew cask install "${@}" 2> /dev/null
+}
+
+installcask dropbox
+installcask google-chrome
+installcask google-chrome-canary
+installcask imagealpha
+installcask imageoptim
+installcask iterm2
+# installcask macvim
+# installcask miro-video-converter
+installcask sublime-text
+# installcask the-unarchiver
+# installcask tor-browser
+installcask transmission
+# installcask ukelele
+installcask virtualbox
+installcask vlc
+installcask alfred
+installcask hip-chat
+installcask codekit
+# installcask daisy-disk
+installcask skype
+installcask comic-book-lover
+installcask comic-book-lover-sync
+installcask ibank
+installcask launch-control
+installcask sitesucker
+installcask toggl-desktop
+installcask diffmerge
+isntallcask little-snitch
+installcask virtualbox
+
+# Add Caskroom to alfred search paths
+brew cask alfred link
