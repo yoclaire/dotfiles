@@ -9,7 +9,7 @@ brew upgrade
 # Tap additional Homebrew repositories
 brew tap homebrew/dupes
 brew tap homebrew/versions
-# brew tap josegonzalez/homebrew-php
+brew tap josegonzalez/homebrew-php
 
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
@@ -39,7 +39,7 @@ brew install vim
 brew install python
 
 # Updated versions of server software
-# brew install php54
+# brew install php55
 # brew install mysql
 
 # Install other useful binaries
