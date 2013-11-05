@@ -134,7 +134,10 @@ gem install \
 	puppet-lint \
 	ruby-lint \
 	therubyracer \
-	twig
+	twig \
+	idid \
+	gemfury \
+	awsutils
 
 # Remove outdated versions from the cellar
 brew cleanup
