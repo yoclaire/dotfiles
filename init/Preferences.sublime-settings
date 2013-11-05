@@ -1,36 +1,78 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Blackboard.tmTheme",
+	"bold_folder_labels": true,
+	"caret_style": "phase",
+	"color_scheme": "Packages/User/solarized (light).tmtheme",
 	"default_line_ending": "unix",
 	"detect_indentation": false,
 	"draw_white_space": "all",
-	"ensure_newline_at_eof_on_save": false,
+	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
-		".DS_Store",
-		"Desktop.ini",
 		"*.pyc",
-		"._*",
-		"Thumbs.db",
-		".Spotlight-V100",
-		".Trashes"
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.pdf",
+		"*.flv",
+		"*.fla",
+		"*.bmp",
+		".tags",
+		".tags_sorted_by_file",
+		".tm_properties",
+		"sess_*"
+	],
+	"file_include_patterns":
+	[
+		"wp-config.php"
 	],
 	"folder_exclude_patterns":
 	[
+		".svn",
 		".git",
-		"node_modules"
+		".hg",
+		"CVS",
+		".bundle",
+		"log",
+		"tmp",
+		".sass-cache",
+		"node_modules",
+		"bower_components",
+		"vendor"
 	],
+	"font_face": "Fira Mono OT",
 	"font_size": 15.0,
+	"highlight_line": true,
 	"highlight_modified_tabs": true,
-	"hot_exit": false,
-	"line_padding_bottom": 6,
-	"matchBracketsAngle": true,
-	"remember_open_files": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_to_bracket": false,
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
 	"rulers":
 	[
 		80
 	],
-	"tab_size": 2,
-	"translate_tabs_to_spaces": false,
-	"trim_trailing_white_space_on_save": true,
-	"word_wrap": true
+	"tab_completion": true,
+	"tab_size": 4,
+	"theme": "Soda Light.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true
 }
