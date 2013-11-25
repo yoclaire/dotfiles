@@ -52,6 +52,7 @@
 	attributesfile = ~/.gitattributes
 	# Treat all kinds of trailing whitespace as an error.
 	whitespace = trailing-space
+	trustctime = false
 
 [color]
 	# Use colors in Git commands that are capable of colored output when
