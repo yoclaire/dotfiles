@@ -15,6 +15,9 @@ tabSize         = 4
 softWrap        = true
 wrapColumn      = "Use Window Frame"
 
+# See github.com/elia/avian-missing.tmbundle#strip-trailing-whitespace-on-save
+TM_STRIP_WHITESPACE_ON_SAVE = true
+
 # File type specific configuration
 [ text ]
 softTabs        = true
