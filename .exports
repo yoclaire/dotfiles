@@ -50,7 +50,7 @@ export CHEF_REPO="$HOME/dev/server-chef"
 
 # AWS stuff
 export JAVA_HOME="$(/usr/libexec/java_home)"
-export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.12.0/libexec"
 export AWS_ELASTICACHE_HOME="/usr/local/Cellar/aws-elasticache/1.7.000/libexec"
 export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.12.002/libexec"
 export AWS_ELB_HOME="/usr/local/Library/LinkedKegs/elb-tools/jars"
