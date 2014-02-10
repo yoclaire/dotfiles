@@ -44,19 +44,21 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # Source SCM Breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
+BREW_PREFIX=`brew --prefix`
+
 # Bash completion for brew-installed packages
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+if [ -f ${BREW_PREFIX}/etc/bash_completion ]; then
+  . ${BREW_PREFIX}/etc/bash_completion
 fi
 
 # Brew completion
-if [ -f $(brew --prefix)/Library/Contributions/brew_bash_completion.sh ]; then
-    . $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
+if [ -f ${BREW_PREFIX}/Library/Contributions/brew_bash_completion.sh ]; then
+    . ${BREW_PREFIX}/Library/Contributions/brew_bash_completion.sh
 fi
 
 # Generic Colouriser
-if [ -f $(brew --prefix)/etc/grc.bashrc ]; then
-    . $(brew --prefix)/etc/grc.bashrc
+if [ -f ${BREW_PREFIX}/etc/grc.bashrc ]; then
+    . ${BREW_PREFIX}/etc/grc.bashrc
 fi
 
 # Set options for Git bash completion
