@@ -336,21 +336,17 @@ function et-deploy() {
 # Deploy a repo to all instances
 # Usage: `et-deploy-all core` or `et-deploy-all api`
 function et-deploy-all() {
-	api_hosts=( 'prod-api-1' 'prod-api-2' ) # 'stage-api-1' 'dev-api-2'
-	web_hosts=( 'prod-web-3' ) # 'stage-web-4'
+	api_hosts=( 'prod-api-1' 'prod-api-2' 'stage-api-1' )
+	web_hosts=( 'prod-web-3' 'stage-web-4' )
 	gateway_hosts=( 'prod' 'stage' )
-	misc_hosts=( 'trubot-1' 'spider-queen-bigger' 'upload-3' 'stage-api-1' 'stage-web-4' 'dev-api-2' )
+	misc_hosts=( 'trubot-1' 'spider-queen-bigger' 'upload-3' )
 
-	# Deploy API, core, & puppet to API hosts
-	if [ "$1" == "api" ] || [ "$1" == "core" ] || [ "$1" == "puppet" ]; then
+	if [ "$1" == "puppet" ]; then
 		for host in "${api_hosts[@]}"
 		do
 			et-deploy $1 $host
 		done
-	fi
 
-	# Don't deploy anything but puppet to gateways & helper instances
-	if [ "$1" == "puppet" ]; then
 		for host in "${gateway_hosts[@]}"
 		do
 			et-deploy $1 $host
