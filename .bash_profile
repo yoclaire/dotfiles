@@ -84,3 +84,7 @@ if which bower > /dev/null; then eval "$(bower completion)"; fi
 
 # Source the Twig bash completion file
 [[ -s ~/.twig/twig-completion.bash ]] && source ~/.twig/twig-completion.bash
+
+# Source `z` for jumping around
+# github.com/rupa/z
+[[ -s ${BREW_PREFIX}/etc/profile.d/z.sh ]] && source ${BREW_PREFIX}/etc/profile.d/z.sh
