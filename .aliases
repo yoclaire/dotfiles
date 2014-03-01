@@ -173,6 +173,9 @@ alias pubkey="pbcopy < ~/.ssh/id_rsa.pub"
 alias fix-tabs-4-spaces="tabfix --line-separator=Unix -r --no-backup -m *.php -m *.html -m *.htm -m *.txt -m *.js -m *.md -m *.sql -m *.sh"
 alias fix-tabs-2-spaces="tabfix --line-separator=Unix -s 2 -r --no-backup -m *.rb -m *.erb -m *.json -m *.yml"
 
+# Easy-peasy pull requests with github.com/github/hub
+alias pr="hub pull-request -o"
+
 # EverTrue handy bits
 alias prod-api-httpd-restart="ssh -t prod-api-1 'sudo service httpd restart' && ssh -t prod-api-2 'sudo service httpd restart'"
 alias update_cookbooks="find ${HOME}/dev/server-chef/cookbooks/ -type d -maxdepth 1 -exec sh -c '(cd {} && pwd && git pull)' ';'"
