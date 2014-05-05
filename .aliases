@@ -176,6 +176,9 @@ alias fix-tabs-2-spaces="tabfix --line-separator=Unix -s 2 -r --no-backup -m *.r
 # Easy-peasy pull requests with github.com/github/hub
 alias pr="hub pull-request -o"
 
+# Less keystrokes for invoking Bundler-installed binaries
+alias be="bundle exec"
+
 # EverTrue handy bits
 alias prod-api-httpd-restart="ssh -t prod-api-1 'sudo service httpd restart' && ssh -t prod-api-2 'sudo service httpd restart'"
 alias update_cookbooks="find ${HOME}/dev/server-chef/cookbooks/ -type d -maxdepth 1 -exec sh -c '(cd {} && pwd && git pull)' ';'"
