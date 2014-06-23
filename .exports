@@ -47,6 +47,7 @@ export AWS_SSH_KEY="aws_dev"
 export AWS_SSH_KEY_ID=$AWS_SSH_KEY
 export ET_EMAIL="jeff@evertrue.com"
 export CHEF_REPO="$HOME/dev/server-chef"
+export CHEF_COOKBOOKS="${CHEF_REPO}/cookbooks"
 
 # AWS stuff
 export JAVA_HOME="$(/usr/libexec/java_home)"
