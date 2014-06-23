@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-rbenv install 2.0.0-p353
-rbenv global 2.0.0-p353
+rbenv install 2.1.1
+rbenv global 2.1.1
 
 # Uninstall all gems
 for i in $(gem list --no-versions); do gem uninstall -aIx "$i"; done
