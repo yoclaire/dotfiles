@@ -11,25 +11,17 @@ gem update --system
 
 # Reinstall all gems
 gem install \
+	aws-sdk
 	aws-s3 \
 	awsutils \
-	berkshelf \
 	bourbon \
 	bundler \
-	capistrano \
-	capistrano-ext \
-	capistrano-gitflow \
-	chef \
-	chef-zero \
 	colored \
 	colorize \
 	compass \
-	deadweight \
-	foodcritic \
 	gemfury \
 	idid \
-	knife-ec2 \
-	knife-github-cookbooks \
+	et-knife-ec2 \
 	less \
 	localtunnel \
 	markdown2confluence \
@@ -38,5 +30,4 @@ gem install \
 	railsless-deploy \
 	rubocop \
 	ruby-lint \
-	therubyracer \
-	twig
+	therubyracer
