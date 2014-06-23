@@ -170,8 +170,8 @@ alias notify-send="growlnotify -a Terminal -m "
 alias pubkey="pbcopy < ~/.ssh/id_rsa.pub"
 
 # Tabfixing, currently are set to dry-run
-alias fix-tabs-4-spaces="tabfix --line-separator=Unix -r --no-backup -m *.php -m *.html -m *.htm -m *.txt -m *.js -m *.md -m *.sql -m *.sh"
-alias fix-tabs-2-spaces="tabfix --line-separator=Unix -s 2 -r --no-backup -m *.rb -m *.erb -m *.json -m *.yml"
+alias fix-tabs-4-spaces="tabfix --line-separator=Unix -r -m *.php,*.html,*.htm,*.txt,*.js,*.md,*.sql,*.sh"
+alias fix-tabs-2-spaces="tabfix --line-separator=Unix -s 2 -r -m *.rb,*.erb,*.json,*.yml"
 
 # Easy-peasy pull requests with github.com/github/hub
 alias pr="hub pull-request -o"
