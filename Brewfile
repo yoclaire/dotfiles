@@ -1,3 +1,6 @@
+# Install command-line tools using Homebrew
+# Usage: `brew bundle Brewfile`
+
 # Make sure we’re using the latest Homebrew
 update
 
@@ -7,11 +10,20 @@ upgrade
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 install coreutils
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+#sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+
+# Install some other useful utilities like `sponge`
+install moreutils
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
 install findutils
-# Install Bash 4, completion, and Generic Colouriser
+# Install GNU `sed`, overwriting the built-in `sed`
+install gnu-sed --default-names
+# Install Bash 4
+# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
 install bash
 install bash-completion
+
+# Install Generic Colouriser
 install grc
 
 # Install wget with IRI support
@@ -24,33 +36,29 @@ install wget --enable-iri
 
 # Install more recent versions of some OS X tools
 install vim --override-system-vi
-tap homebrew/dupes
 install homebrew/dupes/grep
-tap josegonzalez/homebrew-php
-install php53
+install homebrew/dupes/screen
+install homebrew/php/php53 --with-gmp
 install mysql
 install python
 
-# This formula didn’t work well last time I tried it:
-#install homebrew/dupes/screen
-
 # Install other useful binaries
 install ack
-# install exiv2
+#install exiv2
 install git
-# install imagemagick
+install imagemagick --with-webp
 # install lynx
-install node
+install node # This installs `npm` too using the recommended installation method
+install p7zip
 install pigz
+install pv
 # install rename
 # install rhino
 install tree
 # install webkit2png
 # install zopfli
-install p7zip
 
-# tap homebrew/versions
-# install lua52
+install homebrew/versions/lua52
 
 # Install hub github.com/defunkt/hub
 install hub
