@@ -164,7 +164,7 @@ alias fix-tabs-4-spaces="tabfix --line-separator=Unix -r -m *.php,*.html,*.htm,*
 alias fix-tabs-2-spaces="tabfix --line-separator=Unix -s 2 -r -m *.rb,*.erb,*.json,*.yml"
 
 # Easy-peasy pull requests with github.com/github/hub
-alias pr="hub pull-request -o"
+alias pr="git pull-request -o"
 
 # Less keystrokes for invoking Bundler-installed binaries
 alias be="bundle exec"
