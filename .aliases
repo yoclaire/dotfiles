@@ -151,7 +151,7 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias reload="exec $SHELL -l"
 
 # Faster npm for Europeans
-command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu/"
+# command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu/"
 
 # Generic alias to pass any notify-send bits to growlnotify
 alias notify-send="growlnotify -a Terminal -m "
