@@ -23,3 +23,44 @@ export GREP_OPTIONS="--color=auto";
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
+
+# Use Homebrew's directories for rbenv instead of ~/.rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+
+# Set the directory defaults for Sass
+export SASS_DIRECTORY="_scss"
+export CSS_DIRECTORY="css"
+
+# Add DocBook package for XML generation (used for git-subtree)
+export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
+
+# EverTrue tools
+export MAVEN_HOME="/usr/local/share/maven"
+
+# Opscode chef configurations.
+export KNIFE_CHEF_SERVER="https://api.opscode.com/organizations/evertrue"
+export KNIFE_CLIENT_KEY="$HOME/.chef/jeffbyrnes.pem"
+export KNIFE_NODE_NAME="jeffbyrnes"
+export KNIFE_VALIDATION_CLIENT_NAME="evertrue-validator"
+export KNIFE_VALIDATION_CLIENT_KEY="$HOME/.chef/evertrue-validator.pem"
+export AWS_SSH_KEY="aws_dev"
+export AWS_SSH_KEY_ID=$AWS_SSH_KEY
+export AWS_KEYPAIR_NAME="travis_ci_ec2"
+export EC2_SSH_KEY_PATH="$HOME/.ssh/${AWS_KEYPAIR_NAME}.pem"
+export ET_EMAIL="jeff@evertrue.com"
+export CHEF_REPO="$HOME/dev/server-chef"
+export CHEF_COOKBOOKS="${CHEF_REPO}/cookbooks"
+
+# AWS stuff
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export EC2_HOME="$(brew --prefix ec2-api-tools)/libexec"
+export AWS_ELASTICACHE_HOME="$(brew --prefix aws-elasticache)/libexec"
+export AWS_RDS_HOME="$(brew --prefix rds-command-line-tools)/libexec"
+# export AWS_ELB_HOME="/usr/local/Library/LinkedKegs/elb-tools/jars"
+# export EC2_AMITOOL_HOME="${BREW_PREFIX}/Cellar/ec2-ami-tools/1.5.3/libexec"
+# export AWS_CLOUDWATCH_HOME="/usr/local/Library/LinkedKegs/cloud-watch/jars"
+# export SERVICE_HOME="$AWS_CLOUDWATCH_HOME"
+# export AWS_SNS_HOME="/usr/local/Library/LinkedKegs/aws-sns-cli/jars"
+# export AWS_IAM_HOME="/usr/local/opt/aws-iam-tools/jars"
+export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
+export AWS_DEFAULT_REGION="us-east-1"
