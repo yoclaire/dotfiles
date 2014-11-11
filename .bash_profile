@@ -38,10 +38,9 @@ if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completio
 fi;
 
 # Alias hub to git for GitHub CLI magic
-# eval "$(hub alias -s)"
-
-# Alias gh to git for GitHUb CLI magic
-eval "$(gh alias -s)"
+if which hub > /dev/null; then
+	eval "$(hub alias -s)"
+fi;
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
