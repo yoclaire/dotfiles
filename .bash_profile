@@ -90,6 +90,10 @@ fi
 # github.com/sstephenson/rbenv/
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# ChefDK binaries
+# Added after rbenv to avoid path issues
+PATH="/opt/chefdk/bin:$PATH"
+
 # Enable Bower autocompletion
 if which bower > /dev/null; then eval "$(bower completion)"; fi
 
