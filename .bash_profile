@@ -94,6 +94,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Added after rbenv to avoid path issues
 PATH="/opt/chefdk/bin:$PATH"
 
+# chef gem-installed binaries
+PATH="$HOME/.chefdk/gem/ruby/2.1.0/bin:$PATH"
+
 # Enable Bower autocompletion
 if which bower > /dev/null; then eval "$(bower completion)"; fi
 
