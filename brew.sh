@@ -26,8 +26,8 @@ brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
 # Install Bash 4.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
+echo "Note: don’t forget to add '/usr/local/bin/bash' to '/etc/shells' before
+running 'chsh'."
 brew install bash
 brew tap homebrew/versions
 brew install bash-completion2
