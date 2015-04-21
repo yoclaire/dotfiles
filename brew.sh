@@ -32,6 +32,9 @@ brew install bash
 brew tap homebrew/versions
 brew install bash-completion2
 
+# Install Generic Colouriser
+brew install grc
+
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
