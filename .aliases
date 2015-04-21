@@ -169,6 +169,11 @@ alias pr="git pull-request -o"
 # Less keystrokes for invoking Bundler-installed binaries
 alias be="bundle exec"
 
+# github.com/nvbn/thefuck
+alias fuck="$(thefuck $(fc -ln -1))"
+# You can use whatever you want as an alias, like for mondays:
+alias FUCK='fuck'
+
 # EverTrue handy bits
 alias prod-api-httpd-restart="ssh -t prod-api-1 'sudo service httpd restart' && ssh -t prod-api-2 'sudo service httpd restart'"
 alias update_cookbooks="find ${HOME}/dev/server-chef/cookbooks/ -type d -maxdepth 1 -exec sh -c '(cd {} && pwd && git pull)' ';'"
