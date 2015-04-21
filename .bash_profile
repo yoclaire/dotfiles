@@ -99,7 +99,7 @@ PATH="/opt/chefdk/bin:$PATH"
 PATH="$HOME/.chefdk/gem/ruby/2.1.0/bin:$PATH"
 
 # Enable Bower autocompletion
-if which bower > /dev/null; then eval "$(bower completion)"; fi
+# if which bower > /dev/null; then eval "$(bower completion)"; fi
 
 # Source the Twig bash completion file
 [[ -s ~/.twig/twig-completion.bash ]] && source ~/.twig/twig-completion.bash
