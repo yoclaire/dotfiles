@@ -50,6 +50,12 @@ export ET_EMAIL="jeff@evertrue.com"
 export CHEF_REPO="$HOME/dev/server-chef"
 export CHEF_COOKBOOKS="${CHEF_REPO}/cookbooks"
 
+# docker machine
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.100:2376"
+export DOCKER_CERT_PATH="$HOME/.docker/machine/machines/default"
+export DOCKER_MACHINE_NAME="default"
+
 # AWS stuff
 export JAVA_HOME="$(/usr/libexec/java_home)"
 export EC2_HOME="$(brew --prefix ec2-api-tools)/libexec"
