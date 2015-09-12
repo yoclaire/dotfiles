@@ -110,3 +110,5 @@ PATH="$HOME/.chefdk/gem/ruby/2.1.0/bin:$PATH"
 # Source `z` for jumping around
 # github.com/rupa/z
 [[ -s ${BREW_PREFIX}/etc/profile.d/z.sh ]] && source ${BREW_PREFIX}/etc/profile.d/z.sh
+
+test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
