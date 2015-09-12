@@ -8,8 +8,8 @@ calc() {
 		# improve the output for decimal numbers
 		printf "$result" |
 		sed -e 's/^\./0./' \       # add "0" for cases like ".5"
-		    -e 's/^-\./-0./' \     # add "0" for cases like "-.5"
-		    -e 's/0*$//;s/\.$//';  # remove trailing zeros
+			-e 's/^-\./-0./' \     # add "0" for cases like "-.5"
+			-e 's/0*$//;s/\.$//';  # remove trailing zeros
 	else
 		printf "$result";
 	fi;
@@ -255,17 +255,17 @@ tre() {
 # (by default delete all `.DS_Store` files)
 # Thanks @wilto - github.com/Wilto/dotfiles/blob/master/bash/functions/cleanup
 cleanup() {
-    local q="${1:-*.DS_Store}"
-    find . -type f -name "$q" -ls -delete
+	local q="${1:-*.DS_Store}"
+	find . -type f -name "$q" -ls -delete
 }
 
 docker() {
-  if [ "$(docker-machine status default)" != "Running" ]; then
-    echo "WARNING! Starting Default Docker Machine."
+	if [ "$(docker-machine status default)" != "Running" ]; then
+		echo "WARNING! Starting Default Docker Machine."
 
-    docker-machine start default | logger
-    eval "$(docker-machine env default)"
-  fi
+		docker-machine start default | logger
+		eval "$(docker-machine env default)"
+	fi
 
-  command docker "$@"
+	command docker "$@"
 }
