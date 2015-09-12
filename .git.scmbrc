@@ -21,7 +21,7 @@ export git_setup_aliases="yes"
 export GIT_REPO_DIR="$HOME/dev"
 # Add the full paths of any extra repos to GIT_REPOS, separated with ':'
 # e.g. "/opt/rails/project:/opt/rails/another project:$HOME/other/repo"
-export GIT_REPOS="$HOME/Sites/aws-jb-chef:$HOME/Sites/bedpost:$HOME/Sites/dotfiles:$HOME/Sites/jeffbyrn.es"
+export GIT_REPOS="$HOME/Sites/aws-jb-chef:$HOME/Sites/dotfiles"
 export git_status_command="git_status_shortcuts"
 # Alias
 git_index_alias="c"    # Switch to a repo in the (c)ode directory
