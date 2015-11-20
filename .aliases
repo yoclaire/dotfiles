@@ -168,6 +168,5 @@ alias pr="git pull-request -o"
 alias be="bundle exec"
 
 # EverTrue handy bits
-alias prod-api-httpd-restart="ssh -t prod-api-1 'sudo service httpd restart' && ssh -t prod-api-2 'sudo service httpd restart'"
 alias update_cookbooks="find ${HOME}/dev/server-chef/cookbooks/ -type d -maxdepth 1 -exec sh -c '(cd {} && pwd && git pull)' ';'"
 alias ec2ls="knife ec2 server list --no-image --no-key --vpc --tags Type"
