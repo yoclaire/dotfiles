@@ -139,11 +139,6 @@
 	untracked = cyan
 	branch = magenta
 
-[merge]
-
-	# Include summaries of merged commits in newly created merge commit messages
-	log = true
-
 [diff]
 
 	# Detect copies as well as renames
@@ -167,8 +162,15 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
 
+[help]
+
+	# Automatically correct and execute mistyped commands
+	autocorrect = 1
+
 [merge]
 
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
 	tool = diffmerge
 
 [mergetool]
@@ -202,6 +204,8 @@
 	# installations. To use `simple` instead, add this to your `~/.extra` file:
 	# `git config --global push.default simple`. See http://git.io/mMah-w.
 	default = matching
+	# Make `git push` push relevant annotated tags when pushing branches out.
+	followTags = true
 
 # URL shorthands
 
