@@ -57,11 +57,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # Source SCM Breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
-# Brew completion
-if [ -f ${BREW_PREFIX}/Library/Contributions/brew_bash_completion.sh ]; then
-    . ${BREW_PREFIX}/Library/Contributions/brew_bash_completion.sh
-fi
-
 # Generic Colouriser
 if [ -f ${BREW_PREFIX}/etc/grc.bashrc ]; then
     . ${BREW_PREFIX}/etc/grc.bashrc
