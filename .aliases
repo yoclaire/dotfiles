@@ -161,9 +161,6 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
-# Generic alias to pass any notify-send bits to growlnotify
-alias notify-send="growlnotify -a Terminal -m "
-
 # Shortcut for grabbing default pubkey
 alias pubkey="pbcopy < ~/.ssh/id_rsa.pub"
 
