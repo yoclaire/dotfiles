@@ -28,6 +28,12 @@ for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null;
 done;
 
+# Set options for Git bash completion
+if [ -f "${BREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]; then
+	# Set EnvVar so prompt displays Git status
+	GIT_PS1_SHOWDIRTYSTATE=true
+fi
+
 # Add tab completion for many Bash commands
 if which brew > /dev/null && [ -f "${BREW_PREFIX}/etc/bash_completion" ]; then
 	source "${BREW_PREFIX}/etc/bash_completion";
@@ -38,7 +44,7 @@ elif [ -f /etc/bash_completion ]; then
 fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
-if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+if type _git &> /dev/null && [ -f "${BREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]; then
 	complete -o default -o nospace -F _git g;
 fi;
 
@@ -60,15 +66,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # Generic Colouriser
 if [ -f ${BREW_PREFIX}/etc/grc.bashrc ]; then
     . ${BREW_PREFIX}/etc/grc.bashrc
-fi
-
-# Set options for Git bash completion
-if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-	# Enable git command  autocompletion for 'g' as well
-	complete -o default -o nospace -F _git g
-
-	# Set EnvVar so prompt displays Git status
-	GIT_PS1_SHOWDIRTYSTATE=true
 fi
 
 # Enable aws-cli completion
