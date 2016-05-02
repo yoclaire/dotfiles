@@ -35,7 +35,7 @@ if [ -f "${BREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]; then
 fi
 
 # Add tab completion for many Bash commands
-if which brew > /dev/null && [ -f "${BREW_PREFIX}/etc/bash_completion" ]; then
+if which brew &> /dev/null && [ -f "${BREW_PREFIX}/etc/bash_completion" ]; then
 	source "${BREW_PREFIX}/etc/bash_completion";
 elif [ -f "${BREW_PREFIX}/share/bash-completion/bash_completion" ]; then
     source "${BREW_PREFIX}/share/bash-completion/bash_completion"
