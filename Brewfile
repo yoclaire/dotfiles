@@ -94,3 +94,7 @@ brew 'tldr-pages/tldr/tldr'
 cask 'atom'
 cask 'macdown'
 cask 'panic-unison'
+
+# GPG agent for signing commits
+brew 'gpg-agent'
+brew 'pinentry-mac'
