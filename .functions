@@ -259,17 +259,6 @@ cleanup() {
 	find . -type f -name "$q" -ls -delete
 }
 
-docker() {
-	if [ "$(docker-machine status default)" != "Running" ]; then
-		echo "WARNING! Starting Default Docker Machine."
-
-		docker-machine start default | logger
-		eval "$(docker-machine env default)"
-	fi
-
-	command docker "$@"
-}
-
 # toggle iTerm Dock icon
 toggleiTerm() {
 	pb='/usr/libexec/PlistBuddy'
