@@ -98,3 +98,39 @@ cask 'panic-unison'
 # GPG agent for signing commits
 brew 'gpg-agent'
 brew 'pinentry-mac'
+
+
+brew 'awscli'
+
+brew 'icu4c'
+brew 'boost', args: ['with-icu4c']
+
+brew 'ctags'
+brew 'diff-so-fancy'
+brew 'go'
+brew 'gnupg'
+brew 'heroku-toolbelt'
+brew 'man2html'
+brew 'maven'
+brew 'mercurial'
+brew 'mysql', restart_service: true, conflicts_with: ['homebrew/versions/mysql56']
+brew 'node'
+brew 'phantomjs'
+
+brew 'postgresql', restart_service: true
+
+brew 'python'
+brew 'python3'
+brew 'ruby-build'
+brew 'rbenv'
+
+brew 'reattach-to-user-namespace'
+brew 'redis', restart_service: true
+brew 'siege'
+
+brew 'the_silver_searcher'
+brew 'tidy-html5'
+brew 'tmate'
+brew 'tmux'
+
+brew 'watch'
