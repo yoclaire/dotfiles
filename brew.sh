@@ -19,8 +19,8 @@ brew bundle
 echo 'Be sure to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.'
 ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
-if ! grep '/usr/local/bin/bash' /etc/shells; then
-  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
+if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
+  echo '/usr/local/bin/bash' >> /etc/shells;
   chsh -s /usr/local/bin/bash;
 fi;
 
