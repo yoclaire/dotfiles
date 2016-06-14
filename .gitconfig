@@ -53,9 +53,9 @@
 	# Find commits by commit message
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
-	# Remove branches that have already been merged with master
+	# Remove branches that have already been merged with master, without deleting master
 	# a.k.a. ‘delete merged’
-	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	dm = "!git branch --merged master | grep -v '^\\*\\|  master' | xargs -n 1 git branch -d"
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
 	# Sort branches & tags by last commit
