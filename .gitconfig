@@ -153,6 +153,7 @@
 	# Detect copies as well as renames
 	renames = copies
 	tool = diffmerge
+	compactionHeuristic = true
 
 [diff "bin"]
 
