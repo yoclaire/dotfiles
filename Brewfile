@@ -134,3 +134,14 @@ brew 'tmate'
 brew 'tmux'
 
 brew 'watch'
+
+# Useful Quicklook additions
+cask 'qlcolorcode'
+cask 'qlstephen'
+cask 'qlmarkdown'
+cask 'quicklook-json'
+cask 'qlprettypatch'
+cask 'quicklook-csv'
+cask 'betterzipql'
+cask 'webpquicklook'
+cask 'suspicious-package'
