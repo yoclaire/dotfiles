@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+DATA_BAG_ITEM_PATH="data_bags/${1}/${2}.json"
+
+git update-index -q --refresh
+CHANGED=$(git diff-index --name-only HEAD -- | grep "${DATA_BAG_ITEM_PATH}")
+if [ -z "$CHANGED" ]; then
+    knife data bag edit "${1}" "${2}" --secret-file "${HOME}/.chef/encrypted_data_bag_secret"
+    knife data bag show "${1}" "${2}" -F json > "${DATA_BAG_ITEM_PATH}"
+
+    echo 'Unstaging any staged changes in favor of committing your new data bag item…'
+    git reset
+
+    echo 'Committing new data bag item…'
+    git add "${DATA_BAG_ITEM_PATH}"
+    git commit
+else
+    echo "You've got some changes to your data bag item ${1} ${2}, hold up."
+fi
