@@ -176,6 +176,9 @@ alias pr="git pull-request -o"
 # Less keystrokes for invoking Bundler-installed binaries
 alias be="bundle exec"
 
+# Use iTerm 2’s tmux integration
+alias tmux="tmux -CC"
+
 # EverTrue handy bits
 alias update_cookbooks="find ${HOME}/dev/server-chef/cookbooks/ -type d -maxdepth 1 -exec sh -c '(cd {} && pwd && git pull)' ';'"
 alias ec2ls="knife ec2 server list --availability-zone --no-image --no-key --vpc --tags Type"
