@@ -11,7 +11,7 @@ gem update --system
 
 # Reinstall all gems
 gem install \
-	aws-sdk
+	aws-sdk \
 	aws-s3 \
 	awsutils \
 	bourbon \
