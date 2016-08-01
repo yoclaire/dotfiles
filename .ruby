@@ -25,7 +25,6 @@ gem install \
 	localtunnel \
 	oily_png \
 	puppet-lint \
-	railsless-deploy \
 	rubocop \
 	ruby-lint \
 	therubyracer
