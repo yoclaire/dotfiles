@@ -60,7 +60,7 @@ export CHEF_REPO="$HOME/dev/server-chef"
 export CHEF_COOKBOOKS="${CHEF_REPO}/cookbooks"
 
 # AWS stuff
-export JAVA_HOME="$(/usr/libexec/java_home)"
+# export JAVA_HOME="$(/usr/libexec/java_home)"
 export EC2_HOME="$(brew --prefix ec2-api-tools)/libexec"
 export AWS_ELASTICACHE_HOME="$(brew --prefix aws-elasticache)/libexec"
 export AWS_RDS_HOME="$(brew --prefix rds-command-line-tools)/libexec"
