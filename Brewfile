@@ -84,7 +84,6 @@ brew 'pinentry-mac'
 brew 'icu4c'
 brew 'boost', args: ['with-icu4c']
 
-brew 'ctags'
 brew 'diff-so-fancy'
 brew 'go'
 brew 'gnupg'
