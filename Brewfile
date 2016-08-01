@@ -81,9 +81,6 @@ cask 'macdown'
 brew 'gpg-agent'
 brew 'pinentry-mac'
 
-
-brew 'awscli'
-
 brew 'icu4c'
 brew 'boost', args: ['with-icu4c']
 
