@@ -36,7 +36,7 @@ brew 'homebrew/dupes/screen'
 brew 'homebrew/dupes/zlib'
 
 tap 'homebrew/php'
-brew 'homebrew/php/php56', args: ['with-gmp']
+brew 'homebrew/php/php71'
 brew 'homebrew/php/composer'
 brew 'homebrew/php/php-code-sniffer'
 brew 'homebrew/php/php-cs-fixer'
