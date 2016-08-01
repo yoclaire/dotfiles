@@ -91,8 +91,6 @@ brew 'heroku-toolbelt'
 brew 'man2html'
 brew 'node'
 
-brew 'postgresql', restart_service: true
-
 brew 'python'
 brew 'python3'
 brew 'ruby-build'
