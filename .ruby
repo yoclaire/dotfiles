@@ -23,7 +23,6 @@ gem install \
 	idid \
 	less \
 	localtunnel \
-	markdown2confluence \
 	oily_png \
 	puppet-lint \
 	railsless-deploy \
