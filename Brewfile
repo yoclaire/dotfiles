@@ -70,10 +70,6 @@ brew 'homebrew/completions/kitchen-completion'
 brew 'homebrew/completions/rake-completion'
 brew 'homebrew/completions/vagrant-completion'
 
-# Install VIPS for Windlass
-tap 'homebrew/science'
-brew 'homebrew/science/vips'
-
 # Install tldr for more friendly manpages
 tap 'tldr-pages/tldr'
 brew 'tldr-pages/tldr/tldr'
