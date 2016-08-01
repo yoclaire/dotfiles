@@ -50,7 +50,6 @@ brew 'ack'
 brew 'git'
 brew 'git-lfs'
 brew 'hub'
-brew 'imagemagick', args: ['with-webp']
 brew 'jq'
 brew 'p7zip'
 brew 'pigz'
