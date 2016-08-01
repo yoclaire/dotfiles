@@ -97,7 +97,6 @@ brew 'ruby-build'
 brew 'rbenv'
 
 brew 'reattach-to-user-namespace'
-brew 'redis', restart_service: true
 brew 'siege'
 
 brew 'the_silver_searcher'
