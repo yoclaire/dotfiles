@@ -21,7 +21,6 @@ gem install \
 	compass \
 	gemfury \
 	idid \
-	et-knife-ec2 \
 	less \
 	localtunnel \
 	markdown2confluence \
