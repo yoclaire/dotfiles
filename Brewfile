@@ -90,7 +90,6 @@ brew 'gnupg'
 brew 'heroku-toolbelt'
 brew 'man2html'
 brew 'node'
-brew 'phantomjs'
 
 brew 'postgresql', restart_service: true
 
