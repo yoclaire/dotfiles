@@ -26,5 +26,4 @@ gem install \
 	oily_png \
 	puppet-lint \
 	rubocop \
-	ruby-lint \
-	therubyracer
+	ruby-lint
