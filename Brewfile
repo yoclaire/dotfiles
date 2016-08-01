@@ -89,7 +89,6 @@ brew 'go'
 brew 'gnupg'
 brew 'heroku-toolbelt'
 brew 'man2html'
-brew 'maven'
 brew 'mercurial'
 brew 'mysql', restart_service: true, conflicts_with: ['homebrew/versions/mysql56']
 brew 'node'
