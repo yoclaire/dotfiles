@@ -45,12 +45,6 @@ brew 'homebrew/php/phplint'
 brew 'homebrew/php/phpmd'
 brew 'homebrew/php/phpunit'
 
-# Install font tools.
-tap 'bramstein/webfonttools'
-brew 'sfnt2woff'
-brew 'sfnt2woff-zopfli'
-brew 'woff2'
-
 # Install other useful binaries.
 brew 'ack'
 brew 'git'
