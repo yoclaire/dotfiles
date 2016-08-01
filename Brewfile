@@ -76,7 +76,6 @@ brew 'tldr-pages/tldr/tldr'
 
 # Useful apps
 cask 'macdown'
-cask 'panic-unison'
 
 # GPG agent for signing commits
 brew 'gpg-agent'
