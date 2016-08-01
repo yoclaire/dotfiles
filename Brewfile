@@ -75,7 +75,6 @@ tap 'tldr-pages/tldr'
 brew 'tldr-pages/tldr/tldr'
 
 # Useful apps
-cask 'atom'
 cask 'macdown'
 cask 'panic-unison'
 
