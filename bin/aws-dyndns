@@ -20,8 +20,9 @@ TYPE="A"
 
 # Choose from several options to get your IP:
 # IPPROVIDER=http://ifconfig.me/ip
-IPPROVIDER=https://wtfismyip.com/text
+# IPPROVIDER=https://wtfismyip.com/text
 # IPPROVIDER=https://icanhasip.com/
+IPPROVIDER=http://ipinfo.io/ip
 
 # Get the external IP address
 IP=$(curl -sS $IPPROVIDER)
