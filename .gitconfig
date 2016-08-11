@@ -108,7 +108,7 @@
 	# Treat all kinds of trailing whitespace as an error.
 	whitespace = trailing-space
 
-	# Make `git rebase` safer on OS X
+	# Make `git rebase` safer on macOS
 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 	trustctime = false
 
