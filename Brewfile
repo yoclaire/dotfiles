@@ -106,6 +106,9 @@ brew 'tmux'
 
 brew 'watch'
 
+# Linter for bash scripts
+brew 'shellcheck'
+
 # Useful Quicklook additions
 cask 'qlcolorcode'
 cask 'qlstephen'
