@@ -45,8 +45,8 @@ export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
 # EverTrue tools
 export MAVEN_HOME="/usr/local/share/maven"
 
-# Opscode chef configurations.
-export KNIFE_CHEF_SERVER="https://api.opscode.com/organizations/evertrue"
+# Chef configurations
+export KNIFE_CHEF_SERVER="https://api.chef.io/organizations/darksky"
 export KNIFE_CLIENT_KEY="$HOME/.chef/jeffbyrnes.pem"
 export KNIFE_NODE_NAME="jeffbyrnes"
 export KNIFE_VALIDATION_CLIENT_NAME="darksky-validator"
