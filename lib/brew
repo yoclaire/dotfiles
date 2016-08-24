@@ -13,7 +13,7 @@ brew upgrade --all
 
 brew tap Homebrew/bundle
 
-brew bundle
+brew bundle --global
 
 # Set up GNU core utilities (those that come with OS X are outdated).
 echo 'Be sure to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.'
