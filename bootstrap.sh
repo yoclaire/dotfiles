@@ -11,6 +11,8 @@ function doIt() {
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
+		--exclude "knife_bash_completion.sh" \
+		--exclude "*.sublime*" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
 }
