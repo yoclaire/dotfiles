@@ -35,6 +35,7 @@ fi
 # ref: http://ss64.com/osx/ls.html
 # Long form, mark file types, file size, color
 alias l="ls -lFh ${colorflag}"
+alias ll="l"
 
 # Long form, mark file types, order by last modified, color
 alias lt="ls -lFt ${colorflag}"
