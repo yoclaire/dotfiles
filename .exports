@@ -57,6 +57,8 @@ export AWS_KEYPAIR_NAME="ds_travis_ci"
 export EC2_SSH_KEY_PATH="$HOME/.ssh/${AWS_KEYPAIR_NAME}"
 export CHEF_REPO="$HOME/dev/infrastructure"
 export CHEF_COOKBOOKS="${CHEF_REPO}/cookbooks"
+export TF_VAR_user_name=$KNIFE_NODE_NAME
+export TF_VAR_user_key=$KNIFE_CLIENT_KEY
 
 # AWS stuff
 # export JAVA_HOME="$(/usr/libexec/java_home)"
