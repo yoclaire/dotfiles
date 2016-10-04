@@ -9,6 +9,9 @@ for file in $HOME/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done;
 unset file;
 
+# Add all identities stored in keychain to ssh-agent
+/usr/bin/ssh-add -A
+
 # Speed up runtime by caching this value
 BREW_PREFIX=$(brew --prefix)
 
