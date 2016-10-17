@@ -183,3 +183,4 @@ alias ec2ls="knife ec2 server list --availability-zone --no-image --no-key --vpc
 
 alias terraform="terragrunt"
 alias tf="terragrunt"
+alias knife-linode="knife ssh -x jeff -a ipaddress"
