@@ -273,3 +273,10 @@ toggleiTerm() {
 		esac
 	done
 }
+
+# Publish a release to GitHub
+gpub() {
+  git push
+  git release create "$1"
+  git fetch
+}
