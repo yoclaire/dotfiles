@@ -276,6 +276,7 @@ toggleiTerm() {
 
 # Publish a release to GitHub
 gpub() {
+  git commit -m"Bump to $1"
   git push
   git release create "$1"
   git fetch
