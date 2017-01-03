@@ -20,7 +20,7 @@ brew 'grc'
 brew 'wget', args: ['with-iri']
 
 # Install more recent versions of some OS X tools.
-brew 'vim', args: ['override-system-vi']
+brew 'vim', args: ['with-override-system-vi']
 brew 'curl'
 
 tap 'homebrew/dupes'
