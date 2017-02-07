@@ -60,15 +60,14 @@ tap 'caskroom/fonts'
 cask 'font-hack'
 
 # Install bash completions
-tap 'homebrew/completions'
-brew 'homebrew/completions/apm-bash-completion'
-brew 'homebrew/completions/brew-cask-completion'
-brew 'homebrew/completions/bundler-completion'
-brew 'homebrew/completions/docker-completion'
-brew 'homebrew/completions/gem-completion'
-brew 'homebrew/completions/kitchen-completion'
-brew 'homebrew/completions/rake-completion'
-brew 'homebrew/completions/vagrant-completion'
+brew 'apm-bash-completion'
+brew 'brew-cask-completion'
+brew 'bundler-completion'
+brew 'docker-completion'
+brew 'gem-completion'
+brew 'kitchen-completion'
+brew 'rake-completion'
+brew 'vagrant-completion'
 
 # Install tldr for more friendly manpages
 tap 'tldr-pages/tldr'
