@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # (optional) You might need to set your PATH variable at the top here
 # depending on how you run this script
 #PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
@@ -44,19 +46,39 @@ valid_ip()
     return $stat
 }
 
+# set LOGFILE to the full path of your desired logfile; make sure
+# you have write permissions there. set RETAIN_NUM_LINES to the
+# maximum number of lines that should be retained at the beginning
+# of your program execution.
+# execute 'logsetup' once at the beginning of your script, then
+# use 'log' how many times you like.
+
 # Get current dir
 # (from http://stackoverflow.com/a/246128/920350)
 # DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DIR=/var/log/aws-dyndns
 LOGFILE="$DIR/update-route53.log"
 IPFILE="$DIR/update-route53.ip"
+RETAIN_NUM_LINES=120
+
+function logsetup {
+    TMP=$(tail -n $RETAIN_NUM_LINES $LOGFILE 2>/dev/null) && echo "${TMP}" > $LOGFILE
+    exec > >(tee -a $LOGFILE)
+    exec 2>&1
+}
+
+function log {
+    echo "[$(date --rfc-3339=seconds)]: $*"
+}
+
+logsetup
 
 if [[ ! -d $DIR ]]; then
     mkdir $DIR
 fi
 
 if ! valid_ip $IP; then
-    echo "Invalid IP address: $IP" >> "$LOGFILE"
+    log "Invalid IP address: $IP"
     exit 1
 fi
 
@@ -68,10 +90,10 @@ fi
 
 if grep -Fxq "$IP" "$IPFILE"; then
     # code if found
-    echo "IP is still $IP. Exiting" >> "$LOGFILE"
+    log "IP is still $IP. Exiting"
     exit 0
 else
-    echo "IP has changed to $IP" >> "$LOGFILE"
+    log "IP has changed to $IP"
     # Fill a temp file with valid JSON
     TMPFILE=$(mktemp /tmp/temporary-file.XXXXXXXX)
     cat > ${TMPFILE} << EOF
@@ -96,10 +118,9 @@ else
 EOF
 
     # Update the Hosted Zone record
-    aws route53 change-resource-record-sets \
+    log "$(aws route53 change-resource-record-sets \
         --hosted-zone-id $ZONEID \
-        --change-batch file://"$TMPFILE" >> "$LOGFILE"
-    echo "" >> "$LOGFILE"
+        --change-batch file://"$TMPFILE")"
 
     # Clean up
     rm $TMPFILE
@@ -107,3 +128,5 @@ fi
 
 # All Done - cache the IP address for next time
 echo "$IP" > "$IPFILE"
+
+set +e
