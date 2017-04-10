@@ -25,6 +25,9 @@ brew 'wget', args: ['with-iri']
 brew 'vim', args: ['with-override-system-vi']
 brew 'curl'
 
+# Install HTTPie, a better cURL
+brew 'httpie'
+
 brew 'grep'
 brew 'openssh'
 brew 'screen'
