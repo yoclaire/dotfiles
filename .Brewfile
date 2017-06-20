@@ -10,8 +10,7 @@ brew 'findutils'
 brew 'gnu-sed', args: ['with-default-names']
 # Install Bash 4.
 brew 'bash'
-tap 'homebrew/versions'
-brew 'homebrew/versions/bash-completion2'
+brew 'bash-completion@2'
 
 # Install Generic Colouriser
 brew 'grc'
