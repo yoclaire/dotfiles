@@ -95,7 +95,6 @@ brew 'ruby-build'
 brew 'rbenv'
 
 brew 'reattach-to-user-namespace'
-brew 'siege'
 
 brew 'the_silver_searcher'
 brew 'tidy-html5'
