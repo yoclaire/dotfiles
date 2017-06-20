@@ -98,7 +98,6 @@ brew 'reattach-to-user-namespace'
 
 brew 'the_silver_searcher'
 brew 'tidy-html5'
-brew 'tmate'
 brew 'tmux'
 
 brew 'watch'
