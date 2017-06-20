@@ -1,5 +1,8 @@
 cask_args appdir: '/Applications'
 
+# Start with git
+brew 'git'
+
 brew 'coreutils'
 
 # Install some other useful utilities like `sponge`.
@@ -44,7 +47,6 @@ brew 'homebrew/php/phpunit'
 
 # Install other useful binaries.
 brew 'ack'
-brew 'git'
 brew 'git-lfs'
 brew 'hub'
 brew 'jq'
