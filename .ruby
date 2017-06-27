@@ -12,18 +12,13 @@ gem update --system
 # Reinstall all gems
 gem install \
 	aws-sdk \
-	aws-s3 \
 	awsutils \
 	bourbon \
 	bundler \
 	colored \
 	colorize \
 	compass \
-	gemfury \
-	idid \
 	less \
-	localtunnel \
 	oily_png \
-	puppet-lint \
 	rubocop \
 	ruby-lint
