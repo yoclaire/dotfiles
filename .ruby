@@ -15,6 +15,7 @@ gem install \
 	awsutils \
 	bourbon \
 	bundler \
+	cloudflare-dns-update \
 	colored \
 	colorize \
 	compass \
