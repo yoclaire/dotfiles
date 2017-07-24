@@ -42,9 +42,6 @@ export CSS_DIRECTORY="css"
 # Add DocBook package for XML generation (used for git-subtree)
 export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
 
-# EverTrue tools
-export MAVEN_HOME="/usr/local/share/maven"
-
 # Chef configurations
 export KNIFE_CHEF_SERVER="https://api.chef.io/organizations/darksky"
 export KNIFE_CLIENT_KEY="$HOME/.chef/jeffbyrnes.pem"
