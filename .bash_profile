@@ -84,9 +84,6 @@ PATH="/opt/chefdk/bin:$PATH"
 # chef gem-installed binaries
 PATH="$HOME/.chefdk/gem/ruby/2.3.0/bin:$PATH"
 
-# Enable Bower autocompletion
-# if which bower > /dev/null; then eval "$(bower completion)"; fi
-
 # Set up GPG agent
 if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
   source ~/.gnupg/.gpg-agent-info
