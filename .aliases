@@ -190,9 +190,9 @@ alias be="bundle exec"
 # Use iTerm 2’s tmux integration
 alias tmux="tmux -CC"
 
-# EverTrue handy bits
-alias update_cookbooks="find ${HOME}/dev/server-chef/cookbooks/ -type d -maxdepth 1 -exec sh -c '(cd {} && pwd && git pull)' ';'"
-alias ec2ls="knife ec2 server list --availability-zone --no-image --no-key --vpc --tags Type"
+# Handy infra-as-code bits
+alias update_cookbooks="find ${HOME}/dev/infrastructure/cookbooks/ -type d -maxdepth 1 -exec sh -c '(cd {} && pwd && git pull)' ';'"
+alias ec2ls="knife ec2 server list --availability-zone --tags Type"
 
 alias tf="terragrunt"
 alias knife-linode="knife ssh -x jeff -a ipaddress"
