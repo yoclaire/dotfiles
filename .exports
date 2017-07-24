@@ -45,7 +45,7 @@ export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
 # Chef configurations
 export KNIFE_CHEF_SERVER="https://api.chef.io/organizations/darksky"
 export KNIFE_CLIENT_KEY="$HOME/.chef/jeffbyrnes.pem"
-export KNIFE_NODE_NAME="jeffbyrnes"
+export KNIFE_NODE_NAME="jeff"
 export KNIFE_VALIDATION_CLIENT_NAME="darksky-validator"
 export KNIFE_VALIDATION_CLIENT_KEY="$HOME/.chef/darksky-validator.pem"
 export AWS_SSH_KEY="ds_aws_dev"
