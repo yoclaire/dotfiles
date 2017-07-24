@@ -18,7 +18,7 @@ brew bundle --global
 # Set up GNU core utilities (those that come with OS X are outdated).
 echo 'Be sure to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.'
 
-if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
+if ! grep -Fq '/usr/local/bin/bash' /etc/shells; then
   echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
   chsh -s /usr/local/bin/bash;
 fi;
