@@ -13,6 +13,7 @@ function doIt() {
 		--exclude "LICENSE-MIT.txt" \
 		--exclude "knife_bash_completion.sh" \
 		--exclude "*.sublime*" \
+		--exclude ".gitkeep" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
 }
