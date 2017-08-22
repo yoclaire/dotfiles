@@ -57,4 +57,5 @@ export TF_VAR_user_name=$KNIFE_NODE_NAME
 export TF_VAR_user_key=$KNIFE_CLIENT_KEY
 
 # AWS stuff
-export AWS_DEFAULT_REGION="us-east-1"
+export AWS_REGION="us-east-1"
+export AWS_DEFAULT_REGION=$AWS_REGION
