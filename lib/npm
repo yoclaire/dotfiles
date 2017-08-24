@@ -8,7 +8,10 @@ run_npm() {
         e_header "Installing Node.js packages..."
 
         # List of npm packages
-        local packages="bower grunt-cli jshint coffee-script"
+        local packages="bower
+                        coffee-script
+                        grunt-cli
+                        jshint"
 
         # Install packages globally and quietly
         npm install $packages --global --quiet
