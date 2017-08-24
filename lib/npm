@@ -10,8 +10,18 @@ run_npm() {
         # List of npm packages
         local packages="bower
                         coffee-script
+                        emojipacks
+                        eslint
+                        generator-hubot
                         grunt-cli
-                        jshint"
+                        jshint
+                        lighthouse
+                        prettier
+                        semistandard
+                        standard
+                        textlint
+                        travis-ci
+                        yarn"
 
         # Install packages globally and quietly
         npm install $packages --global --quiet
