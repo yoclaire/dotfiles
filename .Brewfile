@@ -34,7 +34,6 @@ brew 'screen'
 brew 'grep'
 brew 'less'
 brew 'libiconv'
-brew 'openssh'
 brew 'screen'
 brew 'zlib'
 
