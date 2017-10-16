@@ -38,6 +38,9 @@ brew 'openssh'
 brew 'screen'
 brew 'zlib'
 
+# cat, with color
+brew 'ccat'
+
 tap 'homebrew/php'
 brew 'homebrew/php/php71'
 brew 'homebrew/php/php71-mcrypt'

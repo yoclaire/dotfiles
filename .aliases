@@ -196,3 +196,6 @@ alias ec2ls="knife ec2 server list --availability-zone --tags Type"
 
 alias tf="terragrunt"
 alias knife-linode="knife ssh -x jeff -a ipaddress"
+
+# cat, with color
+alias cat="ccat"
