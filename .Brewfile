@@ -29,7 +29,6 @@ brew 'curl'
 brew 'httpie'
 
 brew 'grep'
-brew 'openssh'
 brew 'screen'
 brew 'grep'
 brew 'less'
