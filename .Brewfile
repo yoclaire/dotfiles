@@ -92,6 +92,7 @@ brew 'gnupg'
 brew 'heroku-toolbelt'
 brew 'man2html'
 brew 'node'
+brew 'yarn'
 
 brew 'python'
 brew 'python3'
