@@ -9,6 +9,7 @@ run_npm() {
 
         # List of npm packages
         local packages="bower
+                        alfred-change-case
                         coffee-script
                         emojipacks
                         eslint
