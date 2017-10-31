@@ -199,3 +199,8 @@ alias knife-linode="knife ssh -x jeff -a ipaddress"
 
 # cat, with color
 alias cat="ccat"
+
+# npm list only top-level modules
+# h/t https://gist.github.com/yyx990803/6045243
+alias ng="npm list -g --depth=0 2>/dev/null"
+alias nls="npm list --depth=0 2>/dev/null"
