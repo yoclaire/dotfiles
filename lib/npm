@@ -21,7 +21,9 @@ run_npm() {
                         semistandard
                         standard
                         textlint
-                        travis-ci"
+                        travis-ci
+                        yo
+        "
 
         # Install packages globally and quietly
         npm install $packages --global --quiet
