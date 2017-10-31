@@ -14,6 +14,13 @@ run_npm() {
                         coffee-script
                         emojipacks
                         eslint
+                        eslint-config-semistandard
+                        eslint-config-standard
+                        eslint-plugin-import
+                        eslint-plugin-node
+                        eslint-plugin-promise
+                        eslint-plugin-react
+                        eslint-plugin-standard
                         generator-hubot
                         grunt-cli
                         jshint
