@@ -23,6 +23,7 @@ run_npm() {
                         standard
                         textlint
                         travis-ci
+                        travis-watch
                         yo
         "
 
