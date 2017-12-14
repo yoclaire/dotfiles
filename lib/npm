@@ -32,6 +32,8 @@ run_npm() {
                         travis-ci
                         travis-watch
                         yo
+                        @commitlint/cli
+                        @commitlint/config-conventional
         "
 
         # Install packages globally and quietly
