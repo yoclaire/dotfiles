@@ -13,13 +13,31 @@ gem update --system
 gem install \
 	aws-sdk \
 	awsutils \
+	bitters \
 	bourbon \
+	bump \
 	bundler \
 	cloudflare-dns-update \
+	coffee-script \
 	colored \
 	colorize \
 	compass \
+	dotenv \
+	gh \
+	highline \
 	less \
+	neat \
+	normalize-scss \
+	octokit \
 	oily_png \
+	pry \
+	rake \
+	rspec \
 	rubocop \
-	ruby-lint
+	rubocop \
+	ruby-lint \
+	sass \
+	terraforming \
+	travis \
+	trollop \
+	unirest
