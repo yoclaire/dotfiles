@@ -78,6 +78,7 @@ brew 'tldr-pages/tldr/tldr'
 
 # Useful apps
 cask 'macdown'
+cask 'suspicious-package'
 
 # GPG agent for signing commits
 brew 'gpg-agent'
@@ -111,15 +112,14 @@ brew 'watch'
 brew 'shellcheck'
 
 # Useful Quicklook additions
-cask 'qlcolorcode'
-cask 'qlstephen'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'qlprettypatch'
-cask 'quicklook-csv'
 cask 'betterzipql'
+cask 'qlcolorcode'
+cask 'qlmarkdown'
+cask 'qlprettypatch'
+cask 'qlstephen'
+cask 'quicklook-csv'
+cask 'quicklook-json'
 cask 'webpquicklook'
-cask 'suspicious-package'
 
 # CLI for Mac App Store
 brew 'mas'
