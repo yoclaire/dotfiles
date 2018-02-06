@@ -79,6 +79,7 @@ brew 'tldr-pages/tldr/tldr'
 
 # Useful apps
 cask 'keepingyouawake'
+cask 'keybase'
 cask 'macdown'
 cask 'suspicious-package'
 
