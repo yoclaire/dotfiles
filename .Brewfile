@@ -115,6 +115,10 @@ brew 'shellcheck'
 # Linter for Dockerfiles
 brew 'hadolint'
 
+# Linter for Terraform configs
+tap 'wata727/tflint'
+brew 'wata727/tflint/tflint'
+
 # Useful Quicklook additions
 cask 'betterzipql'
 cask 'qlcolorcode'
