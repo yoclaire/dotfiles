@@ -82,6 +82,7 @@ cask 'keepingyouawake'
 cask 'keybase'
 cask 'macdown'
 cask 'suspicious-package'
+cask 'yakyak'
 
 # GPG agent for signing commits
 brew 'gpg-agent'
