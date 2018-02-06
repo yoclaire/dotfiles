@@ -112,6 +112,9 @@ brew 'watch'
 # Linter for bash scripts
 brew 'shellcheck'
 
+# Linter for Dockerfiles
+brew 'hadolint'
+
 # Useful Quicklook additions
 cask 'betterzipql'
 cask 'qlcolorcode'
