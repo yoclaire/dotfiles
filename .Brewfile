@@ -61,7 +61,7 @@ brew 'tree'
 
 # Install Hack typeface
 tap 'caskroom/fonts'
-cask 'font-hack'
+cask 'caskroom/fonts/font-hack'
 
 # Install bash completions
 brew 'apm-bash-completion'
