@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 # Start with git
 brew 'git'
+brew 'git-extras'
 
 brew 'coreutils'
 
