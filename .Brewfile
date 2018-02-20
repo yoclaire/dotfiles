@@ -118,6 +118,12 @@ brew 'shellcheck'
 # Linter for Dockerfiles
 brew 'hadolint'
 
+# Terraform things
+brew 'terraform'
+brew 'terragrunt'
+brew 'terraforming'
+brew 'terraform_landscape'
+
 # Linter for Terraform configs
 tap 'wata727/tflint'
 brew 'wata727/tflint/tflint'
