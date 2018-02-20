@@ -244,3 +244,7 @@ gpub() {
   git release create "$1"
   git fetch
 }
+
+tf() {
+	terragrunt "$1" | landscape
+}

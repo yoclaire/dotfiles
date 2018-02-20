@@ -181,7 +181,6 @@ alias tmux="tmux -CC"
 alias update_cookbooks="find ${HOME}/dev/infrastructure/cookbooks/ -type d -maxdepth 1 -exec sh -c '(cd {} && pwd && git pull)' ';'"
 alias ec2ls="knife ec2 server list --availability-zone --tags Type"
 
-alias tf="terragrunt"
 alias knife-linode="knife ssh -x jeff -a ipaddress"
 
 # cat, with color
