@@ -112,6 +112,8 @@ brew 'tmux'
 
 brew 'watch'
 
+brew 'aws-shell'
+
 # Linter for bash scripts
 brew 'shellcheck'
 
