@@ -4,6 +4,7 @@ declare -a packages=(
 	"aws-shell"
 	"flake8"
 	"git-sweep"
+	"pycodestyle"
 	"tabfix"
 )
 
