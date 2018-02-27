@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
-pip3 install --upgrade git-sweep
-pip3 install --upgrade tabfix
-pip3 install --upgrade aws-shell
+declare -a packages=(
+	"aws-shell"
+	"git-sweep"
+	"tabfix"
+)
+
+for pkg in "${packages[@]}"
+do
+	pip3 install --upgrade "$pkg"
+done
