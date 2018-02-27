@@ -85,7 +85,6 @@ cask 'suspicious-package'
 cask 'yakyak'
 
 # GPG agent for signing commits
-brew 'gpg-agent'
 brew 'pinentry-mac'
 
 brew 'icu4c'
