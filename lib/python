@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
 declare -a packages=(
+	"pip"
+	"setuptools"
+	"wheel"
 	"flake8"
 	"git-sweep"
 	"pycodestyle"
