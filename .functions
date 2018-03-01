@@ -246,5 +246,5 @@ gpub() {
 }
 
 tf() {
-	terragrunt "$1" | landscape
+	terragrunt "$1"
 }
