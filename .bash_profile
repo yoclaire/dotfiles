@@ -84,12 +84,4 @@ PATH="/opt/chefdk/bin:$PATH"
 # chef gem-installed binaries
 PATH="$HOME/.chefdk/gem/ruby/2.3.0/bin:$PATH"
 
-# Set up GPG agent
-if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
-  source ~/.gnupg/.gpg-agent-info
-  export GPG_AGENT_INFO
-else
-  eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
-fi
-
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
