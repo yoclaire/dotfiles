@@ -23,6 +23,7 @@ run_npm() {
                         eslint-plugin-standard
                         generator-hubot
                         grunt-cli
+                        htmlhint
                         jshint
                         lighthouse
                         prettier
