@@ -11,7 +11,7 @@ run_npm() {
         local packages="
                         bower
                         alfred-change-case
-                        coffee-script
+                        coffeescript
                         emojipacks
                         eslint
                         eslint-config-semistandard
