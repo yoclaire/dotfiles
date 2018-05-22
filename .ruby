@@ -19,7 +19,9 @@ gem install \
 	colored \
 	colorize \
 	compass \
+	cookstyle \
 	dotenv \
+	foodcritic \
 	gh \
 	highline \
 	less \
