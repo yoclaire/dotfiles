@@ -38,7 +38,7 @@ fi
 if which brew &> /dev/null && [ -f "${BREW_PREFIX}/etc/bash_completion" ]; then
 	source "${BREW_PREFIX}/etc/bash_completion";
 elif [ -f "${BREW_PREFIX}/share/bash-completion/bash_completion" ]; then
-    source "${BREW_PREFIX}/share/bash-completion/bash_completion"
+	source "${BREW_PREFIX}/share/bash-completion/bash_completion"
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
@@ -65,7 +65,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Generic Colouriser
 if [ -f ${BREW_PREFIX}/etc/grc.bashrc ]; then
-    . ${BREW_PREFIX}/etc/grc.bashrc
+	. ${BREW_PREFIX}/etc/grc.bashrc
 fi
 
 # Enable aws-cli completion
