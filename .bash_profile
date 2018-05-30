@@ -77,6 +77,11 @@ fi
 # github.com/sstephenson/rbenv/
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# Enable pipenv completion
+if [ -f ${BREW_PREFIX}/bin/pipenv ]; then
+	eval "$(pipenv --completion)"
+fi
+
 # ChefDK binaries
 # Added after rbenv to avoid path issues
 PATH="/opt/chefdk/bin:$PATH"
