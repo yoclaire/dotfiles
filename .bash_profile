@@ -87,6 +87,6 @@ fi
 PATH="/opt/chefdk/bin:$PATH"
 
 # chef gem-installed binaries
-PATH="$HOME/.chefdk/gem/ruby/2.3.0/bin:$PATH"
+PATH="$HOME/.chefdk/gem/ruby/2.5.0/bin:$PATH"
 
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
