@@ -183,6 +183,9 @@ alias ec2ls="knife ec2 server list --availability-zone --tags Type"
 
 alias knife-linode="knife ssh -x jeff -a ipaddress"
 
+alias dlv="chef exec delivery local verify"
+alias dla="chef exec delivery local acceptance"
+
 # cat, with color
 alias cat="ccat"
 
