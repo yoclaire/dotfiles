@@ -108,6 +108,7 @@ fi;
 # Set the terminal title to the current working directory.
 PS1="\[\033]0;\w\007\]";
 PS1+="\[${bold}\]\n"; # newline
+PS1+="\D{%T} "; # time
 PS1+="\[${red}\](\$?) " # Last cmd return code
 PS1+="\[${userStyle}\]\u"; # username
 PS1+="\[${black}\] at ";
