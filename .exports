@@ -39,6 +39,9 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 # Use Homebrew's directories for rbenv instead of ~/.rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 
+# Always run brew cleanup as part of a brew upgrade
+export HOMEBREW_UPGRADE_CLEANUP=true
+
 # Set the directory defaults for Sass
 export SASS_DIRECTORY="_scss"
 export CSS_DIRECTORY="css"
