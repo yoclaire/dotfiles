@@ -18,7 +18,6 @@ gem install \
 	coffee-script \
 	colored \
 	colorize \
-	compass \
 	cookstyle \
 	dotenv \
 	foodcritic \
