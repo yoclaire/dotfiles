@@ -32,7 +32,6 @@ gem install \
 	rake \
 	rspec \
 	rubocop \
-	rubocop \
 	ruby-lint \
 	terraforming \
 	travis \
