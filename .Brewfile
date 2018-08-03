@@ -139,6 +139,9 @@ cask 'quicklook-csv'
 cask 'quicklook-json'
 cask 'webpquicklook'
 
+# Install Dart Sass
+brew 'sass/sass/sass'
+
 # CLI for Mac App Store
 brew 'mas'
 

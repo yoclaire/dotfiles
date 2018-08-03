@@ -35,7 +35,6 @@ gem install \
 	rubocop \
 	rubocop \
 	ruby-lint \
-	sass \
 	terraforming \
 	travis \
 	trollop \
