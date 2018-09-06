@@ -25,3 +25,11 @@ fi;
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# Set up Solarized Light syntax highlighting for bat
+BAT_THEMES_DIR="$(bat cache --config-dir)/themes"
+if [ ! -d "$BAT_THEMES_DIR" ]; then
+  mkdir -p "$BAT_THEMES_DIR"
+  git -C "$BAT_THEMES_DIR" clone --quiet https://github.com/braver/Solarized
+  git -C "$BAT_THEMES_DIR" checkout 87e01090cf
+fi

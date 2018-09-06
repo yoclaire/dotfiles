@@ -40,6 +40,9 @@ brew 'zlib'
 # cat, with color
 brew 'ccat'
 
+# syntax highlighting cat replacement
+brew 'bat'
+
 tap 'homebrew/php'
 brew 'homebrew/php/php72'
 brew 'homebrew/php/php72-mcrypt'
