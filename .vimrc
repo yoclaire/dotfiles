@@ -1,7 +1,8 @@
-" Use the Solarized Dark theme
-set background=dark
+" Use the Solarized Light theme
+set background=light
 colorscheme solarized
 let g:solarized_termtrans=1
+let g:solarized_termcolors=256
 
 " Make Vim more useful
 set nocompatible
@@ -44,10 +45,6 @@ set secure
 set number
 " Enable syntax highlighting
 syntax enable
-set background=light
-let g:solarized_termcolors = 256
-let g:solarized_termtrans = 1
-colorscheme solarized
 " Highlight current line
 set cursorline
 " Make tabs as wide as four spaces
