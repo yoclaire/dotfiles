@@ -43,6 +43,38 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
+# Set up fzf
+if [ -f "$HOME/.fzf.bash" ]; then
+	# Setup fzf
+	# ---------
+	if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
+		export PATH="$PATH:/usr/local/opt/fzf/bin"
+	fi
+
+	# Auto-completion
+	# ---------------
+	[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.bash" 2> /dev/null
+
+	# Key bindings
+	# ------------
+	source "/usr/local/opt/fzf/shell/key-bindings.bash"
+
+	if [ -x "$BREW_PREFIX/bin/fd" ]; then
+		# Use fd (https://github.com/sharkdp/fd) instead of the default find
+		# command for listing path candidates.
+		# - The first argument to the function ($1) is the base path to start traversal
+		# - See the source code (completion.{bash,zsh}) for the details.
+		_fzf_compgen_path() {
+			fd --hidden --follow --exclude ".git" . "$1"
+		}
+
+		# Use fd to generate the list for directory completion
+		_fzf_compgen_dir() {
+			fd --type d --hidden --follow --exclude ".git" . "$1"
+		}
+	fi
+fi
+
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type _git &> /dev/null && [ -f "${BREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]; then
 	complete -o default -o nospace -F _git g;

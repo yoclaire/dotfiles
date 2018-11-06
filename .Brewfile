@@ -56,6 +56,7 @@ brew 'homebrew/php/phpunit'
 # Install other useful binaries.
 brew 'ack'
 brew 'fd'
+brew 'fzf'
 brew 'git-lfs'
 brew 'hub'
 brew 'jq'
