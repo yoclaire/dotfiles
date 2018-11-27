@@ -10,6 +10,7 @@ run_npm() {
         # List of npm packages
         local packages="
                         bower
+                        alex
                         alfred-change-case
                         coffeescript
                         emojipacks
