@@ -2,7 +2,7 @@
 
 # Header logging
 e_header() {
-	printf "\n$(tput setaf 7)%s$(tput sgr0)\n" "$@"
+	printf "\n$(tput setaf 33)%s$(tput sgr0)\n" "$@"
 }
 
 # Success logging
@@ -12,7 +12,7 @@ e_success() {
 
 # Error logging
 e_error() {
-	printf "$(tput setaf 1)x %s$(tput sgr0)\n" "$@"
+	printf "$(tput setaf 124)x %s$(tput sgr0)\n" "$@"
 }
 
 # Warning logging
