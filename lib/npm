@@ -12,6 +12,7 @@ run_npm() {
                         bower
                         alex
                         alfred-change-case
+                        alfred-polyglot
                         coffeescript
                         emojipacks
                         eslint
