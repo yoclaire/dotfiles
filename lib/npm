@@ -13,6 +13,7 @@ run_npm() {
                         alex
                         alfred-change-case
                         alfred-polyglot
+                        alfred-show-network-info
                         coffeescript
                         emojipacks
                         eslint
