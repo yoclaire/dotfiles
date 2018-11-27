@@ -30,6 +30,7 @@ run_npm() {
                         jshint
                         lighthouse
                         prettier
+                        semantic-release-cli
                         semistandard
                         standard
                         textlint
