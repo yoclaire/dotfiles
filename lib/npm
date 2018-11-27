@@ -39,6 +39,7 @@ run_npm() {
                         yo
                         @commitlint/cli
                         @commitlint/config-conventional
+                        @darkskyapp/eslint-config
         "
 
         # Install packages globally and quietly
