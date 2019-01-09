@@ -26,9 +26,6 @@ if ! grep -Fq "$BREW_PREFIX/bin/bash" /etc/shells; then
   chsh -s "$BREW_PREFIX/bin/bash";
 fi;
 
-# Remove outdated versions from the cellar.
-brew cleanup
-
 # Set up Solarized Light syntax highlighting for bat
 BAT_THEMES_DIR="$(bat cache --config-dir)/themes"
 if [ ! -d "$BAT_THEMES_DIR" ]; then
