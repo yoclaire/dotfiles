@@ -4,11 +4,12 @@ declare -a packages=(
 	"pip"
 	"setuptools"
 	"wheel"
+	"black"
 	"flake8"
 	"git-sweep"
 	"pycodestyle"
+	"pyflakes"
 	"tabfix"
-	"yamllint"
 )
 
 for pkg in "${packages[@]}"
