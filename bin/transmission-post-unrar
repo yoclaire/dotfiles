@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -ex
+
+# Set the $PATH b/c Transmission uses a non-interactive and/or non-login shell
+[ -r "$file" ] && [ -f "$file" ] && source "$HOME/.path"
+
+torrent_path_full="$TR_TORRENT_DIR/$TR_TORRENT_NAME"
+log_file_path="$HOME/Library/Logs/net.jeffbyrnes.transmission-post-unrar.log"
+
+timestamp()
+{
+    date +"%Y-%m-%d %T"
+}
+
+echo "$(timestamp) Extracting $TR_TORRENT_ID - $TR_TORRENT_NAME" >> "$log_file_path"
+
+if [[ $(find "$torrent_path_full" -type f -iname "*.rar" -print) ]]; then
+    mkdir -v "$TR_TORRENT_DIR/_UNPACK_$TR_TORRENT_NAME" >> "$log_file_path" 2>&1
+    find "$torrent_path_full" -type f -iname "*.rar" -print -exec /usr/local/bin/unrar x {} "$TR_TORRENT_DIR/_UNPACK_$TR_TORRENT_NAME" \; >> "$log_file_path" 2>&1
+    mv -v "$TR_TORRENT_DIR/_UNPACK_$TR_TORRENT_NAME" "$torrent_path_full/EXTRACTED" >> "$log_file_path" 2>&1
+fi
+
+echo "$(timestamp) Done extracting $TR_TORRENT_ID - $TR_TORRENT_NAME" >> "$log_file_path"
+
+set +ex
