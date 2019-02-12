@@ -101,7 +101,6 @@ brew 'man2html'
 brew 'node'
 brew 'yarn'
 
-brew 'python'
 brew 'python3'
 brew 'ruby-build'
 brew 'rbenv'
