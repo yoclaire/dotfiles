@@ -149,20 +149,31 @@ brew 'sass/sass/sass'
 # CLI for Mac App Store
 brew 'mas'
 
-mas '1Password', id: 443987910
-mas 'Acorn', id: 634108295
-mas 'DaisyDisk', id: 411643860
+mas 'Acorn', id: 1233861775
+mas 'Canopy', id: 1419224245
+mas 'Capo', id: 696977615
 mas 'Day One', id: 1055511498
 mas 'Deliveries', id: 924726344
+mas 'Discovery', id: 1381004916
 mas 'Evernote', id: 406056744
+mas 'Fantastical 2', id: 975937182
+mas 'GarageBand', id: 682658836
 mas 'Growl', id: 467939042
+mas 'Helium', id: 1054607607
+mas 'iFlicks', id: 408937559
+mas 'iMovie', id: 408981434
+mas 'iReal Pro', id: 409035833
+mas 'Keynote', id: 409183694
 mas 'LookUp', id: 965041401
 mas 'Medis', id: 1063631769
+mas 'Numbers', id: 409203825
+mas 'Pages', id: 409201541
 mas 'Patterns', id: 429449079
+mas 'Paw', id: 584653203
 mas 'Reeder', id: 880001334
 mas 'Silicio', id: 933627574
+mas 'Slack', id: 803453959
 mas 'Soulver', id: 413965349
 mas 'Spark', id: 1176895641
-mas 'The Unarchiver', id: 425424353
 mas 'Trello', id: 1278508951
-mas 'Tweetbot', id: 557168941
+mas 'Tweetbot', id: 1384080005
