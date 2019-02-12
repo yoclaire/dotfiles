@@ -134,13 +134,15 @@ tap 'wata727/tflint'
 brew 'wata727/tflint/tflint'
 
 # Useful Quicklook additions
-cask 'betterzipql'
+cask 'betterzip'
 cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'qlprettypatch'
 cask 'qlstephen'
+cask 'qlvideo'
 cask 'quicklook-csv'
 cask 'quicklook-json'
+cask 'quicklookase'
 cask 'webpquicklook'
 
 # Install Dart Sass
