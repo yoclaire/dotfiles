@@ -143,6 +143,7 @@ cask 'quicklook-json'
 cask 'webpquicklook'
 
 # Install Dart Sass
+tap 'sass/sass'
 brew 'sass/sass/sass'
 
 # CLI for Mac App Store
