@@ -35,10 +35,11 @@ if [ -f "${BREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]; then
 fi
 
 # Add tab completion for many Bash commands
-if which brew &> /dev/null && [ -f "${BREW_PREFIX}/etc/bash_completion" ]; then
-	source "${BREW_PREFIX}/etc/bash_completion";
-elif [ -f "${BREW_PREFIX}/share/bash-completion/bash_completion" ]; then
-	source "${BREW_PREFIX}/share/bash-completion/bash_completion"
+if which brew &> /dev/null && [ -r "${BREW_PREFIX}/etc/profile.d/bash_completion.sh" ]; then
+	# Ensure existing Homebrew v1 completions continue to work
+	export BASH_COMPLETION_COMPAT_DIR="${BREW_PREFIX}/etc/bash_completion.d"
+
+	source "${BREW_PREFIX}/etc/profile.d/bash_completion.sh"
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
