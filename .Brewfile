@@ -43,15 +43,13 @@ brew 'ccat'
 # syntax highlighting cat replacement
 brew 'bat'
 
-tap 'homebrew/php'
-brew 'homebrew/php/php72'
-brew 'homebrew/php/php72-mcrypt'
-brew 'homebrew/php/composer'
-brew 'homebrew/php/php-code-sniffer'
-brew 'homebrew/php/php-cs-fixer'
-brew 'homebrew/php/phplint'
-brew 'homebrew/php/phpmd'
-brew 'homebrew/php/phpunit'
+brew 'php'
+brew 'composer'
+brew 'php-code-sniffer'
+brew 'php-cs-fixer'
+brew 'phplint'
+brew 'phpmd'
+brew 'phpunit'
 
 # Install other useful binaries.
 brew 'ack'
