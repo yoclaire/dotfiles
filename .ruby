@@ -15,7 +15,6 @@ gem install \
 	bump \
 	bundler \
 	cloudflare-dns-update \
-	coffee-script \
 	colored \
 	colorize \
 	dotenv \
