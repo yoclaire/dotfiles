@@ -31,5 +31,5 @@ gem install \
 	rspec \
 	rubocop \
 	ruby-lint \
-	trollop \
+	optimist \
 	unirest
