@@ -18,9 +18,7 @@ gem install \
 	coffee-script \
 	colored \
 	colorize \
-	cookstyle \
 	dotenv \
-	foodcritic \
 	gh \
 	highline \
 	less \
