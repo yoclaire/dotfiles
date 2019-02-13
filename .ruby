@@ -31,7 +31,5 @@ gem install \
 	rspec \
 	rubocop \
 	ruby-lint \
-	terraforming \
-	travis \
 	trollop \
 	unirest
