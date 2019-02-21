@@ -212,5 +212,5 @@ gpub() {
 }
 
 tf() {
-	terragrunt "$@"
+	terraform "$@" | scenery
 }
