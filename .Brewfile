@@ -11,7 +11,7 @@ brew 'moreutils'
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew 'findutils'
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew 'gnu-sed', args: ['with-default-names']
+brew 'gnu-sed'
 # Install Bash 4.
 brew 'bash'
 brew 'bash-completion@2'
@@ -20,10 +20,10 @@ brew 'bash-completion@2'
 brew 'grc'
 
 # Install `wget` with IRI support.
-brew 'wget', args: ['with-iri']
+brew 'wget'
 
 # Install more recent versions of some OS X tools.
-brew 'vim', args: ['with-override-system-vi']
+brew 'vim'
 brew 'curl'
 
 # Install HTTPie, a better cURL
@@ -92,7 +92,7 @@ cask 'yakyak'
 brew 'pinentry-mac'
 
 brew 'icu4c'
-brew 'boost', args: ['with-icu4c']
+brew 'boost'
 
 brew 'diff-so-fancy'
 brew 'go'
