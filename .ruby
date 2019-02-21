@@ -13,7 +13,6 @@ gem install \
 	bitters \
 	bourbon \
 	bump \
-	bundler \
 	cloudflare-dns-update \
 	colored \
 	colorize \
