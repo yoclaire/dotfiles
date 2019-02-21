@@ -66,3 +66,7 @@ export AWS_DEFAULT_REGION=$AWS_REGION
 
 # Set bat theme
 export BAT_THEME="Solarized (light)"
+
+# Perforce
+export P4DIFF=/usr/local/bin/ksdiff
+export P4MERGE=/usr/local/bin/ksdiff
