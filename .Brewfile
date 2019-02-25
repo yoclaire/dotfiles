@@ -126,6 +126,9 @@ brew 'hadolint'
 # Linter for prose
 brew 'proselint'
 
+# Linter for YAML
+brew 'yamllint'
+
 # Terraform things
 brew 'terraform'
 brew 'terragrunt'
