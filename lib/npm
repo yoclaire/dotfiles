@@ -13,6 +13,7 @@ run_npm() {
                         alfred-change-case
                         alfred-polyglot
                         alfred-show-network-info
+                        csslint
                         emojipacks
                         eslint
                         eslint-config-semistandard
