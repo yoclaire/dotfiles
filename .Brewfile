@@ -123,6 +123,9 @@ brew 'shellcheck'
 # Linter for Dockerfiles
 brew 'hadolint'
 
+# Linter for prose
+brew 'proselint'
+
 # Terraform things
 brew 'terraform'
 brew 'terragrunt'
