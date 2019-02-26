@@ -66,6 +66,7 @@ brew 'tree'
 # Install Hack typeface
 tap 'homebrew/cask-fonts'
 cask 'font-hack'
+cask 'font-source-code-pro'
 
 # Install bash completions
 brew 'apm-bash-completion'
