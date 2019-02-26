@@ -64,8 +64,8 @@ brew 'testssl'
 brew 'tree'
 
 # Install Hack typeface
-tap 'caskroom/fonts'
-cask 'caskroom/fonts/font-hack'
+tap 'homebrew/cask-fonts'
+cask 'font-hack'
 
 # Install bash completions
 brew 'apm-bash-completion'
