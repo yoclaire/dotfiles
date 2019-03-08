@@ -10,7 +10,7 @@ done;
 unset file;
 
 # Speed up runtime by caching this value
-if command -v brew 2> /dev/null; then
+if command -v brew &> /dev/null; then
 	BREW_PREFIX=$(brew --prefix)
 else
 	BREW_PREFIX=""
@@ -39,7 +39,7 @@ if [ -f "${BREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]; then
 fi
 
 # Add tab completion for many Bash commands
-if command -v brew 2> /dev/null && [ -r "${BREW_PREFIX}/etc/profile.d/bash_completion.sh" ]; then
+if command -v brew &> /dev/null && [ -r "${BREW_PREFIX}/etc/profile.d/bash_completion.sh" ]; then
 	# Ensure existing Homebrew v1 completions continue to work
 	export BASH_COMPLETION_COMPAT_DIR="${BREW_PREFIX}/etc/bash_completion.d"
 
@@ -86,7 +86,7 @@ if type _git &> /dev/null && [ -f "${BREW_PREFIX}/etc/bash_completion.d/git-comp
 fi;
 
 # Alias hub to git for GitHub CLI magic
-if command -v hub 2> /dev/null; then
+if command -v hub &> /dev/null; then
 	eval "$(hub alias -s)"
 fi;
 
@@ -112,7 +112,7 @@ fi
 
 # Enable rbenv shims and autocompletion
 # github.com/sstephenson/rbenv/
-if command -v rbenv 2> /dev/null; then eval "$(rbenv init -)"; fi
+if command -v rbenv &> /dev/null; then eval "$(rbenv init -)"; fi
 
 # Enable pipenv completion
 if [ -f ${BREW_PREFIX}/bin/pipenv ]; then
