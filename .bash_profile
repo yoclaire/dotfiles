@@ -10,7 +10,11 @@ done;
 unset file;
 
 # Speed up runtime by caching this value
-BREW_PREFIX=$(brew --prefix)
+if command -v brew 2> /dev/null; then
+	BREW_PREFIX=$(brew --prefix)
+else
+	BREW_PREFIX=""
+fi
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
