@@ -15,6 +15,7 @@ function doIt() {
 		--exclude "*.sublime*" \
 		--exclude ".gitkeep" \
 		-avh --no-perms . ~;
+	sed -i 's/tab/space/' ~/.editorconfig
 	source ~/.bash_profile;
 }
 
