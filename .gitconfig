@@ -184,11 +184,6 @@
 
 	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 
-[difftool "sourcetree"]
-
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-
 [help]
 
 	# Automatically correct and execute mistyped commands
