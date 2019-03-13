@@ -59,10 +59,13 @@
 	# Remove branches that have already been merged with master, without deleting master
 	# a.k.a. ‘delete merged’
 	dm = "!git branch --merged | grep -v '^\\*\\|master\\|production\\|develop' | xargs -n 1 git branch -d"
+
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
+
 	# Sort branches & tags by last commit
 	brbylast = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
+
 	# Various other shorthands
 	st = status
 	ci = commit
