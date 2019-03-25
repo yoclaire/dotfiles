@@ -143,6 +143,7 @@ brew 'wata727/tflint/tflint'
 # Useful Quicklook additions
 cask 'betterzip'
 cask 'qlcolorcode'
+cask 'qlimagesize'
 cask 'qlmarkdown'
 cask 'qlprettypatch'
 cask 'qlstephen'
