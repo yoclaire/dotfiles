@@ -12,7 +12,7 @@ brew 'moreutils'
 brew 'findutils'
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew 'gnu-sed'
-# Install Bash 4.
+# Install Bash 5.
 brew 'bash'
 brew 'bash-completion@2'
 
