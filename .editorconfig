@@ -22,7 +22,7 @@ insert_final_newline = true
 indent_size = 4
 trim_trailing_whitespace = false
 
-; Shell scripts
+; Shell scripts & Python
 ; 4 space indent
-[*.sh]
+[*.{sh,py}]
 indent_size = 4
