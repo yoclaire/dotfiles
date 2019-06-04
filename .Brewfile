@@ -183,7 +183,7 @@ mas 'Patterns', id: 429449079
 mas 'Paw', id: 584653203
 mas 'Reeder', id: 880001334
 mas 'Silicio', id: 933627574
-mas 'Slack', id: 803453959
+# mas 'Slack', id: 803453959
 mas 'Soulver', id: 413965349
 mas 'Spark', id: 1176895641
 mas 'Trello', id: 1278508951
