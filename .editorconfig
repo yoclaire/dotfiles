@@ -26,3 +26,7 @@ trim_trailing_whitespace = false
 ; 4 space indent
 [*.{sh,py}]
 indent_size = 4
+
+; Sublime configs
+[*.{sublime-project,sublime-settings,sublime-theme,sublime-keymap,sublime-macro,sublime-color-scheme,sublime-menu}]
+indent_style = tab
