@@ -267,9 +267,12 @@ mas install 1278508951 # Trello
 mas install 1384080005 # Tweetbot
 
 # Set up Solarized Light syntax highlighting for bat
-BAT_THEMES_DIR="$(bat cache --config-dir)/themes"
+# https://github.com/sharkdp/bat
+BAT_THEMES_DIR="$(bat --config-dir)/themes"
 if [ ! -d "$BAT_THEMES_DIR" ]; then
   mkdir -p "$BAT_THEMES_DIR"
   git -C "$BAT_THEMES_DIR" clone --quiet https://github.com/braver/Solarized
-  git -C "$BAT_THEMES_DIR" checkout 87e01090cf
+  # Check out a specific ref that uses a compatible TextMate-style theme format
+  git -C "${BAT_THEMES_DIR}/Solarized" checkout 87e01090cf
+  bat cache --build
 fi
