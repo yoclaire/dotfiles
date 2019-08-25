@@ -23,7 +23,8 @@ brew 'gnupg'
 # Install more recent versions of some macOS tools.
 brew 'vim'
 brew 'grep'
-brew 'openssh'
+# Disabled b/c brew-installed OpenSSH does not play nicely with macOS Keychain + SSH
+# brew 'openssh'
 brew 'screen'
 brew 'php'
 brew 'gmp'
