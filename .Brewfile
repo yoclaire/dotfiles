@@ -1,9 +1,7 @@
 cask_args appdir: '/Applications'
 
-# Start with git
-brew 'git'
-brew 'git-extras'
-
+# Install GNU core utilities (those that come with macOS are outdated).
+# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew 'coreutils'
 
 # Install some other useful utilities like `sponge`.
@@ -12,29 +10,100 @@ brew 'moreutils'
 brew 'findutils'
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew 'gnu-sed'
-# Install Bash 5.
+# Install a modern version of Bash.
 brew 'bash'
 brew 'bash-completion@2'
-
-# Install Generic Colouriser
-brew 'grc'
 
 # Install `wget` with IRI support.
 brew 'wget'
 
-# Install more recent versions of some OS X tools.
+# Install GnuPG to enable PGP-signing commits.
+brew 'gnupg'
+
+# Install more recent versions of some macOS tools.
 brew 'vim'
+brew 'grep'
+brew 'openssh'
+brew 'screen'
+brew 'php'
+brew 'gmp'
+
+# Install font tools.
+# tap 'bramstein/webfonttools'
+# brew 'sfnt2woff'
+# brew 'sfnt2woff-zopfli'
+# brew 'woff2'
+
+# Install some CTF tools; see https://github.com/ctfs/write-ups.
+# brew 'aircrack-ng'
+# brew 'bfg'
+# brew 'binutils'
+# brew 'binwalk'
+# brew 'cifer'
+# brew 'dex2jar'
+# brew 'dns2tcp'
+# brew 'fcrackzip'
+# brew 'foremost'
+# brew 'hashpump'
+# brew 'hydra'
+# brew 'john'
+# brew 'knock'
+# brew 'netpbm'
+brew 'nmap'
+brew 'pngcheck'
+brew 'socat'
+# brew 'sqlmap'
+brew 'tcpflow'
+brew 'tcpreplay'
+brew 'tcptrace'
+# brew 'ucspi-tcp' # `tcpserver` etc.
+# brew 'xpdf'
+brew 'xz'
+
+# Install other useful binaries.
+brew 'ack'
+# brew 'exiv2'
+brew 'git'
+brew 'git-lfs'
+brew 'gs'
+# brew 'imagemagick'
+# brew 'lua'
+# brew 'lynx'
+brew 'p7zip'
+brew 'pigz'
+brew 'pv'
+brew 'rename'
+brew 'rlwrap'
+brew 'ssh-copy-id'
+brew 'tree'
+brew 'vbindiff'
+brew 'zopfli'
+
+# Jeff Byrnes additions from Mathias Bynens’ upstreams
+
+# Handy git additions
+brew 'git-extras'
+brew 'hub'
+
+# Install Generic Colouriser
+brew 'grc'
+
+# Replace system cURL with an updated one
 brew 'curl'
 
 # Install HTTPie, a better cURL
 brew 'httpie'
 
-brew 'grep'
-brew 'screen'
-brew 'grep'
+# Install yet more useful binaries.
+brew 'fd'
+brew 'fzf'
+brew 'jq'
+brew 'ripgrep'
+brew 'testssl'
+
+# Install the LESS CSS precompiler
 brew 'less'
 brew 'libiconv'
-brew 'screen'
 brew 'zlib'
 
 # cat, with color
@@ -43,25 +112,13 @@ brew 'ccat'
 # syntax highlighting cat replacement
 brew 'bat'
 
-brew 'php'
+# Additional PHP tools
 brew 'composer'
 brew 'php-code-sniffer'
 brew 'php-cs-fixer'
 brew 'phplint'
 brew 'phpmd'
 brew 'phpunit'
-
-# Install other useful binaries.
-brew 'ack'
-brew 'fd'
-brew 'fzf'
-brew 'git-lfs'
-brew 'hub'
-brew 'jq'
-brew 'ripgrep'
-brew 'ssh-copy-id'
-brew 'testssl'
-brew 'tree'
 
 # Install Hack typeface
 tap 'homebrew/cask-fonts'
@@ -82,13 +139,6 @@ brew 'vagrant-completion'
 tap 'tldr-pages/tldr'
 brew 'tldr-pages/tldr/tldr'
 
-# Useful apps
-cask 'keepingyouawake'
-cask 'keybase'
-cask 'macdown'
-cask 'suspicious-package'
-cask 'yakyak'
-
 # GPG agent for signing commits
 brew 'pinentry-mac'
 
@@ -97,14 +147,18 @@ brew 'boost'
 
 brew 'diff-so-fancy'
 brew 'go'
-brew 'gnupg'
+
 tap 'heroku/brew'
 brew 'heroku/brew/heroku'
+
 brew 'man2html'
+
 brew 'node'
 brew 'yarn'
 
 brew 'python3'
+
+# Install rbenv for multiple Ruby versions
 brew 'ruby-build'
 brew 'rbenv'
 
@@ -156,6 +210,13 @@ cask 'webpquicklook'
 # Install Dart Sass
 tap 'sass/sass'
 brew 'sass/sass/sass'
+
+# Useful macOS apps
+cask 'keepingyouawake'
+cask 'keybase'
+cask 'macdown'
+cask 'suspicious-package'
+cask 'yakyak'
 
 # CLI for Mac App Store
 brew 'mas'
