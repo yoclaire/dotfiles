@@ -210,7 +210,7 @@ brew install terraforming
 brew install terraform_landscape
 
 # Linter for Terraform configs
-brew install wata727/tflint/tflint
+brew install tflint
 
 # Useful Quicklook additions
 brew cask install betterzip
