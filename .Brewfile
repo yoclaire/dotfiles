@@ -241,7 +241,6 @@ mas 'Medis', id: 1063631769
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Patterns', id: 429449079
-mas 'Paw', id: 584653203
 mas 'Reeder', id: 880001334
 mas 'Silicio', id: 933627574
 # mas 'Slack', id: 803453959
