@@ -17,6 +17,7 @@ brew bundle --global
 
 # Set up GNU core utilities (those that come with OS X are outdated).
 echo 'Be sure to add `$(brew prefix coreutils|findutils|gnu-sed)/libexec/gnubin` to `$PATH`.'
+ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
 if ! grep -Fq "$BREW_PREFIX/bin/bash" /etc/shells; then
   echo "$BREW_PREFIX/bin/bash" | sudo tee -a /etc/shells;
