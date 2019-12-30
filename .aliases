@@ -190,3 +190,5 @@ alias cat="ccat"
 # h/t https://gist.github.com/yyx990803/6045243
 alias ng="npm list -g --depth=0 2>/dev/null"
 alias nls="npm list --depth=0 2>/dev/null"
+
+alias tf="terraform"
