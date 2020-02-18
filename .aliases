@@ -175,10 +175,8 @@ alias be="bundle exec"
 alias tmux="tmux -CC"
 
 # Handy infra-as-code bits
-alias update_cookbooks="find ${HOME}/dev/infrastructure/cookbooks/ -type d -maxdepth 1 -exec sh -c '(cd {} && pwd && git pull)' ';'"
+alias update_cookbooks="find ${HOME}/dev/chef-aws-jb/cookbooks/ -type d -maxdepth 1 -exec sh -c '(cd {} && pwd && git pull)' ';'"
 alias ec2ls="knife ec2 server list --availability-zone --tags Type"
-
-alias knife-linode="knife ssh -x jeff -a ipaddress"
 
 alias dlv="chef exec delivery local verify"
 alias dla="chef exec delivery local acceptance"
