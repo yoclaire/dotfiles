@@ -39,6 +39,10 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 # Use Homebrew's directories for rbenv instead of ~/.rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 
+# Use Homebrew’s OpenSSL instead of the version-specific one ruby-build installs
+# Does not work with Ruby versions <= 2.4
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
 # Always run brew cleanup as part of a brew upgrade
 export HOMEBREW_INSTALL_CLEANUP=true
 
