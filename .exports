@@ -60,10 +60,6 @@ export KNIFE_NODE_NAME=""
 export CHEF_REPO="$HOME/dev/chef-aws-jb"
 export CHEF_COOKBOOKS="${CHEF_REPO}/cookbooks"
 
-# AWS stuff
-export AWS_REGION="us-east-1"
-export AWS_DEFAULT_REGION=$AWS_REGION
-
 # Set bat theme
 # https://github.com/sharkdp/bat
 export BAT_THEME="Solarized (light)"
