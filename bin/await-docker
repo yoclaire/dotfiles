@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+while (! /usr/local/bin/docker stats --no-stream ); do
+  # Docker takes a few seconds to initialize
+  echo "Waiting for Docker to launch..."
+  sleep 10
+done
+
+/usr/local/bin/docker-compose --file "${HOME}/dev/local-web-apps/docker-compose.yml" up -d
