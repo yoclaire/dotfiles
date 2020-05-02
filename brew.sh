@@ -247,7 +247,6 @@ mas install 406056744  # Evernote
 mas install 975937182  # Fantastical 2
 mas install 682658836  # GarageBand
 mas install 467939042  # Growl
-mas install 1054607607 # Helium
 mas install 408937559  # iFlicks
 mas install 408981434  # iMovie
 mas install 409035833  # iReal Pro
