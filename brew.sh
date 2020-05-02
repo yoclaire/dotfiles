@@ -239,7 +239,6 @@ brew cask install yakyak
 brew install mas-cli/tap/mas
 
 mas install 1233861775 # Acorn
-mas install 1419224245 # Canopy
 mas install 696977615  # Capo
 mas install 1055511498 # Day One
 mas install 924726344  # Deliveries
