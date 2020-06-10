@@ -120,4 +120,7 @@ PATH="/opt/chefdk/bin:$PATH"
 # chef gem-installed binaries
 PATH="$HOME/.chefdk/gem/ruby/2.6.0/bin:$PATH"
 
+# Depends on us having set the alias for tmux to start in control mode
+# https://gitlab.com/gnachman/iterm2/-/wikis/tmux-Integration-Best-Practices#how-do-i-use-shell-integration
+export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
