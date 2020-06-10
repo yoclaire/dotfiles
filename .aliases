@@ -172,7 +172,8 @@ alias pr="gh pr create"
 alias be="bundle exec"
 
 # Use iTerm 2’s tmux integration
-alias tmux="tmux -CC"
+# Follows best practice per https://gitlab.com/gnachman/iterm2/-/wikis/tmux-Integration-Best-Practices
+alias tmux="tmux -CC new -A -s main"
 
 # Handy infra-as-code bits
 alias update_cookbooks="find ${HOME}/dev/chef-aws-jb/cookbooks/ -type d -maxdepth 1 -exec sh -c '(cd {} && pwd && git pull)' ';'"
