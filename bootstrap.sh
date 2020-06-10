@@ -7,15 +7,16 @@ git pull origin master;
 function doIt() {
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
-		--exclude ".osx" \
+		--exclude ".macos" \
 		--exclude "bootstrap.sh" \
+		--exclude "brew.sh" \
+		--exclude ".ruby" \
 		--exclude "README.md" \
-		--exclude "LICENSE-MIT.txt" \
+		--exclude "LICENSE" \
 		--exclude "knife_bash_completion.sh" \
 		--exclude "*.sublime*" \
 		--exclude ".gitkeep" \
 		-avh --no-perms . ~;
-	sed -i 's/tab/space/' ~/.editorconfig
 	source ~/.bash_profile;
 }
 
