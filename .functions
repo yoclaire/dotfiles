@@ -220,12 +220,12 @@ gpub() {
 
 # Run quicksync across all Puppet masters
 quicksync() {
-  for ((i=0;i<=7;i++))
-  do
-    declare -a puppetservers=("10" "6100" "6200")
+  declare -a puppetservers=("10" "6100" "6200")
 
-    ## now loop through the above array
-    for prefix in "${puppetservers[@]}"
+  ## now loop through the above array
+  for prefix in "${puppetservers[@]}"
+  do
+    for ((i=0;i<=7;i++))
     do
       declare hostname="puppetcm${prefix}${i}"
       echo "quicksyncing ${hostname}..."
