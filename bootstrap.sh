@@ -17,7 +17,9 @@ function doIt() {
 		--exclude "knife_bash_completion.sh" \
 		--exclude "*.sublime*" \
 		--exclude ".gitkeep" \
+		--exclude ".editorconfig" \
 		-avh --no-perms . ~;
+	mv "$HOME/editorconfig" "$HOME/.editorconfig"
 	source ~/.bash_profile;
 }
 

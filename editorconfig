@@ -2,14 +2,14 @@
 
 root = true
 
-; PHP style
+; Ruby/JS style
 ; UTF-8 charset
 ; Unix-style newlines with a newline ending every file
-; 4 space hard tabs indent
+; 2 space indent
 ; Trim trailing whitespace
 [*]
-indent_style = tab
-indent_size = 4
+indent_style = space
+indent_size = 2
 end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
@@ -19,4 +19,14 @@ insert_final_newline = true
 ; 4 space indent
 ; Trailing whitespace is potentially meaningful, leave it
 [*.md]
+indent_size = 4
 trim_trailing_whitespace = false
+
+; Shell scripts & Python
+; 4 space indent
+[*.{sh,py}]
+indent_size = 4
+
+; Sublime configs
+[*.{sublime-project,sublime-settings,sublime-theme,sublime-keymap,sublime-macro,sublime-color-scheme,sublime-menu}]
+indent_style = tab
