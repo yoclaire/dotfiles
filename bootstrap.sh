@@ -8,7 +8,7 @@ function doIt() {
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
 		--exclude ".macos" \
-        --exclude ".osx" \
+		--exclude ".osx" \
 		--exclude "bootstrap.sh" \
 		--exclude "brew.sh" \
 		--exclude ".ruby" \
@@ -17,6 +17,7 @@ function doIt() {
 		--exclude "knife_bash_completion.sh" \
 		--exclude "*.sublime*" \
 		--exclude ".gitkeep" \
+		--exclude "lib" \
 		--exclude ".editorconfig" \
 		-avh --no-perms . ~;
 	mv "$HOME/editorconfig" "$HOME/.editorconfig"
