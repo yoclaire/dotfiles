@@ -78,6 +78,8 @@ set title
 set showcmd
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
+" Use fzf for fuzzy finding
+set rtp+=/usr/local/opt/fzf
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
