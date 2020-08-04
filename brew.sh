@@ -248,8 +248,6 @@ mas install 1233861775 # Acorn
 mas install 696977615  # Capo
 mas install 1055511498 # Day One
 mas install 924726344  # Deliveries
-mas install 1381004916 # Discovery
-mas install 406056744  # Evernote
 mas install 975937182  # Fantastical 2
 mas install 682658836  # GarageBand
 mas install 467939042  # Growl
@@ -257,8 +255,6 @@ mas install 408937559  # iFlicks
 mas install 408981434  # iMovie
 mas install 409035833  # iReal Pro
 mas install 409183694  # Keynote
-mas install 965041401  # LookUp
-mas install 1063631769 # Medis
 mas install 409203825  # Numbers
 mas install 409201541  # Pages
 mas install 429449079  # Patterns
