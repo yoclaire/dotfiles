@@ -48,11 +48,11 @@ elif [ -f /etc/bash_completion ]; then
 fi;
 
 # Set up fzf
-if [ -f "$HOME/.fzf.bash" ]; then
+if command -v fzf &> /dev/null; then
 	# Setup fzf
 	# ---------
 	if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
-		export PATH="$PATH:/usr/local/opt/fzf/bin"
+		export PATH="${PATH:+${PATH}:}/usr/local/opt/fzf/bin"
 	fi
 
 	# Auto-completion
