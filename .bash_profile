@@ -118,7 +118,7 @@ fi
 PATH="/opt/chefdk/bin:$PATH"
 
 # chef gem-installed binaries
-PATH="$HOME/.chefdk/gem/ruby/2.6.0/bin:$PATH"
+PATH="$HOME/.chefdk/gem/ruby/2.7.0/bin:$PATH"
 
 # Depends on us having set the alias for tmux to start in control mode
 # https://gitlab.com/gnachman/iterm2/-/wikis/tmux-Integration-Best-Practices#how-do-i-use-shell-integration
