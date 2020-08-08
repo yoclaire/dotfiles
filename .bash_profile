@@ -120,6 +120,12 @@ PATH="/opt/chefdk/bin:$PATH"
 # chef gem-installed binaries
 PATH="$HOME/.chefdk/gem/ruby/2.7.0/bin:$PATH"
 
+# Enable Trellis virtualenv integration
+# github.com/roots/trellis-cli#virtualenv
+if command -v brew &> /dev/null; then
+	eval "$(trellis shell-init bash)"
+fi
+
 # Depends on us having set the alias for tmux to start in control mode
 # https://gitlab.com/gnachman/iterm2/-/wikis/tmux-Integration-Best-Practices#how-do-i-use-shell-integration
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
