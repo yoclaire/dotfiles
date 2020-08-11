@@ -122,7 +122,7 @@ PATH="$HOME/.chefdk/gem/ruby/2.7.0/bin:$PATH"
 
 # Enable Trellis virtualenv integration
 # github.com/roots/trellis-cli#virtualenv
-if command -v brew &> /dev/null; then
+if command -v trellis &> /dev/null; then
 	eval "$(trellis shell-init bash)"
 fi
 
