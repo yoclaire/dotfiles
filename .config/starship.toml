@@ -122,7 +122,7 @@ ssh_only = true
 # yellow
 # style = "bold dimmed 136"
 # red
-style = "bold dimmed 124"
+style = "bold 124"
 
 [hg_branch]
 symbol = " "
