@@ -118,9 +118,11 @@ untracked.style = "166"
 symbol = " "
 
 [hostname]
-ssh_only = false
+ssh_only = true
 # yellow
-style = "bold dimmed 136"
+# style = "bold dimmed 136"
+# red
+style = "bold dimmed 124"
 
 [hg_branch]
 symbol = " "
