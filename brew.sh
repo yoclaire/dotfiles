@@ -136,6 +136,10 @@ brew install bat
 # Nice ls replacement
 brew install exa
 
+# Sweet text-based shell recording tool
+# https://github.com/asciinema/asciinema
+brew install asciinema
+
 # Additional PHP tools
 brew install composer
 brew install php-code-sniffer
