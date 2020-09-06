@@ -29,26 +29,46 @@ else # macOS `ls`
 	export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 fi
 
-# List dir contents aliases
-# ref: http://ss64.com/osx/ls.html
-# Long form, mark file types, file size, color
-alias l="ls -lFh ${colorflag}"
-alias ll="l"
+# Replace ls with exa
+# https://github.com/ogham/exa
+if command -v exa &> /dev/null; then
+	# Long form, groups, mark file types, file size
+	alias l="exa -lgF --icons"
+	alias ll="l"
 
-# Long form, mark file types, order by last modified, color
-alias lt="ls -lFt ${colorflag}"
+	# Long form, groups, mark file types, order by last modified
+	alias lt="exa -lgF -s oldest --icons"
 
-# Long form, list all except . and ..., mark file types, file size, color
-alias la="ls -lAFh ${colorflag}"
+	# Long form, groups, list all except . and ..., mark file types, file size
+	alias la="exa -lgaF --icons"
 
-# Long form, list all except . and ..., mark file types, order by last modified, file size, color
-alias lat="ls -lAFth ${colorflag}"
+	# Long form, groups, list all except . and ..., mark file types, order by last modified, file size
+	alias lat="exa -lgAF -s oldest --icons"
 
-# List only directories, mark file types
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+	# List only directories, groups, mark file types
+	alias lsd="exa -lgFD --icons"
+else
+	# List dir contents aliases
+	# ref: http://ss64.com/osx/ls.html
+	# Long form, mark file types, file size, color
+	alias l="ls -lFh ${colorflag}"
+	alias ll="l"
 
-# Always use color output for `ls`
-alias ls="ls ${colorflag}"
+	# Long form, mark file types, order by last modified, color
+	alias lt="ls -lFt ${colorflag}"
+
+	# Long form, list all except . and ..., mark file types, file size, color
+	alias la="ls -lAFh ${colorflag}"
+
+	# Long form, list all except . and ..., mark file types, order by last modified, file size, color
+	alias lat="ls -lAFth ${colorflag}"
+
+	# List only directories, mark file types
+	alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+
+	# Always use color output for `ls`
+	alias ls="ls ${colorflag}"
+fi
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.

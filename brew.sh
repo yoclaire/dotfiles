@@ -133,6 +133,9 @@ brew install ccat
 # syntax highlighting cat replacement
 brew install bat
 
+# Nice ls replacement
+brew install exa
+
 # Additional PHP tools
 brew install composer
 brew install php-code-sniffer
