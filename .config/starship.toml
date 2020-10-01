@@ -1,48 +1,48 @@
 # https://starship.rs/config/
 
-prompt_order = [
-  "time",
-  "custom",
-  "username",
-  "hostname",
-  "kubernetes",
-  "directory",
-  "git_branch",
-  "git_commit",
-  "git_state",
-  "git_status",
-  "hg_branch",
-  "docker_context",
-  "package",
-  "dotnet",
-  "elixir",
-  "elm",
-  "erlang",
-  "golang",
-  "java",
-  "julia",
-  "nim",
-  "nodejs",
-  "ocaml",
-  "php",
-  "purescript",
-  "python",
-  "ruby",
-  "rust",
-  "terraform",
-  "zig",
-  "nix_shell",
-  "conda",
-  "memory_usage",
-  "aws",
-  "env_var",
-  "crystal",
-  "cmd_duration",
-  "line_break",
-  "jobs",
-  "battery",
-  "character",
-]
+format = """\
+  $time\
+  $custom\
+  $username\
+  $hostname\
+  $kubernetes\
+  $directory\
+  $git_branch\
+  $git_commit\
+  $git_state\
+  $git_status\
+  $hg_branch\
+  $docker_context\
+  $package\
+  $dotnet\
+  $elixir\
+  $elm\
+  $erlang\
+  $golang\
+  $java\
+  $julia\
+  $nim\
+  $nodejs\
+  $ocaml\
+  $php\
+  $purescript\
+  $python\
+  $ruby\
+  $rust\
+  $terraform\
+  $zig\
+  $nix_shell\
+  $conda\
+  $memory_usage\
+  $aws\
+  $env_var\
+  $crystal\
+  $cmd_duration\
+  $line_break\
+  $jobs\
+  $battery\
+  $character\
+"""
 
 [aws]
 symbol = " "
@@ -65,14 +65,13 @@ discharging_symbol = ""
   style = "bold 136"
 
 [character]
-# Replace the "❯" symbol in the prompt with "➜"
-symbol = "♠"
 # Change the symbol & its color
 use_symbol_for_status = true
+# Replace the "❯" symbol in the prompt with "♠"
 # black
-style_success = "bold 0"
+success_symbol = "[♠](bold 0)"
 # red
-style_failure = "bold 124"
+error_symbol = "[✖](bold 124)"
 
 [directory]
 # bold green
@@ -96,7 +95,9 @@ style = "bold 136"
 
 [git_status]
 # Show ahead/behind count of the branch being tracked
-show_sync_count = true
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
 # default, bold blue
 style = "bold 33"
 # cyan
@@ -157,7 +158,8 @@ symbol = " "
 
 [time]
 disabled = false
-format = "🕙 %T"
+format = "🕙 [$time]($style) "
+time_format = "%T"
 
 [username]
 show_always = true
