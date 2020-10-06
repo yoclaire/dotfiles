@@ -45,6 +45,7 @@ format = """\
 """
 
 [aws]
+disabled = true
 symbol = " "
 # yellow
 style = "bold 136"
