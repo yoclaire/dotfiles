@@ -29,8 +29,6 @@ run_npm() {
                         lighthouse
                         prettier
                         semantic-release-cli
-                        semistandard
-                        standard
                         textlint
                         travis-ci
                         travis-watch
