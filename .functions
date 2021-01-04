@@ -218,3 +218,12 @@ gpub() {
 # 	terraform "$@" | scenery
 # }
 
+# Open a JIRA ticket
+jira() {
+	if [ -z "${1}" ]; then
+		echo "ERROR: No JIRA ticket key specified.";
+		return 1;
+	fi;
+
+	open "https://athenajira.athenahealth.com/browse/${1}"
+}
