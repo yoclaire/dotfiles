@@ -19,7 +19,6 @@ run_npm() {
                         eslint-plugin-node
                         eslint-plugin-promise
                         eslint-plugin-react
-                        eslint-plugin-standard
                         eslint-config-standard
                         eslint-config-semistandard
                         generator-hubot
