@@ -150,11 +150,11 @@ brew install phpunit
 
 # Install Hack typeface
 brew tap homebrew/cask-fonts
-brew cask install font-hack
-brew cask install font-source-code-pro
-brew cask install font-fira-code-nerd-font
-brew cask install font-hack-nerd-font
-brew cask install font-inconsolata-nerd-font
+brew install --cask font-hack
+brew install --cask font-source-code-pro
+brew install --cask font-fira-code-nerd-font
+brew install --cask font-hack-nerd-font
+brew install --cask font-inconsolata-nerd-font
 
 # Install bash completions
 brew install apm-bash-completion
@@ -226,27 +226,27 @@ brew install tflint
 brew install starship
 
 # Useful Quicklook additions
-brew cask install betterzip
-brew cask install qlcolorcode
-brew cask install qlimagesize
-brew cask install qlmarkdown
-brew cask install qlprettypatch
-brew cask install qlstephen
-brew cask install qlvideo
-brew cask install quicklook-csv
-brew cask install quicklook-json
-brew cask install quicklookase
-brew cask install webpquicklook
+brew install --cask betterzip
+brew install --cask qlcolorcode
+brew install --cask qlimagesize
+brew install --cask qlmarkdown
+brew install --cask qlprettypatch
+brew install --cask qlstephen
+brew install --cask qlvideo
+brew install --cask quicklook-csv
+brew install --cask quicklook-json
+brew install --cask quicklookase
+brew install --cask webpquicklook
 
 # Install Dart Sass
 brew install sass/sass/sass
 
 # Useful macOS apps
-brew cask install keepingyouawake
-brew cask install keybase
-brew cask install macdown
-brew cask install suspicious-package
-brew cask install yakyak
+brew install --cask keepingyouawake
+brew install --cask keybase
+brew install --cask macdown
+brew install --cask suspicious-package
+brew install --cask yakyak
 
 # CLI for Mac App Store
 brew install mas-cli/tap/mas
