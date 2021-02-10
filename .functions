@@ -230,18 +230,18 @@ jira() {
 
 # athena webpool queries
 query_web_membership() {
-  WEB=${1}
-  dig +short -t TXT "${WEB}.webpool"
+	WEB=${1}
+	dig +short -t TXT "${WEB}.webpool"
 }
 
 query_webpool_members() {
-  WEBPOOL=${1}
-  dig +short -t TXT "athenanet_webpool${WEBPOOL}.webpool" | sed 's/,/ /g' | sed 's/\"//g'
+	WEBPOOL=${1}
+	dig +short -t TXT "athenanet_webpool${WEBPOOL}.webpool" | sed 's/,/ /g' | sed 's/\"//g'
 }
 
 netdata_dashboard() {
-  HOSTS="${1}"
-  for HOST in ${HOSTS}; do
-    echo "${HOST}: http://${HOST}:19999"
-  done
+	HOSTS="${1}"
+	for HOST in ${HOSTS}; do
+		echo "${HOST}: http://${HOST}:19999"
+	done
 }
