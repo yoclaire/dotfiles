@@ -160,7 +160,7 @@
 
 	# Detect copies as well as renames.
 	renames = copies
-	tool = diffmerge
+	tool = Kaleidoscope
 	# Enable an experimental heuristic that shifts the hunk boundary in an
 	# attempt to make the resulting patch easier to read.
 	indentHeuristic = true
@@ -191,7 +191,7 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
-	tool = diffmerge
+	tool = Kaleidoscope
 
 [mergetool]
 
