@@ -66,7 +66,7 @@ if command -v fzf &> /dev/null; then
 
 	# Set additional commands to use fzf
 	_fzf_setup_completion path ag
-	_fzf_setup_completion path g git
+	_fzf_setup_completion path g ga git
 	_fzf_setup_completion path s subl
 	_fzf_setup_completion dir tree
 
