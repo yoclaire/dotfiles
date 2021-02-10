@@ -47,7 +47,8 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
-# Set up fzf
+# Set up fzf for fuzzy tab completion using **<TAB>
+# Learn more at https://github.com/junegunn/fzf
 if command -v fzf &> /dev/null; then
 	# Setup fzf
 	# ---------
@@ -62,6 +63,12 @@ if command -v fzf &> /dev/null; then
 	# Key bindings
 	# ------------
 	source "${BREW_PREFIX}/opt/fzf/shell/key-bindings.bash"
+
+	# Set additional commands to use fzf
+	_fzf_setup_completion path ag
+	_fzf_setup_completion path g git
+	_fzf_setup_completion path s subl
+	_fzf_setup_completion dir tree
 
 	if [ -x "$BREW_PREFIX/bin/fd" ]; then
 		# Use fd (https://github.com/sharkdp/fd) instead of the default find
