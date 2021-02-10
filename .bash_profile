@@ -51,17 +51,17 @@ fi;
 if command -v fzf &> /dev/null; then
 	# Setup fzf
 	# ---------
-	if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
-		export PATH="${PATH:+${PATH}:}/usr/local/opt/fzf/bin"
+	if [[ ! "$PATH" == *${BREW_PREFIX}/opt/fzf/bin* ]]; then
+		export PATH="${PATH:+${PATH}:}${BREW_PREFIX}/opt/fzf/bin"
 	fi
 
 	# Auto-completion
 	# ---------------
-	[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.bash" 2> /dev/null
+	[[ $- == *i* ]] && source "${BREW_PREFIX}/opt/fzf/shell/completion.bash" 2> /dev/null
 
 	# Key bindings
 	# ------------
-	source "/usr/local/opt/fzf/shell/key-bindings.bash"
+	source "${BREW_PREFIX}/opt/fzf/shell/key-bindings.bash"
 
 	if [ -x "$BREW_PREFIX/bin/fd" ]; then
 		# Use fd (https://github.com/sharkdp/fd) instead of the default find
@@ -80,7 +80,7 @@ if command -v fzf &> /dev/null; then
 fi
 
 # Enable tab completion for `g` by marking it as an alias for `git`
-if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+if type _git &> /dev/null && [ -f "${BREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]; then
 	complete -o default -o nospace -F _git g;
 fi;
 
@@ -95,12 +95,12 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
 # Generic Colouriser
-if [ -f ${BREW_PREFIX}/etc/grc.bashrc ]; then
-	. ${BREW_PREFIX}/etc/grc.bashrc
+if [ -f "${BREW_PREFIX}/etc/grc.bashrc" ]; then
+	. "${BREW_PREFIX}/etc/grc.bashrc"
 fi
 
 # Enable aws-cli completion
-if [ -f /usr/local/bin/aws_completer ]; then
+if [ -f "${BREW_PREFIX}/bin/aws_completer" ]; then
 	complete -C aws_completer aws
 fi
 
@@ -109,7 +109,7 @@ fi
 if command -v rbenv &> /dev/null; then eval "$(rbenv init -)"; fi
 
 # Enable pipenv completion
-if [ -f ${BREW_PREFIX}/bin/pipenv ]; then
+if [ -f "${BREW_PREFIX}/bin/pipenv" ]; then
 	eval "$(pipenv --completion)"
 fi
 
@@ -129,6 +129,6 @@ fi
 # Depends on us having set the alias for tmux to start in control mode
 # https://gitlab.com/gnachman/iterm2/-/wikis/tmux-Integration-Best-Practices#how-do-i-use-shell-integration
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
-if [ -e ${HOME}/.iterm2_shell_integration.bash ]; then
-	source ${HOME}/.iterm2_shell_integration.bash
+if [ -e "${HOME}/.iterm2_shell_integration.bash" ]; then
+	source "${HOME}/.iterm2_shell_integration.bash"
 fi
