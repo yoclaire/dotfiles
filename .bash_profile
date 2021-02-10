@@ -73,6 +73,9 @@ if command -v fzf &> /dev/null; then
 	if [ -x "$BREW_PREFIX/bin/fd" ]; then
 		# Use fd (https://github.com/sharkdp/fd) instead of the default find
 		# command for listing path candidates.
+		export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+		export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 		# - The first argument to the function ($1) is the base path to start traversal
 		# - See the source code (completion.{bash,zsh}) for the details.
 		_fzf_compgen_path() {
