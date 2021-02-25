@@ -6,7 +6,7 @@ declare -a packages=(
 	"wheel"
 	"black"
 	"flake8"
-	"git-sweep"
+	"git-sweep3k"
 	"pycodestyle"
 	"pyflakes"
 	"tabfix"
