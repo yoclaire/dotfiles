@@ -78,7 +78,7 @@ error_symbol = "[✖](bold 124)"
 # bold green
 style = "bold 64"
 
-[docker]
+[docker_context]
 symbol = " "
 
 # [env_var]
