@@ -66,8 +66,6 @@ discharging_symbol = ""
   style = "bold 136"
 
 [character]
-# Change the symbol & its color
-use_symbol_for_status = true
 # Replace the "❯" symbol in the prompt with "♠"
 # black
 success_symbol = "[♠](bold 0)"
