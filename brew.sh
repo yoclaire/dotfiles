@@ -249,19 +249,9 @@ brew install --cask yakyak
 # CLI for Mac App Store
 brew install mas-cli/tap/mas
 
-mas install 1233861775 # Acorn
-mas install 696977615  # Capo
 mas install 1055511498 # Day One
 mas install 924726344  # Deliveries
 mas install 975937182  # Fantastical 2
-mas install 682658836  # GarageBand
-mas install 467939042  # Growl
-mas install 408937559  # iFlicks
-mas install 408981434  # iMovie
-mas install 409035833  # iReal Pro
-mas install 409183694  # Keynote
-mas install 409203825  # Numbers
-mas install 409201541  # Pages
 mas install 429449079  # Patterns
 mas install 880001334  # Reeder
 mas install 933627574  # Silicio
