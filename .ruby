@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-rbenv install 3.0.0
-rbenv global 3.0.0
+rbenv install 3.0.1
+rbenv global 3.0.1
 
 # Update Rubygems to latest
 gem update --system
