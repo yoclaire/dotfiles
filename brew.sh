@@ -177,8 +177,6 @@ brew install boost
 brew install diff-so-fancy
 brew install go
 
-brew install heroku/brew/heroku
-
 brew install man2html
 
 brew install node
