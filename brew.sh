@@ -103,7 +103,7 @@ brew install zopfli
 
 # Handy git additions
 brew install git-extras
-brew install github/gh/gh
+brew install gh
 
 # Install Generic Colouriser
 brew install grc
