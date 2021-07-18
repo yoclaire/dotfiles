@@ -182,7 +182,7 @@ brew install man2html
 brew install node
 brew install yarn
 
-brew install python3
+brew install python
 
 # Install rbenv for multiple Ruby versions
 brew install ruby-build
