@@ -53,7 +53,7 @@ export SASS_DIRECTORY="_scss"
 export CSS_DIRECTORY="css"
 
 # Add DocBook package for XML generation (used for git-subtree)
-export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
+export XML_CATALOG_FILES="${BREW_PREFIX}/etc/xml/catalog"
 
 # Chef configurations
 export KNIFE_CHEF_SERVER=""

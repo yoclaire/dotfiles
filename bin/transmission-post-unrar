@@ -17,7 +17,7 @@ echo "$(timestamp) Extracting $TR_TORRENT_ID - $TR_TORRENT_NAME" >> "$log_file_p
 
 if [[ $(find "$torrent_path_full" -type f -iname "*.rar" -print) ]]; then
     mkdir -v "$TR_TORRENT_DIR/_UNPACK_$TR_TORRENT_NAME" >> "$log_file_path" 2>&1
-    find "$torrent_path_full" -type f -iname "*.rar" -print -exec /usr/local/bin/unrar x {} "$TR_TORRENT_DIR/_UNPACK_$TR_TORRENT_NAME" \; >> "$log_file_path" 2>&1
+    find "$torrent_path_full" -type f -iname "*.rar" -print -exec /opt/homebrew/bin/unrar x {} "$TR_TORRENT_DIR/_UNPACK_$TR_TORRENT_NAME" \; >> "$log_file_path" 2>&1
     mv -v "$TR_TORRENT_DIR/_UNPACK_$TR_TORRENT_NAME" "$torrent_path_full/EXTRACTED" >> "$log_file_path" 2>&1
 fi
 

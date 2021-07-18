@@ -2,8 +2,8 @@
 # windowTitle     = "$TM_DISPLAYNAME — ${CWD/^.*\///} ($TM_SCM_BRANCH)"
 
 # Variables
-TM_GIT          = "/usr/local/bin/git"
-TM_HG           = "/usr/local/bin/hg"
+TM_GIT          = "/opt/homebrew/bin/git"
+TM_HG           = "/opt/homebrew/bin/hg"
 
 # General settings
 fontName        = "Panic Sans"
