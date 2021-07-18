@@ -39,9 +39,6 @@ export BASH_SILENCE_DEPRECATION_WARNING=1;
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 
-# Use Homebrew's directories for rbenv instead of ~/.rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
-
 # Use Homebrew’s OpenSSL instead of the version-specific one ruby-build installs
 # Does not work with Ruby versions <= 2.4
 if command -v brew &> /dev/null; then
