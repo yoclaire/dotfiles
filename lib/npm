@@ -12,6 +12,7 @@ run_npm() {
                         alex
                         alfred-polyglot
                         alfred-show-network-info
+                        applemusicdiscordrpc
                         csslint
                         emojipacks
                         eslint
