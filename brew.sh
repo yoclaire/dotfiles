@@ -165,9 +165,6 @@ brew install kitchen-completion
 brew install rake-completion
 brew install vagrant-completion
 
-# Install tldr for more friendly manpages
-brew install tldr-pages/tldr/tldr
-
 # GPG agent for signing commits
 brew install pinentry-mac
 

@@ -29,6 +29,7 @@ run_npm() {
                         prettier
                         semantic-release-cli
                         textlint
+                        tldr
                         travis-ci
                         travis-watch
                         yo
