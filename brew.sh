@@ -173,6 +173,9 @@ brew install boost
 brew install diff-so-fancy
 brew install go
 
+# Install shfmt for shell parsing & linting/formatting
+go install mvdan.cc/sh/v3/cmd/gosh@latest
+
 brew install man2html
 
 brew install node
