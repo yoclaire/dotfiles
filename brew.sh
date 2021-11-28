@@ -242,6 +242,7 @@ brew install --cask keepingyouawake
 brew install --cask keybase
 brew install --cask macdown
 brew install --cask suspicious-package
+brew install --cask syntax-highlight
 brew install --cask tower
 brew install --cask yakyak
 
