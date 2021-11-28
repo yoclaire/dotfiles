@@ -156,7 +156,6 @@ brew install --cask font-hack-nerd-font
 brew install --cask font-inconsolata-nerd-font
 
 # Install bash completions
-brew install apm-bash-completion
 brew install brew-cask-completion
 brew install bundler-completion
 brew install docker-completion
