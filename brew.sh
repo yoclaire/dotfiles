@@ -174,7 +174,7 @@ brew install diff-so-fancy
 brew install go
 
 # Install shfmt for shell parsing & linting/formatting
-go install mvdan.cc/sh/v3/cmd/gosh@latest
+go install mvdan.cc/sh/v3/cmd/shfmt@latest
 
 brew install man2html
 
