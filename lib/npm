@@ -31,8 +31,6 @@ run_npm() {
                         textlint
                         tldr
                         yo
-                        @commitlint/cli
-                        @commitlint/config-conventional
         "
 
         # Install packages globally and quietly
