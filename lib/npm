@@ -31,8 +31,6 @@ run_npm() {
                         semantic-release-cli
                         textlint
                         tldr
-                        travis-ci
-                        travis-watch
                         yo
                         @commitlint/cli
                         @commitlint/config-conventional
