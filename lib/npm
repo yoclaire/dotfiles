@@ -22,7 +22,6 @@ run_npm() {
                         eslint-plugin-react
                         eslint-config-standard
                         eslint-config-semistandard
-                        generator-hubot
                         grunt-cli
                         htmlhint
                         jshint
