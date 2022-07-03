@@ -253,13 +253,13 @@ brew install --cask 1password/tap/1password-cli
 brew install mas-cli/tap/mas
 
 mas install 1055511498 # Day One
-mas install 924726344  # Deliveries
-mas install 975937182  # Fantastical 2
+mas install 290986013  # Deliveries
+mas install 975937182  # Fantastical
 mas install 429449079  # Patterns
-mas install 880001334  # Reeder
+mas install 1529448980  # Reeder 5
 mas install 933627574  # Silicio
 # mas install 803453959  # Slack
-mas install 413965349  # Soulver
+# mas install 1508732804  # Soulver 3
 mas install 1176895641 # Spark
 mas install 1278508951 # Trello
 mas install 1384080005 # Tweetbot
