@@ -10,7 +10,7 @@ run_npm() {
         # List of npm packages
         local packages="
                         alex
-                        alfred-polyglot
+                        alfred-polyglot-fork
                         alfred-show-network-info
                         applemusicdiscordrpc
                         csslint
