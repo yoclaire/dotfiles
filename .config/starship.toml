@@ -100,19 +100,19 @@ behind = "⇣${count}"
 # default, bold blue
 style = "bold 33"
 # cyan
-conflicted.style = "37"
+conflicted = "[=](37)"
 # black
-deleted.style = "0"
+deleted = "[✘](0)"
 # red
-modified.style = "124"
+modified = "[!](124)"
 # default
-# renamed.style = ""
+# renamed = '»'
 # green
-staged.style = "64"
+staged = "[+](64)"
 # yellow
-stashed.style = "136"
+stashed = '[\$](136)'
 # orange
-untracked.style = "166"
+untracked = "[?](166)"
 
 [golang]
 symbol = " "
