@@ -246,6 +246,7 @@ brew install --cask kaleidoscope
 brew install --cask keepingyouawake
 brew install --cask keybase
 brew install --cask macdown
+brew install --cask rocket
 brew install --cask suspicious-package
 brew install --cask syntax-highlight
 brew install --cask tower
