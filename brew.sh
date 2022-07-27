@@ -209,6 +209,9 @@ brew install proselint
 # Linter for YAML
 brew install yamllint
 
+# Linter for Perl
+brew install perltidy
+
 # Terraform things
 brew install terraform
 brew install terragrunt
