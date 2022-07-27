@@ -241,6 +241,7 @@ brew install --cask webpquicklook
 brew install sass/sass/sass
 
 # Useful macOS apps
+brew install --cask diffmerge
 brew install --cask keepingyouawake
 brew install --cask keybase
 brew install --cask macdown
