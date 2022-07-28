@@ -79,8 +79,8 @@ style = "bold 64"
 [docker_context]
 symbol = " "
 
-# [env_var]
-# variable = "VAULT_ADDR"
+[env_var]
+variable = "VAULT_ADDR"
 
 [git_branch]
 # bold violet
