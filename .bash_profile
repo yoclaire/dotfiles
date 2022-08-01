@@ -14,6 +14,8 @@ export PATH="$HOME/bin:$PATH";
 # ~/.bash_profile, or ~/.zprofile) with: eval "$(brew shellenv)"
 if command -v /opt/homebrew/bin/brew &> /dev/null; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
+elif command -v /usr/local/bin/brew &> /dev/null; then
+	eval "$(/usr/local/bin/brew shellenv)"
 else
 	HOMEBREW_PREFIX=""
 fi
