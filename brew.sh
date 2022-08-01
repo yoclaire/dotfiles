@@ -8,8 +8,14 @@
 # Upgrade any already-installed formulae.
 brew upgrade
 
-# Save Homebrew’s installed location.
-BREW_PREFIX=$(brew --prefix)
+# Add Homebrew to $PATH and set useful env vars
+if command -v /opt/homebrew/bin/brew &> /dev/null; then
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+elif command -v /usr/local/bin/brew &> /dev/null; then
+	eval "$(/usr/local/bin/brew shellenv)"
+else
+	HOMEBREW_PREFIX=""
+fi
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
