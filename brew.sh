@@ -31,7 +31,7 @@ brew install gnu-sed
 brew install bash
 brew install bash-completion@2
 
-# Set up GNU core utilities (those that come with OS X are outdated).
+# Set up GNU core utilities (those that come with macOS are outdated).
 echo 'Be sure to add `$(brew prefix coreutils|findutils|gnu-sed)/libexec/gnubin` to `$PATH`.'
 ln -s "${HOMEBREW_PREFIX}/bin/gsha256sum" "${HOMEBREW_PREFIX}/bin/sha256sum"
 
