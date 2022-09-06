@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 _poetry_b7db913b333fa573_complete()
 {
     local cur script coms opts com
@@ -6,13 +8,13 @@ _poetry_b7db913b333fa573_complete()
 
     # for an alias, get the real script behind it
     if [[ $(type -t ${words[0]}) == "alias" ]]; then
-        script=$(alias ${words[0]} | sed -E "s/alias ${words[0]}='(.*)'/\1/")
+        script=$(alias "${words[0]}" | sed -E "s/alias ${words[0]}='(.*)'/\1/")
     else
-        script=${words[0]}
+        script="${words[0]}"
     fi
 
     # lookup for command
-    for word in ${words[@]:1}; do
+    for word in "${words[@]:1}"; do
         if [[ $word != -* ]]; then
             com=$word
             break
@@ -37,11 +39,11 @@ _poetry_b7db913b333fa573_complete()
             opts="${opts} --format"
             ;;
 
-            (cache clear)
+            ("cache clear")
             opts="${opts} --all"
             ;;
 
-            (cache list)
+            ("cache list")
             opts="${opts} "
             ;;
 
@@ -53,27 +55,27 @@ _poetry_b7db913b333fa573_complete()
             opts="${opts} --list --local --unset"
             ;;
 
-            (debug info)
+            ("debug info")
             opts="${opts} "
             ;;
 
-            (debug resolve)
+            ("debug resolve")
             opts="${opts} --extras --install --python --tree"
             ;;
 
-            (env info)
+            ("env info")
             opts="${opts} --path"
             ;;
 
-            (env list)
+            ("env list")
             opts="${opts} --full-path"
             ;;
 
-            (env remove)
+            ("env remove")
             opts="${opts} --all"
             ;;
 
-            (env use)
+            ("env use")
             opts="${opts} "
             ;;
 
@@ -121,31 +123,31 @@ _poetry_b7db913b333fa573_complete()
             opts="${opts} "
             ;;
 
-            (self add)
+            ("self add")
             opts="${opts} --allow-prereleases --dry-run --editable --extras --source"
             ;;
 
-            (self install)
+            ("self install")
             opts="${opts} --dry-run --sync"
             ;;
 
-            (self lock)
+            ("self lock")
             opts="${opts} --check --no-update"
             ;;
 
-            (self remove)
+            ("self remove")
             opts="${opts} --dry-run"
             ;;
 
-            (self show)
+            ("self show")
             opts="${opts} --addons --latest --outdated --tree"
             ;;
 
-            (self show plugins)
+            ("self show plugins")
             opts="${opts} "
             ;;
 
-            (self update)
+            ("self update")
             opts="${opts} --dry-run --preview"
             ;;
 
@@ -157,15 +159,15 @@ _poetry_b7db913b333fa573_complete()
             opts="${opts} --all --latest --no-dev --only --outdated --tree --why --with --without"
             ;;
 
-            (source add)
+            ("source add")
             opts="${opts} --default --secondary"
             ;;
 
-            (source remove)
+            ("source remove")
             opts="${opts} "
             ;;
 
-            (source show)
+            ("source show")
             opts="${opts} "
             ;;
 
