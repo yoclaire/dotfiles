@@ -149,6 +149,10 @@ fi
 # Depends on us having set the alias for tmux to start in control mode
 # https://gitlab.com/gnachman/iterm2/-/wikis/tmux-Integration-Best-Practices#how-do-i-use-shell-integration
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
-if [ -e "${HOME}/.iterm2_shell_integration.bash" ]; then
+if [ "$TERM_PROGRAM" == "iTerm.app" ] && [ -e "${HOME}/.iterm2_shell_integration.bash" ]; then
 	source "${HOME}/.iterm2_shell_integration.bash"
 fi
+
+# Enable Visual Studio Code shell integration
+# https://code.visualstudio.com/docs/terminal/shell-integration
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path bash)"
