@@ -139,7 +139,7 @@ brew install ccat
 brew install bat
 
 # Nice ls replacement
-brew install exa
+brew install eza
 
 # Sweet text-based shell recording tool
 # https://github.com/asciinema/asciinema
