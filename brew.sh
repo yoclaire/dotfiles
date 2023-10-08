@@ -267,6 +267,7 @@ brew install mas-cli/tap/mas
 mas install 1055511498 # Day One
 mas install 290986013  # Deliveries
 mas install 975937182  # Fantastical
+mas install 6444602274 # Ivory
 mas install 429449079  # Patterns
 mas install 1529448980  # Reeder 5
 mas install 933627574  # Silicio
