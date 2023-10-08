@@ -274,4 +274,4 @@ mas install 933627574  # Silicio
 # mas install 1508732804  # Soulver 3
 mas install 1176895641 # Spark
 mas install 1278508951 # Trello
-mas install 1384080005 # Tweetbot
+mas install 1482454543 # Twitter
