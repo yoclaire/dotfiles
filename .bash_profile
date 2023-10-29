@@ -136,12 +136,6 @@ if [ -f "${HOMEBREW_PREFIX}/bin/pipenv" ]; then
 	eval "$(pipenv --completion)"
 fi
 
-# Enable Trellis virtualenv integration
-# github.com/roots/trellis-cli#virtualenv
-if command -v trellis &> /dev/null; then
-	eval "$(trellis shell-init bash)"
-fi
-
 if command -v op &> /dev/null; then
 	source <(op completion bash)
 	source "${HOME}/.config/op/plugins.sh"
