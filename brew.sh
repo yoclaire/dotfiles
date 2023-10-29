@@ -270,6 +270,7 @@ mas install 975937182  # Fantastical
 mas install 6444602274 # Ivory
 mas install 429449079  # Patterns
 mas install 1529448980  # Reeder 5
+mas install 1518036000 # Sequel Ace
 mas install 933627574  # Silicio
 # mas install 803453959  # Slack
 # mas install 1508732804  # Soulver 3
