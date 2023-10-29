@@ -55,13 +55,6 @@ export CSS_DIRECTORY="css"
 # Add DocBook package for XML generation (used for git-subtree)
 export XML_CATALOG_FILES="${HOMEBREW_PREFIX}/etc/xml/catalog"
 
-# Chef configurations
-export KNIFE_CHEF_SERVER=""
-export KNIFE_CLIENT_KEY=""
-export KNIFE_NODE_NAME=""
-export CHEF_REPO="$HOME/dev/chef-aws-jb"
-export CHEF_COOKBOOKS="${CHEF_REPO}/cookbooks"
-
 # Set bat theme
 # https://github.com/sharkdp/bat
 export BAT_THEME="Solarized (light)"
