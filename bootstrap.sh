@@ -14,8 +14,6 @@ function doIt() {
 		--exclude ".ruby" \
 		--exclude "README.md" \
 		--exclude "LICENSE" \
-		--exclude "knife_bash_completion.sh" \
-		--exclude "*.sublime*" \
 		--exclude ".gitkeep" \
 		--exclude "lib" \
 		--exclude ".editorconfig" \
