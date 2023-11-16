@@ -1,5 +1,5 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
+export PATH="$HOME/bin:$PATH"
 
 # Usage: brew shellenv
 #
@@ -12,9 +12,9 @@ export PATH="$HOME/bin:$PATH";
 # directories are first and second respectively in your PATH. Consider adding
 # evaluation of this command's output to your dotfiles (e.g. ~/.profile,
 # ~/.bash_profile, or ~/.zprofile) with: eval "$(brew shellenv)"
-if command -v /opt/homebrew/bin/brew &> /dev/null; then
+if command -v /opt/homebrew/bin/brew &>/dev/null; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
-elif command -v /usr/local/bin/brew &> /dev/null; then
+elif command -v /usr/local/bin/brew &>/dev/null; then
 	eval "$(/usr/local/bin/brew shellenv)"
 else
 	HOMEBREW_PREFIX=""
@@ -24,25 +24,25 @@ fi
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in $HOME/.{path,bash_prompt,exports,aliases,functions,extra}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
+	[ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
+unset file
 
 # Case-insensitive globbing (used in pathname expansion)
-shopt -s nocaseglob;
+shopt -s nocaseglob
 
 # Append to the Bash history file, rather than overwriting it
-shopt -s histappend;
+shopt -s histappend
 
 # Autocorrect typos in path names when using `cd`
-shopt -s cdspell;
+shopt -s cdspell
 
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
 # * Recursive globbing, e.g. `echo **/*.txt`
 for option in autocd globstar; do
-	shopt -s "$option" 2> /dev/null;
-done;
+	shopt -s "$option" 2>/dev/null
+done
 
 # Set options for Git bash completion
 if [ -f "${HOMEBREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]; then
@@ -51,17 +51,17 @@ if [ -f "${HOMEBREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]; then
 fi
 
 # Add tab completion for many Bash commands
-if command -v brew &> /dev/null && [ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]; then
+if command -v brew &>/dev/null && [ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]; then
 	# Ensure existing Homebrew v1 completions continue to work
-	export BASH_COMPLETION_COMPAT_DIR="${HOMEBREW_PREFIX}/etc/bash_completion.d";
-	source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh";
+	export BASH_COMPLETION_COMPAT_DIR="${HOMEBREW_PREFIX}/etc/bash_completion.d"
+	source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
 elif [ -f /etc/bash_completion ]; then
-	source /etc/bash_completion;
-fi;
+	source /etc/bash_completion
+fi
 
 # Set up fzf for fuzzy tab completion using **<TAB>
 # Learn more at https://github.com/junegunn/fzf
-if command -v fzf &> /dev/null; then
+if command -v fzf &>/dev/null; then
 	# Setup fzf
 	# ---------
 	if [[ ! "$PATH" == *${HOMEBREW_PREFIX}/opt/fzf/bin* ]]; then
@@ -70,7 +70,7 @@ if command -v fzf &> /dev/null; then
 
 	# Auto-completion
 	# ---------------
-	[[ $- == *i* ]] && source "${HOMEBREW_PREFIX}/opt/fzf/shell/completion.bash" 2> /dev/null
+	[[ $- == *i* ]] && source "${HOMEBREW_PREFIX}/opt/fzf/shell/completion.bash" 2>/dev/null
 
 	# Key bindings
 	# ------------
@@ -103,16 +103,16 @@ if command -v fzf &> /dev/null; then
 fi
 
 # Enable tab completion for `g` by marking it as an alias for `git`
-if type _git &> /dev/null && [ -f "${HOMEBREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]; then
-	complete -o default -o nospace -F _git g;
-fi;
+if type _git &>/dev/null && [ -f "${HOMEBREW_PREFIX}/etc/bash_completion.d/git-completion.bash" ]; then
+	complete -o default -o nospace -F _git g
+fi
 
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
-complete -W "NSGlobalDomain" defaults;
+complete -W "NSGlobalDomain" defaults
 
 # Add `killall` tab completion for common apps
-complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
 
 # Source SCM Breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
@@ -129,14 +129,14 @@ fi
 
 # Enable rbenv shims and autocompletion
 # github.com/sstephenson/rbenv/
-if command -v rbenv &> /dev/null; then eval "$(rbenv init -)"; fi
+if command -v rbenv &>/dev/null; then eval "$(rbenv init -)"; fi
 
 # Enable pipenv completion
 if [ -f "${HOMEBREW_PREFIX}/bin/pipenv" ]; then
 	eval "$(pipenv --completion)"
 fi
 
-if command -v op &> /dev/null; then
+if command -v op &>/dev/null; then
 	source <(op completion bash)
 	source "${HOME}/.config/op/plugins.sh"
 fi

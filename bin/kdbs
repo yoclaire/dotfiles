@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-knife data bag show "${1}" "${2}" -F json

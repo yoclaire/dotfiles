@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")";
+cd "$(dirname "${BASH_SOURCE}")"
 
-git pull origin main;
+git pull origin main
 
 function doIt() {
 	rsync --exclude ".git/" \
@@ -19,16 +19,16 @@ function doIt() {
 		--exclude ".editorconfig" \
 		-avh --no-perms . ~;
 	mv "$HOME/editorconfig" "$HOME/.editorconfig"
-	source ~/.bash_profile;
+	source ~/.bash_profile
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
-	doIt;
+	doIt
 else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
-	echo "";
+	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
+	echo ""
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		doIt;
-	fi;
-fi;
-unset doIt;
+		doIt
+	fi
+fi
+unset doIt

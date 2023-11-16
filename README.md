@@ -93,8 +93,8 @@ Suggestions/improvements
 ## Author
 
 | [![twitter/thejeffbyrnes](http://gravatar.com/avatar/e9e409ecf5d0650e6a987a174444795b?s=70)](http://twitter.com/thejeffbyrnes "Follow @thejeffbyrnes on Twitter") |
-|---|
-| [Jeff Byrnes](http://thejeffbyrnes.com/) |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Jeff Byrnes](http://thejeffbyrnes.com/)                                                                                                                          |
 
 ## Thanks to…
 

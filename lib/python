@@ -12,7 +12,6 @@ declare -a packages=(
 	"tabfix"
 )
 
-for pkg in "${packages[@]}"
-do
+for pkg in "${packages[@]}"; do
 	pip3 install --upgrade "$pkg"
 done

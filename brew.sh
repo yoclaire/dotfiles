@@ -9,9 +9,9 @@
 brew upgrade
 
 # Add Homebrew to $PATH and set useful env vars
-if command -v /opt/homebrew/bin/brew &> /dev/null; then
+if command -v /opt/homebrew/bin/brew &>/dev/null; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
-elif command -v /usr/local/bin/brew &> /dev/null; then
+elif command -v /usr/local/bin/brew &>/dev/null; then
 	eval "$(/usr/local/bin/brew shellenv)"
 else
 	HOMEBREW_PREFIX=""
@@ -36,9 +36,9 @@ echo 'Be sure to add `$(brew prefix coreutils|findutils|gnu-sed)/libexec/gnubin`
 ln -s "${HOMEBREW_PREFIX}/bin/gsha256sum" "${HOMEBREW_PREFIX}/bin/sha256sum"
 
 if ! grep -Fq "$HOMEBREW_PREFIX/bin/bash" /etc/shells; then
-  echo "$HOMEBREW_PREFIX/bin/bash" | sudo tee -a /etc/shells;
-  chsh -s "$HOMEBREW_PREFIX/bin/bash";
-fi;
+	echo "$HOMEBREW_PREFIX/bin/bash" | sudo tee -a /etc/shells
+	chsh -s "$HOMEBREW_PREFIX/bin/bash"
+fi
 
 # Install `wget` with IRI support.
 brew install wget
@@ -153,7 +153,7 @@ brew install phplint
 brew install phpmd
 brew install phpunit
 
-# Install Hack typeface
+# Install typefaces
 brew tap homebrew/cask-fonts
 brew install --cask font-hack
 brew install --cask font-source-code-pro
