@@ -226,6 +226,10 @@ brew install yamllint
 # Starship shell prompt
 brew install starship
 
+# Emoji Wine Alfred Workflow requirement
+# Friendly PIL fork (Python Imaging Library)
+brew install pillow
+
 # Useful Quicklook additions
 brew install --cask betterzip
 brew install --cask qlcolorcode
