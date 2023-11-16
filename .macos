@@ -380,8 +380,8 @@ defaults write com.apple.dock tilesize -int 64
 # Change minimize/maximize window effect
 # defaults write com.apple.dock mineffect -string "scale"
 
-# Minimize windows into their application’s icon
-defaults write com.apple.dock minimize-to-application -bool true
+# # Minimize windows into their application’s icon
+# defaults write com.apple.dock minimize-to-application -bool true
 
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
@@ -865,8 +865,8 @@ defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 # Spectacle.app                                                               #
 ###############################################################################
 
-# Set up my preferred keyboard shortcuts
-cp -r init/spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2> /dev/null
+# # Set up my preferred keyboard shortcuts
+# cp -r init/spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2>/dev/null
 
 ###############################################################################
 # Transmission.app                                                            #
@@ -907,8 +907,8 @@ defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 # Twitter.app                                                                 #
 ###############################################################################
 
-# Disable smart quotes as it’s annoying for code tweets
-defaults write com.twitter.twitter-mac AutomaticQuoteSubstitutionEnabled -bool false
+# # Disable smart quotes as it’s annoying for code tweets
+# defaults write com.twitter.twitter-mac AutomaticQuoteSubstitutionEnabled -bool false
 
 # Show the app window when clicking the menu bar icon
 defaults write com.twitter.twitter-mac MenuItemBehavior -int 1
