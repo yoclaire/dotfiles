@@ -10,7 +10,6 @@ run_npm() {
 		# List of npm packages
 		local packages="
                         alex
-                        alfred-polyglot-fork
                         alfred-show-network-info
                         applemusicdiscordrpc
                         csslint
@@ -25,9 +24,7 @@ run_npm() {
                         grunt-cli
                         htmlhint
                         jshint
-                        lighthouse
                         prettier
-                        semantic-release-cli
                         textlint
                         tldr
                         yo
