@@ -51,7 +51,7 @@ brew install vim
 brew install grep
 # Disabled b/c brew-installed OpenSSH does not play nicely with macOS Keychain + SSH
 # brew install openssh
-brew install screen
+# brew install screen
 brew install php
 brew install gmp
 
@@ -76,12 +76,12 @@ brew install gmp
 # brew install john
 # brew install knock
 # brew install netpbm
-brew install nmap
-brew install pngcheck
-brew install socat
+# brew install nmap
+# brew install pngcheck
+# brew install socat
 # brew install sqlmap
-brew install tcpflow
-brew install tcptrace
+# brew install tcpflow
+# brew install tcptrace
 # brew install ucspi-tcp' # `tcpserver` etc
 # brew install xpdf
 brew install xz
@@ -90,20 +90,20 @@ brew install xz
 brew install ack
 # brew install exiv2
 brew install git
-brew install git-lfs
-brew install gs
+# brew install git-lfs
+# brew install gs
 # brew install imagemagick
 # brew install lua
 # brew install lynx
-brew install p7zip
-brew install pigz
-brew install pv
-brew install rename
-brew install rlwrap
+# brew install p7zip
+# brew install pigz
+# brew install pv
+# brew install rename
+# brew install rlwrap
 brew install ssh-copy-id
 brew install tree
-brew install vbindiff
-brew install zopfli
+# brew install vbindiff
+# brew install zopfli
 
 # Jeff Byrnes additions from Mathias Bynens’ upstreams
 
@@ -145,18 +145,16 @@ brew install eza
 # https://github.com/asciinema/asciinema
 brew install asciinema
 
-# Additional PHP tools
-brew install composer
-brew install php-code-sniffer
-brew install php-cs-fixer
-brew install phplint
-brew install phpmd
-brew install phpunit
+# # Additional PHP tools
+# brew install composer
+# brew install php-code-sniffer
+# brew install php-cs-fixer
+# brew install phplint
+# brew install phpmd
+# brew install phpunit
 
 # Install typefaces
 brew tap homebrew/cask-fonts
-brew install --cask font-hack
-brew install --cask font-source-code-pro
 brew install --cask font-fira-code-nerd-font
 brew install --cask font-hack-nerd-font
 brew install --cask font-inconsolata-nerd-font
@@ -166,9 +164,9 @@ brew install brew-cask-completion
 brew install bundler-completion
 brew install docker-completion
 brew install gem-completion
-brew install kitchen-completion
+# brew install kitchen-completion
 brew install rake-completion
-brew install vagrant-completion
+# brew install vagrant-completion
 
 # GPG agent for signing commits
 brew install pinentry-mac
@@ -195,13 +193,13 @@ brew install rbenv
 
 brew install reattach-to-user-namespace
 
-brew install the_silver_searcher
-brew install tidy-html5
+# brew install the_silver_searcher
+# brew install tidy-html5
 brew install tmux
 
 brew install watch
 
-brew install aws-shell
+# brew install aws-shell
 
 # Linter for bash scripts
 brew install shellcheck
@@ -215,17 +213,14 @@ brew install proselint
 # Linter for YAML
 brew install yamllint
 
-# Linter for Perl
-brew install perltidy
+# # Linter for Perl
+# brew install perltidy
 
-# Terraform things
-brew install terraform
-brew install terragrunt
-brew install terraforming
-brew install terraform_landscape
+# # Terraform things
+# brew install terraform
 
-# Linter for Terraform configs
-brew install tflint
+# # Linter for Terraform configs
+# brew install tflint
 
 # Starship shell prompt
 brew install starship
@@ -247,16 +242,15 @@ brew install --cask webpquicklook
 brew install sass/sass/sass
 
 # Useful macOS apps
-brew install --cask diffmerge
+# brew install --cask diffmerge
 brew install --cask kaleidoscope
 brew install --cask keepingyouawake
-brew install --cask keybase
-brew install --cask macdown
+# brew install --cask keybase
+# brew install --cask macdown
 brew install --cask rocket
 brew install --cask suspicious-package
 brew install --cask syntax-highlight
 brew install --cask tower
-brew install --cask yakyak
 
 # 1Password 8 CLI
 brew install --cask 1password/tap/1password-cli
@@ -264,16 +258,14 @@ brew install --cask 1password/tap/1password-cli
 # CLI for Mac App Store
 brew install mas-cli/tap/mas
 
-mas install 1055511498 # Day One
-mas install 290986013  # Deliveries
+# mas install 1055511498 # Day One
 mas install 975937182  # Fantastical
 mas install 6444602274 # Ivory
 mas install 429449079  # Patterns
-mas install 1529448980  # Reeder 5
-mas install 1518036000 # Sequel Ace
-mas install 933627574  # Silicio
+mas install 1529448980 # Reeder 5
+# mas install 1518036000 # Sequel Ace
 # mas install 803453959  # Slack
-# mas install 1508732804  # Soulver 3
+# mas install 1508732804 # Soulver 3
 mas install 1176895641 # Spark
-mas install 1278508951 # Trello
+# mas install 1278508951 # Trello
 mas install 1482454543 # Twitter
