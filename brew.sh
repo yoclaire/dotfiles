@@ -258,7 +258,7 @@ brew install --cask syntax-highlight
 brew install --cask tower
 
 # 1Password 8 CLI
-brew install --cask 1password/tap/1password-cli
+brew install --cask 1password-cli
 
 # CLI for Mac App Store
 brew install mas-cli/tap/mas
