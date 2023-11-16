@@ -17,7 +17,8 @@ function doIt() {
 		--exclude ".gitkeep" \
 		--exclude "lib" \
 		--exclude ".editorconfig" \
-		-avh --no-perms . ~;
+		--exclude "dotfiles.code-workspace" \
+		-avh --no-perms . ~
 	mv "$HOME/editorconfig" "$HOME/.editorconfig"
 	source ~/.bash_profile
 }
