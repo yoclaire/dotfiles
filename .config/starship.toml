@@ -46,24 +46,30 @@ format = """\
 
 [aws]
 disabled = true
-symbol = " "
 # yellow
 style = "bold 136"
+symbol = "  "
 
 [battery]
-full_symbol = ""
-charging_symbol = ""
-discharging_symbol = ""
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
 
-  # "bold red" style when capacity is between 0% and 10%
-  [[battery.display]]
-  threshold = 10
-  style = "bold 124"
+# "bold red" style when capacity is between 0% and 10%
+[[battery.display]]
+threshold = 10
+style = "bold 124"
 
-  # "bold yellow" style when capacity is between 10% and 30%
-  [[battery.display]]
-  threshold = 30
-  style = "bold 136"
+# "bold yellow" style when capacity is between 10% and 30%
+[[battery.display]]
+threshold = 30
+style = "bold 136"
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
 
 [character]
 # Replace the "❯" symbol in the prompt with "♠"
@@ -72,15 +78,31 @@ success_symbol = "[♠](bold 0)"
 # red
 error_symbol = "[✖](bold 124)"
 
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
 [directory]
 # bold green
 style = "bold 64"
+read_only = " 󰌾"
 
 [docker_context]
 symbol = " "
 
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
 [env_var]
 variable = "VAULT_ADDR"
+
+[fossil_branch]
+symbol = " "
 
 [git_branch]
 # bold violet
@@ -117,39 +139,113 @@ untracked = "[?](166)"
 [golang]
 symbol = " "
 
-[hostname]
-ssh_only = true
-# yellow
-# style = "bold dimmed 136"
-# red
-style = "bold 124"
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
 
 [hg_branch]
 symbol = " "
 
+[hostname]
+# yellow
+# style = "bold dimmed 136"
+# red
+style = "bold 124"
+ssh_symbol = " "
+
 [java]
 symbol = " "
 
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
 [memory_usage]
-symbol = " "
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
 
 [nodejs]
-symbol = " "
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
 
 [package]
-symbol = " "
+symbol = "󰏗 "
+
+[pijul_channel]
+symbol = " "
 
 [php]
 symbol = " "
 
 [python]
-symbol = " "
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
 
 [ruby]
-symbol = " "
+symbol = " "
 
 [rust]
-symbol = " "
+symbol = " "
+
+[scala]
+symbol = " "
 
 [terraform]
 # This is very slow currently, so it is disabled by default
