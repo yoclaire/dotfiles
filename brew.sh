@@ -247,11 +247,14 @@ brew install --cask webpquicklook
 brew install sass/sass/sass
 
 # Useful macOS apps
+brew install --cask chronosync
 brew install --cask dash
 # brew install --cask diffmerge
 brew install --cask discord
+brew install --cask graphicconverter
 brew install --cask handbrake
 brew install --cask imageoptim
+brew install --cask ivolume
 brew install --cask kaleidoscope
 brew install --cask keepingyouawake
 # brew install --cask keybase
@@ -262,7 +265,9 @@ brew install --cask rocket
 brew install --cask suspicious-package
 brew install --cask syntax-highlight
 brew install --cask tower
+brew install --cask transmit
 brew install --cask vlc
+brew install --cask xld
 
 # 1Password 8 CLI
 brew install --cask 1password-cli
