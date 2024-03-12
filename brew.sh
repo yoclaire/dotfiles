@@ -188,6 +188,9 @@ brew install node
 brew install yarn
 
 brew install python
+brew install black
+brew install flake8
+brew install git-sweep3k
 
 # Install rbenv for multiple Ruby versions
 brew install ruby-build
