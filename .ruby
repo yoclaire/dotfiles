@@ -8,9 +8,6 @@ gem update --system
 
 # Reinstall all gems
 gem install \
-	mdl \
-	oily_png \
-	pry \
 	rake \
 	rspec \
 	rubocop \
