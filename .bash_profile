@@ -120,8 +120,14 @@ export SCM_BREEZE_DISABLE_ASSETS_MANAGEMENT=false
 [[ -s "$HOME/.scm_breeze/scm_breeze.sh" ]] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
 # Generic Colouriser
-if [ -f "${HOMEBREW_PREFIX}/etc/grc.bashrc" ]; then
-	. "${HOMEBREW_PREFIX}/etc/grc.bashrc"
+export GRC_ALIASES=true
+if [ -s "${HOMEBREW_PREFIX}/etc/grc.sh" ]; then
+	. "${HOMEBREW_PREFIX}/etc/grc.sh"
+
+	for cmd in g++ gas head make ld ping6 tail traceroute6 $(ls "${HOMEBREW_PREFIX}/share/grc/"); do
+		cmd="${cmd##*conf.}"
+		type "${cmd}" >/dev/null 2>&1 && alias "${cmd}"="$(which grc) --colour=auto ${cmd}"
+	done
 fi
 
 # Enable aws-cli completion
