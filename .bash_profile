@@ -117,7 +117,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # Source SCM Breeze
 # https://github.com/scmbreeze/scm_breeze/pull/335
 export SCM_BREEZE_DISABLE_ASSETS_MANAGEMENT=false
-[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
+[[ -s "$HOME/.scm_breeze/scm_breeze.sh" ]] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
 # Generic Colouriser
 if [ -f "${HOMEBREW_PREFIX}/etc/grc.bashrc" ]; then
