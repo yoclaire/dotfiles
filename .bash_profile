@@ -68,19 +68,7 @@ fi
 # Set up fzf for fuzzy tab completion using **<TAB>
 # Learn more at https://github.com/junegunn/fzf
 if command -v fzf &>/dev/null; then
-	# Setup fzf
-	# ---------
-	if [[ ! "$PATH" == *${HOMEBREW_PREFIX}/opt/fzf/bin* ]]; then
-		export PATH="${PATH:+${PATH}:}${HOMEBREW_PREFIX}/opt/fzf/bin"
-	fi
-
-	# Auto-completion
-	# ---------------
-	[[ $- == *i* ]] && source "${HOMEBREW_PREFIX}/opt/fzf/shell/completion.bash" 2>/dev/null
-
-	# Key bindings
-	# ------------
-	source "${HOMEBREW_PREFIX}/opt/fzf/shell/key-bindings.bash"
+	eval "$(fzf --bash)"
 
 	# Set additional commands to use fzf
 	_fzf_setup_completion path ag
