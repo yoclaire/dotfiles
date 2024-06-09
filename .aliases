@@ -202,12 +202,23 @@ alias ec2ls="knife ec2 server list --availability-zone --tags Type"
 alias dlv="chef exec delivery local verify"
 alias dla="chef exec delivery local acceptance"
 
-# cat, with color
-alias cat="ccat"
-
 # npm list only top-level modules
 # h/t https://gist.github.com/yyx990803/6045243
 alias ng="npm list -g --depth=0 2>/dev/null"
 alias nls="npm list --depth=0 2>/dev/null"
 
 alias tf="terraform"
+
+# cat, with color
+# https://github.com/sharkdp/bat
+if command -v bat &>/dev/null; then
+	# set bat theme based on if macOS is using Light or Dark mode
+	# https://github.com/sharkdp/bat?tab=readme-ov-file#dark-mode
+	if command -v /opt/homebrew/bin/brew &>/dev/null || command -v /usr/local/bin/brew &>/dev/null; then
+		alias cat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo Solarized (dark) || echo Solarized (light))"
+	else
+		alias cat="bat"
+	fi
+elif command -v ccat &>/dev/null; then
+	alias cat="ccat"
+fi
