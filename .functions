@@ -239,6 +239,12 @@ netdata_dashboard() {
 	done
 }
 
+# Set up help $cmd to use bat for output highlighting
+# https://github.com/sharkdp/bat?tab=readme-ov-file#highlighting---help-messages
+help() {
+	"$@" --help 2>&1 | bat --plain --language=help
+}
+
 # README: Combine ripgrep, fzf, bat for very fancy CLI searching
 # https://junegunn.github.io/fzf/tips/ripgrep-integration/
 # ripgrep->fzf->vim [QUERY]
