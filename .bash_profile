@@ -77,7 +77,7 @@ if command -v fzf &>/dev/null; then
 	_fzf_setup_completion path s subl
 	_fzf_setup_completion dir tree
 
-	if [ -x "$HOMEBREW_PREFIX/bin/fd" ]; then
+	if command -v fd &>/dev/null; then
 		# Use fd (https://github.com/sharkdp/fd) instead of the default find
 		# command for listing path candidates.
 		export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
