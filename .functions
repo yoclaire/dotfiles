@@ -245,6 +245,11 @@ help() {
 	"$@" --help 2>&1 | bat --plain --language=help
 }
 
+# https://github.com/sharkdp/bat?tab=readme-ov-file#git-diff
+batdiff() {
+	git diff --name-only --relative --diff-filter=d | xargs bat --diff
+}
+
 # README: Combine ripgrep, fzf, bat for very fancy CLI searching
 # https://junegunn.github.io/fzf/tips/ripgrep-integration/
 # ripgrep->fzf->vim [QUERY]
